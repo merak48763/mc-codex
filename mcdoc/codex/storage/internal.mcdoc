@@ -5,6 +5,8 @@ use super::CommandStorage
 use super::DescriptionKey
 use super::CompoundDescriptionKey
 use super::super::custom_data::BakedEntry
+use super::archive::ArchiveEntry
+use super::archive::Insertion
 
 dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
   /// The bundle item
@@ -47,7 +49,8 @@ dispatch codex:transforms_in[%unknown] to any
 dispatch codex:transforms_out[%unknown] to any
 dispatch codex:transforms_temp[%unknown] to any
 
-// item stack → translated item name 
+// item stack → translated item name
+// extra input: @s = 24b09cde-0-0-0-2
 dispatch codex:transforms_in[codex:item_name] to ItemStack
 dispatch codex:transforms_out[codex:item_name] to Text
 
@@ -68,4 +71,28 @@ dispatch codex:transforms_temp[codex:bake_single_entry] to struct {
     #[id="codex:page"] string |
     CompoundDescriptionKey |
   )],
+  /// Archive entry retrieved from `codex:archives`
+  retrieved_archive?: ArchiveEntry,
+  /// Transformed `with` text components
+  with?: [Text],
+}
+
+// text & style → styled text component
+dispatch codex:transforms_in[codex:format_text] to struct {
+  /// Text content
+  content?: Text,
+  /// Text style
+  style?: TextStyle,
+}
+dispatch codex:transforms_out[codex:format_text] to Text
+
+// archive insertion → standard text component
+// extra input: context related scores
+dispatch codex:transforms_in[codex:insertion] to Insertion
+dispatch codex:transforms_out[codex:insertion] to Text
+dispatch codex:transforms_temp[codex:insertion] to struct {
+  /// Typed input
+  lookup_insertion?: codex:insertion[lookup],
+  /// Temp storage of unformatted result text
+  picked_text?: Text,
 }
