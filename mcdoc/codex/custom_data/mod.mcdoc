@@ -20,16 +20,16 @@ dispatch codex:item_data[book] to struct BookItemData {
 type BakedPage = [BakedEntry] @ ..11
 struct BakedEntry {
   /// Lore appended to the book item
-  lore?: :data_component[lore],
+  lore?: [Text],
   /// The gui button appended to bundle contents
   button?: ItemStack,
 }
 
 dispatch codex:item_data[button] to struct ButtonItemData {
-  action: ButtonAction,
+  action?: ButtonAction,
   ...codex:button_action[[action]],
 }
-dispatch codex:button_action[%unknown] to struct {}
+dispatch codex:button_action[%unknown, %none] to struct {}
 
 dispatch codex:button_action[select_entry] to struct SelectEntryAction {
   /// Index of the book item's `active_page` list
@@ -55,6 +55,4 @@ enum(string) ButtonAction {
   NextPage = "next_page",
   /// Select an entry
   Select = "select_entry",
-  /// No action
-  None = "nil",
 }

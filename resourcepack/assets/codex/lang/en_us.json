@@ -1,1 +1,13 @@
-{}
+{
+  "codex.book": "Book of the Universe Cat",
+  "codex.book.empty.1": "Place an item in this book",
+  "codex.book.empty.2": "to learn more about it.",
+  "codex.book.active.1": "Hover + Scroll on this item to see keywords,",
+  "codex.book.active.2": "then use %1$s to read one.",
+  "codex.book.too_many_items.1": "Found more than 1 item stack.",
+  "codex.book.too_many_items.2": "Take some items out.",
+  "codex.book.item_name": "[%s]",
+  "codex.book.unnamed_item": "Unnamed Item",
+  "codex.formatter": "%s",
+  "codex.bracket": "[%s]"
+}

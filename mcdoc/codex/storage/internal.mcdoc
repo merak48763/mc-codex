@@ -29,8 +29,23 @@ dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
       temp?: codex:transforms_temp[[%parent.%key]],
     },
   },
+  /// Macro params
+  macro?: struct {
+    /// Banner `base_color` component
+    base_color?: :data_component[base_color],
+    /// Arbitrary ID
+    id?: string,
+    /// Potion effect type
+    effect?: string,
+  },
 }>
 
-dispatch codex:transforms_in[%unknown] to struct {}
-dispatch codex:transforms_out[%unknown] to struct {}
-dispatch codex:transforms_temp[%unknown] to struct {}
+dispatch codex:transforms_in[%unknown] to any
+dispatch codex:transforms_out[%unknown] to any
+dispatch codex:transforms_temp[%unknown] to any
+
+dispatch codex:transforms_in[codex:item_name] to ItemStack
+dispatch codex:transforms_out[codex:item_name] to Text
+
+dispatch codex:transforms_in[codex:active_book_lore] to Text
+dispatch codex:transforms_out[codex:active_book_lore] to [Text]
