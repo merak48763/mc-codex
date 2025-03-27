@@ -1,4 +1,4 @@
-scoreboard objectives add mu.codex dummy {text: "Codex internal variable", color: "gray"}
+scoreboard objectives add codex.var dummy {text: "Codex internal variable", color: "gray"}
 
 function codex:load/vanilla_description
 function codex:load/custom_description

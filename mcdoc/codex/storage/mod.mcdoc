@@ -8,18 +8,24 @@ type CommandStorage<T> = struct {
 dispatch :storage[codex:inspecting_item] to CommandStorage<ItemStack>
 
 dispatch :storage[codex:description_keys] to struct {
-  values: [(
-    DescriptionKey |
-    [DescriptionKey] @ 1.. |
-  )],
+  values: [DescriptionKey],
 }
 
 type DescriptionKey = (
   #[id="codex:page"] string |
   struct {
-    /// Page ID of `codex:archives` storage
-    id: #[id="codex:page"] string,
-    /// Context number provided to the text
-    context_number?: int,
+    ...CompoundDescriptionKey,
+    /// Other keywords related to the description
+    related_keywords?: [(
+      #[id="codex:page"] string |
+      CompoundDescriptionKey |
+    )],
   }
 )
+
+struct CompoundDescriptionKey {
+  /// Page ID of `codex:archives` storage
+  id: #[id="codex:page"] string,
+  /// Context number provided to the text
+  context_number?: int,
+}

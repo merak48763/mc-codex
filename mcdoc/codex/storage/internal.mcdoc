@@ -2,6 +2,9 @@ use ::java::util::text::Text
 use ::java::util::text::TextStyle
 use ::java::world::item::ItemStack
 use super::CommandStorage
+use super::DescriptionKey
+use super::CompoundDescriptionKey
+use super::super::custom_data::BakedEntry
 
 dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
   /// The bundle item
@@ -13,8 +16,6 @@ dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
   },
   /// The button item in the bundle
   button_item?: struct {
-    /// Typed custom data
-    custom_data?: codex:item_data[button],
     /// Typed custom data
     select_entry_data?: codex:button_action[select_entry],
   },
@@ -37,6 +38,8 @@ dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
     id?: string,
     /// Potion effect type
     effect?: string,
+    /// Array index
+    index?: int,
   },
 }>
 
@@ -44,8 +47,25 @@ dispatch codex:transforms_in[%unknown] to any
 dispatch codex:transforms_out[%unknown] to any
 dispatch codex:transforms_temp[%unknown] to any
 
+// item stack → translated item name 
 dispatch codex:transforms_in[codex:item_name] to ItemStack
 dispatch codex:transforms_out[codex:item_name] to Text
 
+// item name → common lore containing item name
 dispatch codex:transforms_in[codex:active_book_lore] to Text
 dispatch codex:transforms_out[codex:active_book_lore] to [Text]
+
+// archive entry IDs → page object
+dispatch codex:transforms_in[codex:bake_book_contents] to [DescriptionKey]
+dispatch codex:transforms_out[codex:bake_book_contents] to codex:item_data[book]
+
+// single entry ID → lore and button item
+dispatch codex:transforms_in[codex:bake_single_entry] to DescriptionKey
+dispatch codex:transforms_out[codex:bake_single_entry] to BakedEntry
+dispatch codex:transforms_temp[codex:bake_single_entry] to struct {
+  /// Other keywords related to the main description
+  related_keywords?: [(
+    #[id="codex:page"] string |
+    CompoundDescriptionKey |
+  )],
+}

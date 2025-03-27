@@ -8,6 +8,8 @@
   "codex.book.too_many_items.2": "Take some items out.",
   "codex.book.item_name": "[%s]",
   "codex.book.unnamed_item": "Unnamed Item",
+  "codex.book.no_description": "No Information",
+  "codex.book.next_page": "Next Page ❱",
   "codex.formatter": "%s",
   "codex.bracket": "[%s]"
 }
