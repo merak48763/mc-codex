@@ -1,0 +1,18 @@
+scoreboard objectives add mu.codex dummy {text: "Codex internal variable", color: "gray"}
+
+function codex:load/vanilla_description
+function codex:load/custom_description
+
+forceload add -30000000 1832230
+# book item
+#summon item_display -30000000 0 1832230 {UUID: uuid("24b09cde-0-0-0-1"), CustomName: "[codex] 24b09cde-0-0-0-1", view_range: 0}
+summon item_display -30000000 0 1832230 {UUID: [I; 615554270,0,0,1], CustomName: "[codex] 24b09cde-0-0-0-1", view_range: 0}
+# bundle contents [0]
+#summon item_display -30000000 0 1832230 {UUID: uuid("24b09cde-0-0-0-2"), CustomName: "[codex] 24b09cde-0-0-0-2", view_range: 0}
+summon item_display -30000000 0 1832230 {UUID: [I; 615554270,0,0,2], CustomName: "[codex] 24b09cde-0-0-0-2", view_range: 0}
+# item held on cursor
+#summon item_display -30000000 0 1832230 {UUID: uuid("24b09cde-0-0-0-3"), CustomName: "[codex] 24b09cde-0-0-0-3", view_range: 0}
+summon item_display -30000000 0 1832230 {UUID: [I; 615554270,0,0,3], CustomName: "[codex] 24b09cde-0-0-0-3", view_range: 0}
+# text resolver
+#summon text_display -30000000 0 1832230 {UUID: uuid("24b09cde-0-0-1-1"), CustomName: "[codex] 24b09cde-0-0-1-1", view_range: 0}
+summon text_display -30000000 0 1832230 {UUID: [I; 615554270,0,65536,1], CustomName: "[codex] 24b09cde-0-0-1-1", view_range: 0}

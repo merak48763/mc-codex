@@ -1,0 +1,65 @@
+use ::java::util::text::Text
+use ::java::util::text::TextStyle
+use super::CommandStorage
+
+dispatch :storage[codex:archives] to CommandStorage<struct Archives {
+  [#[id(registry="codex:page", definition=true)] string]: ArchiveEntry,
+}>
+
+struct ArchiveEntry {
+  /// How to interpret the context number passed in
+  /// Defaults to `none`
+  context_type?: ContextType,
+  /// Map color of the button item
+  /// \* The button item uses filled map item model
+  button_color?: #[color="composite_rgb"] int,
+  /// Title of the entry
+  /// When context number is provided, the title will be suffixed with text determined by the number and `context_type`
+  /// The default style is white & non-italic
+  title: Text,
+  /// Text lines displayed in the book item's lore
+  details: [Text],
+  /// Text style applied to `details`
+  /// Defaults to white & non-italic
+  base_style?: TextStyle,
+  /// If present, generates and provides `with` list to all (translated) lines in `details`
+  insertions?: [Insertion],
+}
+
+struct Insertion {
+  /// Type of the insertion
+  /// Defaults to `text`
+  type?: InsertionType,
+  ...codex:insertion[[type]],
+}
+dispatch codex:insertion[%unknown] to struct {}
+
+dispatch codex:insertion[%none, text] to struct TextInsertion {
+  value: Text,
+}
+
+dispatch codex:insertion[lookup] to struct LookupInsertion {
+  /// Value to use when context number is not provided
+  no_context_value: Text,
+  /// When context number is provided, the corresponding value in the list will be picked
+  values: [Text],
+  /// Value to use when context number is provided but too large
+  out_of_bound_value: Text,
+  /// Text style applied to the generated value
+  base_style?: TextStyle,
+}
+
+enum(string) ContextType {
+  /// The entry doesn't need/have context number
+  None = "none",
+  /// The context number is an enchantment level (1-indexed)
+  EnchantmentLevel = "enchantment",
+  /// The context number is an effect amplifier (0-indexed)
+  EffectAmplifier = "effect",
+}
+enum(string) InsertionType {
+  /// Normal text component
+  TextComponent = "text",
+  /// Value determined by context number
+  ValueLookup = "lookup",
+}
