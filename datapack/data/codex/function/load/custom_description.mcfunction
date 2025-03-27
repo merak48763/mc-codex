@@ -7,3 +7,10 @@ data modify storage codex:archives root."codex:book" set value { \
   ], \
   base_style: {italic: true} \
 }
+
+data modify storage codex:archives root."codex:caps/damage_reduction" set value { \
+  title: {translate: "codex.cap.damage_reduction", fallback: "Damage Reduction", color: "#ffbb88", bold: true}, \
+  details: [ \
+    {translate: "codex.cap.damage_reduction.1", fallback: "Capped at 80%%."} \
+  ] \
+}

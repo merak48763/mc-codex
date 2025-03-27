@@ -2,7 +2,7 @@
 data modify storage codex:internal root.transforms."codex:format_text".in.content \
   set from storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.details[0]
 data modify storage codex:internal root.transforms."codex:format_text".in.style \
-  set value {color: "white", italic: false}
+  set value {color: "#e0e0e0", italic: false}
 data modify storage codex:internal root.transforms."codex:format_text".in.style \
   merge from storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.base_style
 

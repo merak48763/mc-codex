@@ -2,7 +2,7 @@
 
 # base text
 data modify storage codex:internal root.transforms."codex:item_name".out set value \
-  {translate: "codex.book.item_name", fallback: "[%s]", with: [{translate: "codex.formatter", fallback: "%s", with: []}], color: "white", italic: false}
+  {translate: "codex.book.item_name", fallback: "Item: [%s]", with: [{translate: "codex.formatter", fallback: "%s", with: []}], color: "white", italic: false}
 
 # rarity
 function codex:transforms_internal/item_name/rarity_style
