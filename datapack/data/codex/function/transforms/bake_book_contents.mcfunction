@@ -12,7 +12,7 @@ execute if score #entry_count codex.var matches 0 run return run data modify \
   append value {button: {id: "music_disc_5", components: { \
     item_name: {translate: "codex.bracket", fallback: "[%s]", with: [{translate: "codex.book.no_description", "fallback": "No Information", "color": "red"}]}, \
     custom_data: {codex: {type: "button"}}, item_model: "barrier", \
-    bundle_contents: [{id: "bow"}], rarity: "common" \
+    bundle_contents: [{id: "bow"}], rarity: "common", "!jukebox_playable": {} \
   }}}
 
 # start loop
