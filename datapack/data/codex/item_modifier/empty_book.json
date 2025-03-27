@@ -1,7 +1,7 @@
 [
   {
     "function": "set_custom_data",
-    "tag": "{codex: {type: \"book\", state: \"empty\"}}"
+    "tag": "{codex: {type: \"book\", state: \"empty\", other_pages: [], active_page: []}}"
   },
   {
     "function": "set_contents",
