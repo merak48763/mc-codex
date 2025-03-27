@@ -14,8 +14,6 @@ data modify storage codex:internal root.book_item.item_stack.components."minecra
   set from storage codex:internal root.transforms."codex:active_book_lore".out
 
 # append description
-data modify storage codex:internal root.book_item.item_stack.components."minecraft:lore" \
-  append value ""
 execute store result storage codex:internal root.macro.index int 1 \
   run scoreboard players get #index codex.var
 function codex:main/modify_book/select_entry/retrieve_entry with storage codex:internal root.macro

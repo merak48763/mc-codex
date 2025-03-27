@@ -14,6 +14,13 @@ function codex:transforms_internal/bake_single_entry/retrieve_archive with stora
 execute if score #is_main_entry codex.var matches 1 run data modify \
   storage codex:internal root.transforms."codex:bake_single_entry".out.button.components."minecraft:map_color" \
   set from storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.button_color
+# button data
+execute if score #is_main_entry codex.var matches 1 \
+  store result storage codex:internal root.button_item.select_entry_data.entry_index int 1 \
+  run scoreboard players get #entry_counter codex.var
+execute if score #is_main_entry codex.var matches 1 run data modify \
+  storage codex:internal root.transforms."codex:bake_single_entry".out.button.components."minecraft:custom_data".codex \
+  merge from storage codex:internal root.button_item.select_entry_data
 
 # load context
 execute store result score #has_context codex.var \

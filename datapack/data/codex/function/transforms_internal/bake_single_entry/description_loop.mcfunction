@@ -15,3 +15,8 @@ execute if data storage codex:internal root.transforms."codex:format_text".in.co
 function codex:transforms/format_text
 data modify storage codex:internal root.transforms."codex:bake_single_entry".out.lore \
   append from storage codex:internal root.transforms."codex:format_text".out
+
+# recursion
+data remove storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.details[0]
+execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.details[0] \
+  run function codex:transforms_internal/bake_single_entry/description_loop
