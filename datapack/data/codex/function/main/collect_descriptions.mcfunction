@@ -5,6 +5,6 @@ execute if items entity @s contents *[enchantments~[{levels: {min: 1}}]] \
   run function #codex:describe/enchantment
 execute if items entity @s contents enchanted_book[stored_enchantments~[{levels: {min: 1}}], !enchantments|!enchantments~[{levels: {min: 1}}]] \
   unless data storage codex:inspecting_item root.components."minecraft:tooltip_display"{hidden_components: ["minecraft:stored_enchantment"]} \
-  run function #codex:describe/enchantment
+  run function #codex:describe/stored_enchantment
 
 function #codex:describe
