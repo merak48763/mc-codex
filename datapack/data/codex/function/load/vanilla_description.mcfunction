@@ -32,10 +32,8 @@ data modify storage codex:archives root."minecraft:enchantment/blast_protection"
   title: {translate: "enchantment.minecraft.blast_protection", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.blast_protection.1", fallback: "Reduces damage from explosions"}, \
-    {translate: "codex.desc.enchantment.blast_protection.2", fallback: "by %1$s."}, \
-    {translate: "codex.desc.enchantment.blast_protection.3", fallback: "Reduces knockback from explosions"}, \
-    {translate: "codex.desc.enchantment.blast_protection.4", fallback: "by %2$s."} \
+    {translate: "codex.desc.enchantment.blast_protection.1", fallback: "Reduces explosion damage by %1$s."}, \
+    {translate: "codex.desc.enchantment.blast_protection.2", fallback: "Reduces explosion knockback by %2$s."} \
   ], \
   context_type: "enchantment", \
   insertions: [ \
@@ -64,8 +62,79 @@ data modify storage codex:archives root."minecraft:enchantment/channeling" set v
     {translate: "codex.desc.enchantment.channeling.3", fallback: "summons a lightning bolt."} \
   ] \
 }
+data modify storage codex:archives root."minecraft:enchantment/density" set value { \
+  title: {translate: "enchantment.minecraft.density", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.density.1", fallback: "Increases the damage of mace"}, \
+    {translate: "codex.desc.enchantment.density.2", fallback: "smashes by %1$s per block fallen."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["0.5", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5"], no_context_value: {translate: "codex.desc.enchantment.density.with.1", fallback: "0.5 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.density.with.1", fallback: "0.5 * lvl"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/depth_strider" set value { \
+  title: {translate: "enchantment.minecraft.depth_strider", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.depth_strider.1", fallback: "Increases underwater movement"}, \
+    {translate: "codex.desc.enchantment.depth_strider.2", fallback: "efficiency by %1$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["33.33%", "66.67%"], no_context_value: {translate: "codex.desc.enchantment.depth_strider.with.1", fallback: "33.33%% * lvl"}, out_of_bound_value: "100%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/efficiency" set value { \
+  title: {translate: "enchantment.minecraft.efficiency", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.efficiency.1", fallback: "Increases mining efficiency with"}, \
+    {translate: "codex.desc.enchantment.efficiency.2", fallback: "correct tool by %1$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["2", "5", "10", "17", "26", "37", "50", "65", "82", "101"], no_context_value: {translate: "codex.desc.enchantment.efficiency.with.1", fallback: "(lvl)² + 1"}, out_of_bound_value: {translate: "codex.desc.enchantment.efficiency.with.1", fallback: "(lvl)² + 1"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/feather_falling" set value { \
+  title: {translate: "enchantment.minecraft.feather_falling", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.feather_falling.1", fallback: "Reduces fall damage by %1$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["12%", "24%", "36%", "48%", "60%", "72%"], no_context_value: {translate: "codex.desc.enchantment.feather_falling.with.1", fallback: "12%% * lvl"}, out_of_bound_value: "80%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/fire_aspect" set value { \
+  title: {translate: "enchantment.minecraft.fire_aspect", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.fire_aspect.1", fallback: "Ignites the target for %1$s seconds."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["4", "8", "12", "16", "20", "24", "28", "32", "36", "40"], no_context_value: {translate: "codex.desc.enchantment.fire_aspect.with.1", fallback: "4 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.fire_aspect.with.1", fallback: "4 * lvl"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/fire_protection" set value { \
+  title: {translate: "enchantment.minecraft.fire_protection", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.fire_protection.1", fallback: "Reduces fire damage by %1$s."}, \
+    {translate: "codex.desc.enchantment.fire_protection.2", fallback: "Reduces burning time by %2$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["8%", "16%", "24%", "32%", "40%", "48%", "56%", "64%", "72%", "80%"], no_context_value: {translate: "codex.desc.enchantment.blast_protection.with.1", fallback: "8%% * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.fire_protection.with.1", fallback: "8%% * lvl"}, base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: ["15%", "30%", "45%", "60%", "75%", "90%"], no_context_value: {translate: "codex.desc.enchantment.fire_protection.with.2", fallback: "15%% * lvl"}, out_of_bound_value: "100%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
 data modify storage codex:archives root."minecraft:enchantment/sharpness" set value { \
-  title: {translate: "enchantment.minecraft.sharpness", color: "#cc88ff", "bold": true}, \
+  title: {translate: "enchantment.minecraft.sharpness", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
     {translate: "codex.desc.enchantment.sharpness.1", fallback: "Attack made against all targets"}, \
@@ -74,6 +143,24 @@ data modify storage codex:archives root."minecraft:enchantment/sharpness" set va
   context_type: "enchantment", \
   insertions: [ \
     {type: "lookup", values: ["1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5"], no_context_value: {translate: "codex.desc.enchantment.sharpness.with.1", fallback: "0.5 + (0.5 * lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.sharpness.with.1", fallback: "0.5 + (0.5 * lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+
+# 14680064 = 0xe00000
+data modify storage codex:archives root."minecraft:enchantment/binding_curse" set value { \
+  title: {translate: "enchantment.minecraft.binding_curse", color: "red", bold: true}, \
+  button_color: 14680064, \
+  details: [ \
+    {translate: "codex.desc.enchantment.binding_curse.1", fallback: "This item cannot be unequipped"}, \
+    {translate: "codex.desc.enchantment.binding_curse.2", fallback: "except through death dropping."} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/vanishing_curse" set value { \
+  title: {translate: "enchantment.minecraft.vanishing_curse", color: "red", bold: true}, \
+  button_color: 14680064, \
+  details: [ \
+    {translate: "codex.desc.enchantment.vanishing_curse.1", fallback: "This item disappears when"}, \
+    {translate: "codex.desc.enchantment.vanishing_curse.2", fallback: "dropped on death."} \
   ] \
 }
 
