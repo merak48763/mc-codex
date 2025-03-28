@@ -19,7 +19,7 @@ data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropod
     {translate: "codex.desc.enchantment.bane_of_arthropods.1", fallback: "Attack made against arthropods"}, \
     {translate: "codex.desc.enchantment.bane_of_arthropods.2", fallback: "deal %1$s additional damage,"}, \
     {translate: "codex.desc.enchantment.bane_of_arthropods.3", fallback: "and inflict %2$s for"}, \
-    {translate: "codex.desc.enchantment.bane_of_arthropods.4", fallback: "up to %3$s seconds."}, \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.4", fallback: "up to %3$s seconds."} \
   ], \
   context_type: "enchantment", \
   insertions: [ \
@@ -37,7 +37,7 @@ data modify storage codex:archives root."minecraft:enchantment/blast_protection"
   ], \
   context_type: "enchantment", \
   insertions: [ \
-    {type: "lookup", values: ["8%", "16%", "24%", "32%", "40%", "48%", "56%", "64%", "72%", "80%"], no_context_value: {translate: "codex.desc.enchantment.blast_protection.with.1", fallback: "8%% * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.blast_protection.with.1", fallback: "8%% * lvl"}, base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: ["8%", "16%", "24%", "32%", "40%", "48%", "56%", "64%", "72%"], no_context_value: {translate: "codex.desc.enchantment.blast_protection.with.1", fallback: "8%% * lvl"}, out_of_bound_value: "80%", base_style: {color: "#ff88ff"}}, \
     {type: "lookup", values: ["15%", "30%", "45%", "60%", "75%", "90%"], no_context_value: {translate: "codex.desc.enchantment.blast_protection.with.2", fallback: "15%% * lvl"}, out_of_bound_value: "100%", base_style: {color: "#ff88ff"}} \
   ] \
 }
@@ -129,8 +129,57 @@ data modify storage codex:archives root."minecraft:enchantment/fire_protection" 
   ], \
   context_type: "enchantment", \
   insertions: [ \
-    {type: "lookup", values: ["8%", "16%", "24%", "32%", "40%", "48%", "56%", "64%", "72%", "80%"], no_context_value: {translate: "codex.desc.enchantment.blast_protection.with.1", fallback: "8%% * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.fire_protection.with.1", fallback: "8%% * lvl"}, base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: ["8%", "16%", "24%", "32%", "40%", "48%", "56%", "64%", "72%"], no_context_value: {translate: "codex.desc.enchantment.fire_protection.with.1", fallback: "8%% * lvl"}, out_of_bound_value: "80%", base_style: {color: "#ff88ff"}}, \
     {type: "lookup", values: ["15%", "30%", "45%", "60%", "75%", "90%"], no_context_value: {translate: "codex.desc.enchantment.fire_protection.with.2", fallback: "15%% * lvl"}, out_of_bound_value: "100%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/flame" set value { \
+  title: {translate: "enchantment.minecraft.flame", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.flame.1", fallback: "Arrows from this weapon ignite"}, \
+    {translate: "codex.desc.enchantment.flame.2", fallback: "the target for 4 seconds."} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/fortune" set value { \
+  title: {translate: "enchantment.minecraft.fortune", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.fortune.1", fallback: "Increase the amount of some"}, \
+    {translate: "codex.desc.enchantment.fortune.2", fallback: "block drops."} \
+  ], \
+  context_type: "enchantment" \
+}
+data modify storage codex:archives root."minecraft:enchantment/frost_walker" set value { \
+  title: {translate: "enchantment.minecraft.frost_walker", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.frost_walker.1", fallback: "The wearer can walk on water,"}, \
+    {translate: "codex.desc.enchantment.frost_walker.2", fallback: "frosting water within %1$s blocks."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], no_context_value: {translate: "codex.desc.enchantment.frost_walker.with.1", fallback: "2 + lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.frost_walker.with.1", fallback: "2 + lvl"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/impaling" set value { \
+  title: {translate: "enchantment.minecraft.impaling", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.impaling.1", fallback: "Attack made against aquatic mobs"}, \
+    {translate: "codex.desc.enchantment.impaling.2", fallback: "deal %1$s additional damage."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["2.5", "5", "7.5", "10", "12.5", "15", "17.5", "20", "22.5", "25"], no_context_value: {translate: "codex.desc.enchantment.impaling.with.1", fallback: "2.5 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.impaling.with.1", fallback: "2.5 * lvl"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/infinity" set value { \
+  title: {translate: "enchantment.minecraft.infinity", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.infinity.1", fallback: "This weapon doesn't consume"}, \
+    {translate: "codex.desc.enchantment.infinity.2", fallback: "regular arrows."} \
   ] \
 }
 data modify storage codex:archives root."minecraft:enchantment/sharpness" set value { \
@@ -152,7 +201,7 @@ data modify storage codex:archives root."minecraft:enchantment/binding_curse" se
   button_color: 14680064, \
   details: [ \
     {translate: "codex.desc.enchantment.binding_curse.1", fallback: "This item cannot be unequipped"}, \
-    {translate: "codex.desc.enchantment.binding_curse.2", fallback: "except through death dropping."} \
+    {translate: "codex.desc.enchantment.binding_curse.2", fallback: "except through death drops."} \
   ] \
 }
 data modify storage codex:archives root."minecraft:enchantment/vanishing_curse" set value { \
