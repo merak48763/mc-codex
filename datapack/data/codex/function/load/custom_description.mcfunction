@@ -21,3 +21,10 @@ data modify storage codex:archives root."codex:keyword/damage_reduction" set val
     {translate: "codex.keyword.damage_reduction.1", fallback: "The value is capped at 80%%."} \
   ] \
 }
+data modify storage codex:archives root."codex:keyword/armor_unbreaking" set value { \
+  title: {translate: "codex.keyword.armor_unbreaking", fallback: "Unbreaking on Armor", color: "#ffbb88", bold: true}, \
+  details: [ \
+    {translate: "codex.keyword.armor_unbreaking.1", fallback: "The chance of not losing durability"}, \
+    {translate: "codex.keyword.armor_unbreaking.2", fallback: "is different from normal items."} \
+  ] \
+}

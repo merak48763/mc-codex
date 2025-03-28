@@ -398,6 +398,75 @@ data modify storage codex:archives root."minecraft:enchantment/soul_speed" set v
     {type: "lookup", values: ["40.5%", "51%", "61.5%", "72%", "82.5%", "93%", "103.5%", "114%", "124.5%", "135%"], no_context_value: {translate: "codex.desc.enchantment.soul_speed.with.1", fallback: "30%% + (10.5%% * lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.soul_speed.with.1", fallback: "30%% + (10.5%% * lvl)"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
+data modify storage codex:archives root."minecraft:enchantment/sweeping_edge" set value { \
+  title: {translate: "enchantment.minecraft.sweeping_edge", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.sweeping_edge.1", fallback: "Increases sweeping damage"}, \
+    {translate: "codex.desc.enchantment.sweeping_edge.2", fallback: "by %1$s of total attack damage."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["50%", "66.67%", "75%", "80%", "83.33%", "85.71%", "87.5%", "88.89%", "90%", "90.91%"], no_context_value: {translate: "codex.desc.enchantment.sweeping_edge.with.1", fallback: "lvl / (1 + lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.sweeping_edge.with.1", fallback: "lvl / (1 + lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/swift_sneak" set value { \
+  title: {translate: "enchantment.minecraft.swift_sneak", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.swift_sneak.1", fallback: "Increases crouch speed by %1$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["50%", "100%", "150%", "200%"], no_context_value: {translate: "codex.desc.enchantment.swift_sneak.with.1", fallback: "50%% * lvl"}, out_of_bound_value: "233.33%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/thorns" set value { \
+  title: {translate: "enchantment.minecraft.thorns", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.thorns.1", fallback: "When attacked, there is a %1$s"}, \
+    {translate: "codex.desc.enchantment.thorns.2", fallback: "chance to deal up to 5 damage"}, \
+    {translate: "codex.desc.enchantment.thorns.3", fallback: "back to the attacker."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["15%", "30%", "45%", "60%", "75%", "90%"], no_context_value: {translate: "codex.desc.enchantment.thorns.with.1", fallback: "15%% * lvl"}, out_of_bound_value: "100%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/unbreaking" set value { \
+  title: {translate: "enchantment.minecraft.unbreaking", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.unbreaking.1", fallback: "This item has a %1$s chance to not"}, \
+    {translate: "codex.desc.enchantment.unbreaking.2", fallback: "lose durability when it should."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["50%", "66.67%", "75%", "80%", "83.33%", "85.71%", "87.5%", "88.89%", "90%", "90.91%"], no_context_value: {translate: "codex.desc.enchantment.unbreaking.with.1", fallback: "lvl / (1 + lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.unbreaking.with.1", fallback: "lvl / (1 + lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/unbreaking/armor" set value { \
+  title: {translate: "enchantment.minecraft.unbreaking", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.unbreaking.1", fallback: "This item has a %1$s chance to not"}, \
+    {translate: "codex.desc.enchantment.unbreaking.2", fallback: "lose durability when it should."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["20%", "26.67%", "30%", "32%", "33.33%", "34.29%", "35%", "35.56%", "36%", "36.36%"], no_context_value: {translate: "codex.desc.enchantment.unbreaking.with.1_armor", fallback: "(lvl * 2) / (5 + (lvl * 5))"}, out_of_bound_value: {translate: "codex.desc.enchantment.unbreaking.with.1_armor", fallback: "(lvl * 2) / (5 + (lvl * 5))"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/wind_burst" set value { \
+  title: {translate: "enchantment.minecraft.wind_burst", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.wind_burst.1", fallback: "When performing falling attack,"}, \
+    {translate: "codex.desc.enchantment.wind_burst.2", fallback: "launches the user up."} \
+  ], \
+  context_type: "enchantment" \
+}
 
 # 14680064 = 0xe00000
 data modify storage codex:archives root."minecraft:enchantment/binding_curse" set value { \
