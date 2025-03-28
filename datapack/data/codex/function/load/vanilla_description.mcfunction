@@ -329,6 +329,27 @@ data modify storage codex:archives root."minecraft:enchantment/quick_charge" set
     ], no_context_value: {translate: "codex.desc.enchantment.quick_charge.with.2", fallback: "second(s)"}, out_of_bound_value: {translate: "codex.desc.enchantment.quick_charge.with.2_pl", fallback: "seconds"}} \
   ] \
 }
+data modify storage codex:archives root."minecraft:enchantment/respiration" set value { \
+  title: {translate: "enchantment.minecraft.respiration", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.respiration.1", fallback: "Increases underwater breathing"}, \
+    {translate: "codex.desc.enchantment.respiration.2", fallback: "time by around %1$s seconds."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["15", "30", "45", "60", "75", "90", "105", "120", "135", "150"], no_context_value: {translate: "codex.desc.enchantment.respiration.with.1", fallback: "15 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.respiration.with.1", fallback: "15 * lvl"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/riptide" set value { \
+  title: {translate: "enchantment.minecraft.riptide", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.riptide.1", fallback: "This Trident launches the user"}, \
+    {translate: "codex.desc.enchantment.riptide.2", fallback: "in water instead of throwing."} \
+  ], \
+  context_type: "enchantment" \
+}
 data modify storage codex:archives root."minecraft:enchantment/sharpness" set value { \
   title: {translate: "enchantment.minecraft.sharpness", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
@@ -339,6 +360,42 @@ data modify storage codex:archives root."minecraft:enchantment/sharpness" set va
   context_type: "enchantment", \
   insertions: [ \
     {type: "lookup", values: ["1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5"], no_context_value: {translate: "codex.desc.enchantment.sharpness.with.1", fallback: "0.5 + (0.5 * lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.sharpness.with.1", fallback: "0.5 + (0.5 * lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/silk_touch" set value { \
+  title: {translate: "enchantment.minecraft.silk_touch", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.silk_touch.1", fallback: "Mined blocks drop themselves"}, \
+    {translate: "codex.desc.enchantment.silk_touch.2", fallback: "instead of their normal drops."} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/smite" set value { \
+  title: {translate: "enchantment.minecraft.smite", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.smite.1", fallback: "Attack made against undead mobs"}, \
+    {translate: "codex.desc.enchantment.smite.2", fallback: "deal %1$s additional damage."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["2.5", "5", "7.5", "10", "12.5", "15", "17.5", "20", "22.5", "25"], no_context_value: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/soul_speed" set value { \
+  title: {translate: "enchantment.minecraft.soul_speed", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.soul_speed.1", fallback: "Negates the movement speed"}, \
+    {translate: "codex.desc.enchantment.soul_speed.2", fallback: "penalty of Soul Sand."}, \
+    {translate: "codex.desc.enchantment.soul_speed.3", fallback: "Increases movement speed on"}, \
+    {translate: "codex.desc.enchantment.soul_speed.4", fallback: "Soul Sand and Soul Soil by %1$s."}, \
+    {translate: "codex.desc.enchantment.soul_speed.5", fallback: "While active, this item randomly"}, \
+    {translate: "codex.desc.enchantment.soul_speed.6", fallback: "loses durability."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["40.5%", "51%", "61.5%", "72%", "82.5%", "93%", "103.5%", "114%", "124.5%", "135%"], no_context_value: {translate: "codex.desc.enchantment.soul_speed.with.1", fallback: "30%% + (10.5%% * lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.soul_speed.with.1", fallback: "30%% + (10.5%% * lvl)"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
 
