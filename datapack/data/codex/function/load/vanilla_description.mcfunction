@@ -1,3 +1,6 @@
+# Some languages have different plural rules
+# ...good luck
+
 # 11141375 = 0xaa00ff
 data modify storage codex:archives root."minecraft:enchantment/aqua_affinity" set value { \
   title: {translate: "enchantment.minecraft.aqua_affinity", color: "#cc88ff", bold: true}, \
@@ -249,19 +252,81 @@ data modify storage codex:archives root."minecraft:enchantment/multishot" set va
     {type: "text", value: {translate: "codex.desc.enchantment.multishot.with.1", fallback: "2", color: "#ff88ff"}} \
   ] \
 }
-# Some languages have different plural rules
-# ...good luck
 data modify storage codex:archives root."minecraft:enchantment/piercing" set value { \
   title: {translate: "enchantment.minecraft.piercing", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.piercing.1", fallback: "Arros from this weapon pierce"}, \
+    {translate: "codex.desc.enchantment.piercing.1", fallback: "Arrows from this weapon pierce"}, \
     {translate: "codex.desc.enchantment.piercing.2", fallback: "through mobs %1$s %2$s."} \
   ], \
   context_type: "enchantment", \
   insertions: [ \
     {type: "lookup", values: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], no_context_value: {translate: "codex.desc.enchantment.piercing.with.1", fallback: "lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.piercing.with.1", fallback: "lvl"}, base_style: {color: "#ff88ff"}}, \
     {type: "lookup", values: [{translate: "codex.desc.enchantment.piercing.with.2_sg", fallback: "time"}], no_context_value: {translate: "codex.desc.enchantment.piercing.with.2", fallback: "time(s)"}, out_of_bound_value: {translate: "codex.desc.enchantment.piercing.with.2_pl", fallback: "times"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/power" set value { \
+  title: {translate: "enchantment.minecraft.power", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.power.1", fallback: "Arrows from this weapon"}, \
+    {translate: "codex.desc.enchantment.power.2", fallback: "deal %1$s additional damage."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["50%", "75%", "100%", "125%", "150%", "175%", "200%", "225%", "250%", "275%"], no_context_value: {translate: "codex.desc.enchantment.power.with.1", fallback: "25%% + (25%% * lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.power.with.1", fallback: "25%% + (25%% * lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/projectile_protection" set value { \
+  title: {translate: "enchantment.minecraft.projectile_protection", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.projectile_protection.1", fallback: "Reduces projectile damage by %1$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["8%", "16%", "24%", "32%", "40%", "48%", "56%", "64%", "72%"], no_context_value: {translate: "codex.desc.enchantment.projectile_protection.with.1", fallback: "8%% * lvl"}, out_of_bound_value: "80%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/protection" set value { \
+  title: {translate: "enchantment.minecraft.protection", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.protection.1", fallback: "Reduces all damage by %1$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["4%", "8%", "12%", "16%", "20%", "24%", "28%", "32%", "36%", "40%", "44%", "48%", "52%", "56%", "60%", "64%", "68%", "72%", "76%"], no_context_value: {translate: "codex.desc.enchantment.protection.with.1", fallback: "4%% * lvl"}, out_of_bound_value: "80%", base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/punch" set value { \
+  title: {translate: "enchantment.minecraft.punch", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.punch.1", fallback: "Increases arrow knockback"}, \
+    {translate: "codex.desc.enchantment.punch.2", fallback: "by %1$s blocks."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["3", "6", "9", "12", "15", "18", "21", "24", "27", "30"], no_context_value: {translate: "codex.desc.enchantment.punch.with.1", fallback: "3 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.punch.with.1", fallback: "3 * lvl"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/quick_charge" set value { \
+  title: {translate: "enchantment.minecraft.quick_charge", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.quick_charge.1", fallback: "Decreases crossbow charging"}, \
+    {translate: "codex.desc.enchantment.quick_charge.2", fallback: "time by %1$s %2$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["0.25", "0.5", "0.75", "1"], no_context_value: {translate: "codex.desc.enchantment.quick_charge.with.1", fallback: "0.25 * lvl"}, out_of_bound_value: "1.25", base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: [ \
+      {translate: "codex.desc.enchantment.quick_charge.with.2_pl", fallback: "seconds"}, \
+      {translate: "codex.desc.enchantment.quick_charge.with.2_pl", fallback: "seconds"}, \
+      {translate: "codex.desc.enchantment.quick_charge.with.2_pl", fallback: "seconds"}, \
+      {translate: "codex.desc.enchantment.quick_charge.with.2_sg", fallback: "second"} \
+    ], no_context_value: {translate: "codex.desc.enchantment.quick_charge.with.2", fallback: "second(s)"}, out_of_bound_value: {translate: "codex.desc.enchantment.quick_charge.with.2_pl", fallback: "seconds"}} \
   ] \
 }
 data modify storage codex:archives root."minecraft:enchantment/sharpness" set value { \
@@ -299,8 +364,8 @@ data modify storage codex:archives root."minecraft:effect/slowness" set value { 
   title: {translate: "effect.minecraft.slowness", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
   details: [ \
-    {translate: "codex.desc.effect.slowness.1", fallback: "Reduces the afflicted's"}, \
-    {translate: "codex.desc.effect.slowness.2", fallback: "movement speed by %1$s."} \
+    {translate: "codex.desc.effect.slowness.1", fallback: "Reduces the afflicted's movement"}, \
+    {translate: "codex.desc.effect.slowness.2", fallback: "speed by %1$s."} \
   ], \
   context_type: "effect", \
   insertions: [ \
