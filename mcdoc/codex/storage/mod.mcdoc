@@ -27,5 +27,5 @@ struct CompoundDescriptionKey {
   /// Page ID of `codex:archives` storage
   id: #[id="codex:page"] string,
   /// Context number provided to the text
-  context_number?: int,
+  context_number?: int @ 0..,
 }
