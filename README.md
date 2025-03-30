@@ -18,6 +18,12 @@ Minecraft version: 1.21.5
 - Codex displays related keywords in the same page instead of creating additional pages for keywords.
 - Codex displays a more precise item name.
 
+# Mcdoc
+
+Mcdoc is a feature of VSCode [Spyglass extension](https://github.com/SpyglassMC/Spyglass).  
+If you're using the extension, you can copy `mcdoc/` folder to the root of your workspace.  
+It provides syntax highlighting and autocompletion of data structures provided by this pack.
+
 # API
 
 ## Define Descriptions
