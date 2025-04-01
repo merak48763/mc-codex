@@ -1,3 +1,6 @@
+# take item sound
+scoreboard players set #sound_type codex.var 2
+
 # glitch case
 execute if items entity @s contents *[bundle_contents~{items: {size: 0}}] \
   run return run item modify entity @s contents codex:empty_book
@@ -9,6 +12,9 @@ function codex:main/modify_book/load_book_data
 execute if items entity 24b09cde-0-0-0-2 contents *[custom_data~{codex: {type: "button"}}] \
   run return run item modify entity @s contents codex:empty_book
 
+# this item is probably untouched - no sound
+scoreboard players set #sound_type codex.var 0
+
 # detect item count
 execute store result score #item_count codex.var \
   run data get storage codex:internal root.book_item.item_stack.components."minecraft:bundle_contents"
@@ -18,6 +24,9 @@ execute store result score #entry_count codex.var \
 scoreboard players remove #item_count codex.var 1
 # this book is unchanged
 execute unless score #item_count codex.var < #entry_count codex.var run return 1
+
+# button press sound
+scoreboard players set #sound_type codex.var 3
 
 # change page
 execute if items entity 24b09cde-0-0-0-3 contents *[custom_data~{codex: {type: "button", action: "next_page"}}] \

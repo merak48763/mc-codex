@@ -1,7 +1,16 @@
-# trivial cases
+# too many item stacks
+# error sound
+scoreboard players set #sound_type codex.var 4
 execute if items entity @s contents *[bundle_contents~{items: {size: {min: 2}}}] \
   run return run item modify entity @s contents codex:too_many_item_state
+
+# item not touched
+# no sound
+scoreboard players set #sound_type codex.var 0
 execute if items entity @s contents *[bundle_contents~{items: {size: 0}}] run return 1
+
+# put item sound
+scoreboard players set #sound_type codex.var 1
 
 # load data
 function codex:main/modify_book/load_book_data
