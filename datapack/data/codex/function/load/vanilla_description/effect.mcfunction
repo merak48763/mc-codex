@@ -3,10 +3,8 @@ data modify storage codex:archives root."minecraft:effect/haste" set value { \
   title: {translate: "effect.minecraft.haste", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
   details: [ \
-    {translate: "codex.desc.effect.haste.1", fallback: "Increases the afflicted's attack"}, \
-    {translate: "codex.desc.effect.haste.2", fallback: "speed by %1$s."}, \
-    {translate: "codex.desc.effect.haste.3", fallback: "Increases the afflicted's mining"}, \
-    {translate: "codex.desc.effect.haste.4", fallback: "speed by %2$s."} \
+    {translate: "codex.desc.effect.haste.1", fallback: "Increases attack speed by %1$s."}, \
+    {translate: "codex.desc.effect.haste.2", fallback: "Increases mining speed by %2$s."} \
   ], \
   context_type: "effect", \
   insertions: [ \
@@ -18,10 +16,8 @@ data modify storage codex:archives root."minecraft:effect/mining_fatigue" set va
   title: {translate: "effect.minecraft.mining_fatigue", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
   details: [ \
-    {translate: "codex.desc.effect.mining_fatigue.1", fallback: "Decreases the afflicted's attack"}, \
-    {translate: "codex.desc.effect.mining_fatigue.2", fallback: "speed by %1$s."}, \
-    {translate: "codex.desc.effect.mining_fatigue.3", fallback: "Decreases the afflicted's mining"}, \
-    {translate: "codex.desc.effect.mining_fatigue.4", fallback: "speed by %2$s."} \
+    {translate: "codex.desc.effect.mining_fatigue.1", fallback: "Decreases attack speed by %1$s."}, \
+    {translate: "codex.desc.effect.mining_fatigue.2", fallback: "Decreases mining speed by %2$s."} \
   ], \
   context_type: "effect", \
   insertions: [ \
@@ -33,8 +29,7 @@ data modify storage codex:archives root."minecraft:effect/slowness" set value { 
   title: {translate: "effect.minecraft.slowness", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
   details: [ \
-    {translate: "codex.desc.effect.slowness.1", fallback: "Decreases the afflicted's movement"}, \
-    {translate: "codex.desc.effect.slowness.2", fallback: "speed by %1$s."} \
+    {translate: "codex.desc.effect.slowness.1", fallback: "Decreases movement speed by %1$s."}, \
   ], \
   context_type: "effect", \
   insertions: [ \
@@ -45,8 +40,7 @@ data modify storage codex:archives root."minecraft:effect/speed" set value { \
   title: {translate: "effect.minecraft.speed", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
   details: [ \
-    {translate: "codex.desc.effect.speed.1", fallback: "Increases the afflicted's movement"}, \
-    {translate: "codex.desc.effect.speed.2", fallback: "speed by %1$s."} \
+    {translate: "codex.desc.effect.speed.1", fallback: "Increases movement speed by %1$s."} \
   ], \
   context_type: "effect", \
   insertions: [ \
