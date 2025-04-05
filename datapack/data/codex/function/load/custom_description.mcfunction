@@ -40,3 +40,16 @@ data modify storage codex:archives root."codex:keyword/mining_speed_bonus" set v
     {type: "text", value: {translate: "effect.minecraft.conduit_power", color: "#8888ff"}} \
   ] \
 }
+
+# 42520 = 0x00aa00
+data modify storage codex:archives root."codex:item/turtle_shell" set value { \
+  title: {translate: "item.minecraft.turtle_helmet", color: "dark_green", bold: true}, \
+  button_color: 43520, \
+  details: [ \
+    {translate: "codex.item_keyword.turtle_shell.1", fallback: "Provides %1$s for 10"}, \
+    {translate: "codex.item_keyword.turtle_shell.2", fallback: "seconds when exposed to air."} \
+  ], \
+  insertions: [ \
+    {type: "text", value: {translate: "effect.minecraft.water_breathing", color: "#8888ff"}} \
+  ] \
+}
