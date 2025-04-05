@@ -414,11 +414,12 @@ data modify storage codex:archives root."minecraft:enchantment/swift_sneak" set 
   title: {translate: "enchantment.minecraft.swift_sneak", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.swift_sneak.1", fallback: "Increases crouch speed by %1$s."} \
+    {translate: "codex.desc.enchantment.swift_sneak.1", fallback: "Increases sneaking movement"}, \
+    {translate: "codex.desc.enchantment.swift_sneak.2", fallback: "efficiency by %1$s."} \
   ], \
   context_type: "enchantment", \
   insertions: [ \
-    {type: "lookup", values: ["50%", "100%", "150%", "200%"], no_context_value: {translate: "codex.desc.enchantment.swift_sneak.with.1", fallback: "50%% * lvl"}, out_of_bound_value: "233.33%", base_style: {color: "#ff88ff"}} \
+    {type: "lookup", values: ["15%", "30%", "45%", "60%"], no_context_value: {translate: "codex.desc.enchantment.swift_sneak.with.1", fallback: "15%% * lvl"}, out_of_bound_value: "70%", base_style: {color: "#ff88ff"}} \
   ] \
 }
 data modify storage codex:archives root."minecraft:enchantment/thorns" set value { \

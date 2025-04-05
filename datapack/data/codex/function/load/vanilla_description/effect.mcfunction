@@ -1,4 +1,23 @@
 # 5592575 = 0x5555ff
+data modify storage codex:archives root."minecraft:effect/bad_omen" set value { \
+  title: {translate: "effect.minecraft.bad_omen", color: "#8888ff", bold: true}, \
+  button_color: 5592575, \
+  details: [ \
+    {translate: "codex.desc.effect.bad_omen.1", fallback: "Transforms into 30 seconds long"}, \
+    {translate: "codex.desc.effect.bad_omen.2", fallback: "%1$s%2$s when entering a"}, \
+    {translate: "codex.desc.effect.bad_omen.3", fallback: "village without raid happening."}, \
+    {translate: "codex.desc.effect.bad_omen.4", fallback: "Transforms into %3$s minutes long"}, \
+    {translate: "codex.desc.effect.bad_omen.5", fallback: "%4$s when seen by a regular"}, \
+    {translate: "codex.desc.effect.bad_omen.6", fallback: "trial spawner."} \
+  ], \
+  context_type: "effect", \
+  insertions: [ \
+    {type: "text", value: {translate: "effect.minecraft.raid_omen", color: "#8888ff"}}, \
+    {type: "lookup", values: ["", [" ", {translate: "potion.potency.1"}], [" ", {translate: "potion.potency.2"}], [" ", {translate: "potion.potency.3"}], [" ", {translate: "potion.potency.4"}], [" ", {translate: "potion.potency.5"}]], no_context_value: {translate: "codex.desc.effect.bad_omen.with.2", fallback: " [lvl]"}, out_of_bound_value: {translate: "codex.desc.effect.bad_omen.with.2", fallback: " [lvl]"}, base_style: {color: "#8888ff"}}, \
+    {type: "lookup", values: ["15", "30", "45", "60", "75", "90"], no_context_value: {translate: "codex.desc.effect.bad_omen.with.4", fallback: "15 * lvl"}, out_of_bound_value: {translate: "codex.desc.effect.bad_omen.with.4", fallback: "15 * lvl"}, base_style: {color: "#ff88ff"}}, \
+    {type: "text", value: {translate: "effect.minecraft.trial_omen", color: "#8888ff"}} \
+  ] \
+}
 data modify storage codex:archives root."minecraft:effect/blindness" set value { \
   title: {translate: "effect.minecraft.blindness", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
@@ -28,12 +47,21 @@ data modify storage codex:archives root."minecraft:effect/haste" set value { \
     {type: "lookup", values: ["20%", "40%", "60%", "80%", "100%", "120%"], no_context_value: {translate: "codex.desc.effect.haste.with.2", fallback: "20%% * lvl"}, out_of_bound_value: {translate: "codex.desc.effect.haste.with.2", fallback: "20%% * lvl"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
+data modify storage codex:archives root."minecraft:effect/hero_of_the_village" set value { \
+  title: {translate: "effect.minecraft.hero_of_the_village", color: "#8888ff", "bold": true}, \
+  button_color: 5592575, \
+  details: [ \
+    {translate: "codex.desc.effect.hero_of_the_village.1", fallback: "Receives gifts and discounts from"}, \
+    {translate: "codex.desc.effect.hero_of_the_village.2", fallback: "villagers."} \
+  ], \
+  context_type: "effect" \
+}
 data modify storage codex:archives root."minecraft:effect/instant_damage" set value { \
   title: {translate: "effect.minecraft.instant_damage", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
   details: [ \
     {translate: "codex.desc.effect.instant_damage.1", fallback: "Inflicts %1$s magic damage."}, \
-    {translate: "codex.desc.effect.instant_damage.2", fallback: "If the afflicted is undead mob,"}, \
+    {translate: "codex.desc.effect.instant_damage.2", fallback: "If the affected is undead mob,"}, \
     {translate: "codex.desc.effect.instant_damage.3", fallback: "heals %2$s HP instead."} \
   ], \
   context_type: "effect", \
@@ -47,7 +75,7 @@ data modify storage codex:archives root."minecraft:effect/instant_health" set va
   button_color: 5592575, \
   details: [ \
     {translate: "codex.desc.effect.instant_health.1", fallback: "Heals %1$s HP."}, \
-    {translate: "codex.desc.effect.instant_health.2", fallback: "If the afflicted is undead mob,"}, \
+    {translate: "codex.desc.effect.instant_health.2", fallback: "If the affected is undead mob,"}, \
     {translate: "codex.desc.effect.instant_health.3", fallback: "inflicts %2$s magic damage instead."} \
   ], \
   context_type: "effect", \
@@ -56,6 +84,9 @@ data modify storage codex:archives root."minecraft:effect/instant_health" set va
     {type: "lookup", values: ["6", "12", "24", "48", "96", "192"], no_context_value: {translate: "codex.desc.effect.instant_health.with.2", fallback: "2 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_health.with.2", fallback: "2 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
+# MC-279819: Mining Fatigue III+ has inconsistent mining speed penalty
+# 97.3% -> 99.73%
+# 99.19% -> 99.919%
 data modify storage codex:archives root."minecraft:effect/mining_fatigue" set value { \
   title: {translate: "effect.minecraft.mining_fatigue", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
@@ -66,7 +97,7 @@ data modify storage codex:archives root."minecraft:effect/mining_fatigue" set va
   context_type: "effect", \
   insertions: [ \
     {type: "lookup", values: ["10%", "20%", "30%", "40%", "50%", "60%"], no_context_value: {translate: "codex.desc.effect.mining_fatigue.with.1", fallback: "10%% * lvl"}, out_of_bound_value: {translate: "codex.desc.effect.mining_fatigue.with.1", fallback: "10%% * lvl"}, base_style: {color: "#ff88ff"}}, \
-    {type: "lookup", values: ["70%", "91%", "97.3%"], no_context_value: {translate: "codex.desc.effect.mining_fatigue.with.2", fallback: "20%% * lvl"}, out_of_bound_value: "99.19%", base_style: {color: "#ff88ff"}} \
+    {type: "lookup", values: ["70%", "91%", "99.73%"], no_context_value: {translate: "codex.desc.effect.mining_fatigue.with.2", fallback: "20%% * lvl"}, out_of_bound_value: "99.92%", base_style: {color: "#ff88ff"}} \
   ] \
 }
 data modify storage codex:archives root."minecraft:effect/nausea" set value { \

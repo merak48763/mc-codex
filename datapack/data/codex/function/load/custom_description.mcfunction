@@ -28,3 +28,15 @@ data modify storage codex:archives root."codex:keyword/armor_unbreaking" set val
     {translate: "codex.keyword.armor_unbreaking.2", fallback: "is different from normal items."} \
   ] \
 }
+data modify storage codex:archives root."codex:keyword/mining_speed_bonus" set value { \
+  title: {translate: "codex.keyword.mining_speed_bonus", fallback: "Mining Speed Bonus", color: "#ffbb88", bold: true}, \
+  details: [ \
+    {translate: "codex.keyword.mining_speed_bonus.1", fallback: "The mining speed bonuses from"}, \
+    {translate: "codex.keyword.mining_speed_bonus.2", fallback: "%1$s and %2$s don't"}, \
+    {translate: "codex.keyword.mining_speed_bonus.3", fallback: "stack."} \
+  ], \
+  insertions: [ \
+    {type: "text", value: {translate: "effect.minecraft.haste", color: "#8888ff"}}, \
+    {type: "text", value: {translate: "effect.minecraft.conduit_power", color: "#8888ff"}} \
+  ] \
+}
