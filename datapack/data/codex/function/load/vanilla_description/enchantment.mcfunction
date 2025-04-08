@@ -459,6 +459,21 @@ data modify storage codex:archives root."minecraft:enchantment/unbreaking/armor"
     {type: "lookup", values: ["20%", "26.67%", "30%", "32%", "33.33%", "34.29%", "35%", "35.56%", "36%", "36.36%"], no_context_value: {translate: "codex.desc.enchantment.unbreaking.with.1_armor", fallback: "(lvl * 2) / (5 + (lvl * 5))"}, out_of_bound_value: {translate: "codex.desc.enchantment.unbreaking.with.1_armor", fallback: "(lvl * 2) / (5 + (lvl * 5))"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
+data modify storage codex:archives root."minecraft:enchantment/unbreaking/general" set value { \
+  title: {translate: "enchantment.minecraft.unbreaking", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.unbreaking.general.1", fallback: "This item has a chance to not lose"}, \
+    {translate: "codex.desc.enchantment.unbreaking.general.2", fallback: "durability when it should."}, \
+    {translate: "codex.desc.enchantment.unbreaking.general.3", fallback: "◆ Chance on armor: %1$s"}, \
+    {translate: "codex.desc.enchantment.unbreaking.general.4", fallback: "◆ Chance on other items: %2$s"} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["20%", "26.67%", "30%", "32%", "33.33%", "34.29%", "35%", "35.56%", "36%", "36.36%"], no_context_value: {translate: "codex.desc.enchantment.unbreaking.with.1_armor", fallback: "(lvl * 2) / (5 + (lvl * 5))"}, out_of_bound_value: {translate: "codex.desc.enchantment.unbreaking.with.1_armor", fallback: "(lvl * 2) / (5 + (lvl * 5))"}, base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: ["50%", "66.67%", "75%", "80%", "83.33%", "85.71%", "87.5%", "88.89%", "90%", "90.91%"], no_context_value: {translate: "codex.desc.enchantment.unbreaking.with.1", fallback: "lvl / (1 + lvl)"}, out_of_bound_value: {translate: "codex.desc.enchantment.unbreaking.with.1", fallback: "lvl / (1 + lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
 data modify storage codex:archives root."minecraft:enchantment/wind_burst" set value { \
   title: {translate: "enchantment.minecraft.wind_burst", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \

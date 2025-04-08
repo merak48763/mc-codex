@@ -41,6 +41,15 @@ data modify storage codex:archives root."codex:keyword/mining_speed_bonus" set v
   ] \
 }
 
+# 16711935 = 0xff00ff
+data modify storage codex:archives root."codex:item/enchanted_book" set value { \
+  title: {translate: "item.minecraft.enchanted_book", color: "#ff55ff", bold: true}, \
+  button_color: 16711935, \
+  details: [ \
+    {translate: "codex.item_keyword.enchanted_book.1", fallback: "Enchantments must be applied to"}, \
+    {translate: "codex.item_keyword.enchanted_book.2", fallback: "proper items to work."} \
+  ] \
+}
 # 42520 = 0x00aa00
 data modify storage codex:archives root."codex:item/turtle_shell" set value { \
   title: {translate: "item.minecraft.turtle_helmet", color: "dark_green", bold: true}, \

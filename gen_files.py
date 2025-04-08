@@ -89,9 +89,17 @@ def describe_enchantment():
       file.write("# generated function\n")
       for ench in enchantments:
         file.write(f'execute if items entity @s contents *[enchantments~[{{enchantments: "{ench}"}}]] run function codex:event_handler/describe_enchantment/{ench}\n')
+    with open("datapack/data/codex/function/event_handler/describe_stored_enchantment.mcfunction", "w") as file:
+      file.write("# generated function\n")
+      for ench in enchantments:
+        file.write(f'execute if items entity @s contents *[stored_enchantments~[{{enchantments: "{ench}"}}]] run function codex:event_handler/describe_stored_enchantment/{ench}\n')
   def create_subfunctions():
     for ench in enchantments:
       filename = Path(f"datapack/data/codex/function/event_handler/describe_enchantment/{ench}.mcfunction")
+      if not filename.is_file():
+        with open(filename, "w") as file:
+          file.write("\n")
+      filename = Path(f"datapack/data/codex/function/event_handler/describe_stored_enchantment/{ench}.mcfunction")
       if not filename.is_file():
         with open(filename, "w") as file:
           file.write("\n")
