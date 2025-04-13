@@ -31,7 +31,7 @@ data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropod
   title: {translate: "enchantment.minecraft.bane_of_arthropods", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.bane_of_arthropods.1", fallback: "Attack made against arthropods"}, \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.1", fallback: "Attacks made against arthropods"}, \
     {translate: "codex.desc.enchantment.bane_of_arthropods.2", fallback: "deal %1$s additional damage,"}, \
     {translate: "codex.desc.enchantment.bane_of_arthropods.3", fallback: "and inflict %2$s for"}, \
     {translate: "codex.desc.enchantment.bane_of_arthropods.4", fallback: "up to %3$s seconds."} \
@@ -60,7 +60,7 @@ data modify storage codex:archives root."minecraft:enchantment/breach" set value
   title: {translate: "enchantment.minecraft.breach", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.breach.1", fallback: "Attack made by this item bypasses"}, \
+    {translate: "codex.desc.enchantment.breach.1", fallback: "Attacks made by this item bypass"}, \
     {translate: "codex.desc.enchantment.breach.2", fallback: "%1$s of armor effectiveness."} \
   ], \
   context_type: "enchantment", \
@@ -181,7 +181,7 @@ data modify storage codex:archives root."minecraft:enchantment/impaling" set val
   title: {translate: "enchantment.minecraft.impaling", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.impaling.1", fallback: "Attack made against aquatic mobs"}, \
+    {translate: "codex.desc.enchantment.impaling.1", fallback: "Attacks made against aquatic mobs"}, \
     {translate: "codex.desc.enchantment.impaling.2", fallback: "deal %1$s additional damage."} \
   ], \
   context_type: "enchantment", \
@@ -377,7 +377,7 @@ data modify storage codex:archives root."minecraft:enchantment/sharpness" set va
   title: {translate: "enchantment.minecraft.sharpness", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.sharpness.1", fallback: "Attack made against all targets"}, \
+    {translate: "codex.desc.enchantment.sharpness.1", fallback: "Attacks made against all targets"}, \
     {translate: "codex.desc.enchantment.sharpness.2", fallback: "deal %1$s additional damage."} \
   ], \
   context_type: "enchantment", \
@@ -397,7 +397,7 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
   title: {translate: "enchantment.minecraft.smite", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.smite.1", fallback: "Attack made against undead mobs"}, \
+    {translate: "codex.desc.enchantment.smite.1", fallback: "Attacks made against undead mobs"}, \
     {translate: "codex.desc.enchantment.smite.2", fallback: "deal %1$s additional damage."} \
   ], \
   context_type: "enchantment", \
