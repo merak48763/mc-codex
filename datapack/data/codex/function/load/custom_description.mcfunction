@@ -67,6 +67,27 @@ data modify storage codex:archives root."codex:item/enchanted_book" set value { 
     {translate: "codex.item_keyword.enchanted_book.2", fallback: "proper items to work."} \
   ] \
 }
+# 15658581 = 0xeeee55
+data modify storage codex:archives root."codex:item/spectral_arrow" set value { \
+  title: {translate: "item.minecraft.spectral_arrow", color: "gold", bold: true}, \
+  button_color: 16755285, \
+  details: [ \
+    {translate: "codex.item_keyword.spectral_arrow.1", fallback: "Inflicts %1$s for 10 seconds"}, \
+    {translate: "codex.item_keyword.spectral_arrow.2", fallback: "after hitting the target."} \
+  ], \
+  insertions: [ \
+    {type: "text", value: {translate: "effect.minecraft.glowing", color: "#8888ff"}} \
+  ] \
+}
+# 255 = 0x0000ff
+data modify storage codex:archives root."codex:item/tipped_arrow" set value { \
+  title: {translate: "item.minecraft.tipped_arrow", color: "blue", bold: true}, \
+  button_color: 255, \
+  details: [ \
+    {translate: "codex.item_keyword.tipped_arrow.1", fallback: "Inflicts stored potion effect after"}, \
+    {translate: "codex.item_keyword.tipped_arrow.2", fallback: "hitting the target."} \
+  ] \
+}
 # 42520 = 0x00aa00
 data modify storage codex:archives root."codex:item/turtle_shell" set value { \
   title: {translate: "item.minecraft.turtle_helmet", color: "dark_green", bold: true}, \

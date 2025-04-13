@@ -33,8 +33,8 @@ data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropod
   details: [ \
     {translate: "codex.desc.enchantment.bane_of_arthropods.1", fallback: "Attacks made against arthropods"}, \
     {translate: "codex.desc.enchantment.bane_of_arthropods.2", fallback: "deal %1$s additional damage,"}, \
-    {translate: "codex.desc.enchantment.bane_of_arthropods.3", fallback: "and inflict %2$s for"}, \
-    {translate: "codex.desc.enchantment.bane_of_arthropods.4", fallback: "up to %3$s seconds."} \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.3", fallback: "and inflict %2$s for up to"}, \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.4", fallback: "%3$s seconds."} \
   ], \
   context_type: "enchantment", \
   insertions: [ \
