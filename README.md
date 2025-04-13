@@ -18,6 +18,14 @@ Minecraft version: 1.21.5
 - Codex displays related keywords in the same page instead of creating additional pages for keywords.
 - Codex displays a more precise item name.
 
+# Showcases
+
+![Unbreaking III on an Iron Helmet](readme_images/showcase_1.png)
+
+![Arrow of Slowness](readme_images/showcase_2.png)
+
+![Mending on a Shield with green background and black Creeper pattern](readme_images/showcase_3.png)
+
 # Mcdoc
 
 Mcdoc is a feature of VSCode [Spyglass extension](https://github.com/SpyglassMC/Spyglass).  
