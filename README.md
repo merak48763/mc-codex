@@ -20,11 +20,11 @@ Minecraft version: 1.21.5
 
 # Showcases
 
-![Unbreaking III on an Iron Helmet](readme_images/showcase_1.png)
+<img src="readme_images/showcase_1.png" alt="Unbreaking III on an Iron Helmet" width="600">
 
-![Arrow of Slowness](readme_images/showcase_2.png)
+<img src="readme_images/showcase_2.png" alt="Arrow of Slowness" width="600">
 
-![Mending on a Shield with green background and black Creeper pattern](readme_images/showcase_3.png)
+<img src="readme_images/showcase_3.png" alt="Mending on a Shield with green background and black Creeper pattern" width="600">
 
 # Mcdoc
 
