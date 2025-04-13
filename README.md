@@ -79,7 +79,7 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
   title: {translate: "enchantment.minecraft.smite", color: "#cc88ff", bold: true}, \
   button_color: 0xaa00ff, \
   details: [ \
-    {translate: "codex.desc.enchantment.smite.1", fallback: "Attack made against undead mobs"}, \
+    {translate: "codex.desc.enchantment.smite.1", fallback: "Attacks made against undead mobs"}, \
     {translate: "codex.desc.enchantment.smite.2", fallback: "deal %1$s additional damage."} \
   ], \
   context_type: "enchantment", \
