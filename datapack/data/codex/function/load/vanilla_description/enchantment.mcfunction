@@ -12,7 +12,19 @@ data modify storage codex:archives root."minecraft:enchantment/aqua_affinity" se
   ], \
   context_type: "none", \
   insertions: [ \
-    {type: "text", value: {translate: "codex.desc.enchantment.aqua_affinity.with.1", fallback: "400%%", color: "#ff88ff"}} \
+    {type: "text", value: {text: "400%", color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/aqua_affinity/general" set value { \
+  title: {translate: "enchantment.minecraft.aqua_affinity", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.aqua_affinity.general.1", fallback: "Increases underwater mining speed"}, \
+    {translate: "codex.desc.enchantment.aqua_affinity.general.2", fallback: "by %1$s."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["400%", "800%", "1200%", "1600%", "2000%", "2400%", "2800%", "3200%", "3600%", "4000%"], no_context_value: {translate: "codex.desc.enchantment.aqua_affinity.general.with.1", fallback: "400%% * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.aqua_affinity.general.with.1", fallback: "400%% * lvl"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
 data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropods" set value { \
@@ -249,7 +261,18 @@ data modify storage codex:archives root."minecraft:enchantment/multishot" set va
   ], \
   context_type: "none", \
   insertions: [ \
-    {type: "text", value: {translate: "codex.desc.enchantment.multishot.with.1", fallback: "2", color: "#ff88ff"}} \
+    {type: "text", value: {text: "2", color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:enchantment/multishot/general" set value { \
+  title: {translate: "enchantment.minecraft.multishot", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.multishot.1", fallback: "Fires %1$s extra projectiles."} \
+  ], \
+  context_type: "enchantment", \
+  insertions: [ \
+    {type: "lookup", values: ["2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], no_context_value: {translate: "codex.desc.enchantment.multishot.with.1", fallback: "2 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.multishot.with.1", fallback: "2 * lvl"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
 data modify storage codex:archives root."minecraft:enchantment/piercing" set value { \
