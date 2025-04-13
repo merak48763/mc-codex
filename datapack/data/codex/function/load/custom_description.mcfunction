@@ -40,6 +40,23 @@ data modify storage codex:archives root."codex:keyword/mining_speed_bonus" set v
     {type: "text", value: {translate: "effect.minecraft.conduit_power", color: "#8888ff"}} \
   ] \
 }
+data modify storage codex:archives root."codex:keyword/lingering_potion" set value { \
+  title: {translate: "item.minecraft.lingering_potion", color: "#88ffff", bold: true}, \
+  details: [ \
+    {translate: "codex.keyword.lingering_potion.1", fallback: "Instantaneous effect potency is"}, \
+    {translate: "codex.keyword.lingering_potion.2", fallback: "halved on lingering potions."} \
+  ] \
+}
+data modify storage codex:archives root."codex:keyword/bad_omen_addition" set value { \
+  title: {translate: "codex.keyword.bad_omen_addition", fallback: "Transformed Effects", color: "#8c00ff", bold: true}, \
+  button_color: 5111949, \
+  details: [ \
+    {translate: "codex.keyword.bad_omen_addition.1", fallback: "Effects transformed from %1$s."} \
+  ], \
+  insertions: [ \
+    {type: "text", value: {translate: "effect.minecraft.bad_omen", color: "#8888ff"}} \
+  ] \
+}
 
 # 16711935 = 0xff00ff
 data modify storage codex:archives root."codex:item/enchanted_book" set value { \

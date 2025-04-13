@@ -22,7 +22,7 @@ def iterate_slot_function():
     for slot in slots:
       file.write(f'execute if items entity @s {slot} *[custom_data~{{codex: {{type: "book"}}}}] run function codex:main/update_book {{slot: "{slot}"}}\n')
 
-def potion_check():
+def describe_potion():
   # TODO: use datagen file to create the list
   potion_effects = [
     "water",
@@ -67,6 +67,7 @@ def potion_check():
     "turtle_master": ["long", "strong"],
     "slow_falling": ["long"],
   }
+  no_effect_potions = set(["water", "mundane", "thick", "awkward"])
   def potion_tags():
     for effect, variants in potion_with_variants.items():
       with open(f"datapack/data/codex/tags/potion/{effect}.json", "w") as file:
@@ -78,8 +79,26 @@ def potion_check():
       for effect in potion_effects:
         effect_predicate = f"#codex:{effect}" if effect in potion_with_variants else effect
         file.write(f'execute if items entity @s contents *[potion_contents~"{effect_predicate}"] run return run data modify storage codex:internal root.macro.effect set value "{effect}"\n')
+  def event_handler_function():
+    with open("datapack/data/codex/function/event_handler/describe_potion.mcfunction", "w") as file:
+      file.write("# generated function\n")
+      for effect in potion_effects:
+        if effect in no_effect_potions:
+          continue
+        effect_predicate = f"#codex:{effect}" if effect in potion_with_variants else effect
+        file.write(f'execute if items entity @s contents *[potion_contents~"{effect_predicate}"] run return run function codex:event_handler/describe_potion/{effect}\n')
+  def create_subfunctions():
+    for effect in potion_effects:
+      if effect in no_effect_potions:
+        continue
+      filepath = Path(f"datapack/data/codex/function/event_handler/describe_potion/{effect}.mcfunction")
+      if not filepath.is_file():
+        with open(filepath, "w") as file:
+          file.write("\n")
   potion_tags()
   potion_name_function()
+  event_handler_function()
+  create_subfunctions()
 
 def describe_enchantment():
   with open(f"mcdata/{VERSION_NAME}-tag-tooltip_order.json") as file:
@@ -95,13 +114,13 @@ def describe_enchantment():
         file.write(f'execute if items entity @s contents *[stored_enchantments~[{{enchantments: "{ench}"}}]] run function codex:event_handler/describe_stored_enchantment/{ench}\n')
   def create_subfunctions():
     for ench in enchantments:
-      filename = Path(f"datapack/data/codex/function/event_handler/describe_enchantment/{ench}.mcfunction")
-      if not filename.is_file():
-        with open(filename, "w") as file:
+      filepath = Path(f"datapack/data/codex/function/event_handler/describe_enchantment/{ench}.mcfunction")
+      if not filepath.is_file():
+        with open(filepath, "w") as file:
           file.write("\n")
-      filename = Path(f"datapack/data/codex/function/event_handler/describe_stored_enchantment/{ench}.mcfunction")
-      if not filename.is_file():
-        with open(filename, "w") as file:
+      filepath = Path(f"datapack/data/codex/function/event_handler/describe_stored_enchantment/{ench}.mcfunction")
+      if not filepath.is_file():
+        with open(filepath, "w") as file:
           file.write("\n")
   event_hander_function()
   create_subfunctions()
@@ -109,5 +128,5 @@ def describe_enchantment():
 if __name__ == "__main__":
   block_item_tag()
   iterate_slot_function()
-  potion_check()
+  describe_potion()
   describe_enchantment()

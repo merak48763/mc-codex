@@ -150,6 +150,20 @@ data modify storage codex:archives root."minecraft:effect/instant_damage" set va
     {type: "lookup", values: ["4", "8", "16", "32", "64", "128"], no_context_value: {translate: "codex.desc.effect.instant_damage.with.2", fallback: "2 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_damage.with.2", fallback: "2 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
+data modify storage codex:archives root."minecraft:effect/instant_damage/half" set value { \
+  title: {translate: "effect.minecraft.instant_damage", color: "#8888ff", bold: true}, \
+  button_color: 5592575, \
+  details: [ \
+    {translate: "codex.desc.effect.instant_damage.1", fallback: "Inflicts %1$s magic damage."}, \
+    {translate: "codex.desc.effect.instant_damage.2", fallback: "If the affected is undead mob,"}, \
+    {translate: "codex.desc.effect.instant_damage.3", fallback: "heals %2$s HP instead."} \
+  ], \
+  context_type: "effect", \
+  insertions: [ \
+    {type: "lookup", values: ["3", "6", "12", "24", "48", "96"], no_context_value: {translate: "codex.desc.effect.instant_damage.half.with.1", fallback: "1.5 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_damage.half.with.1", fallback: "1.5 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: ["2", "4", "8", "16", "32", "64"], no_context_value: {translate: "codex.desc.effect.instant_damage.half.with.2", fallback: "1 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_damage.half.with.2", fallback: "1 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
 data modify storage codex:archives root."minecraft:effect/instant_health" set value { \
   title: {translate: "effect.minecraft.instant_health", color: "#8888ff", bold: true}, \
   button_color: 5592575, \
@@ -160,8 +174,22 @@ data modify storage codex:archives root."minecraft:effect/instant_health" set va
   ], \
   context_type: "effect", \
   insertions: [ \
-    {type: "lookup", values: ["4", "8", "16", "32", "64", "128"], no_context_value: {translate: "codex.desc.effect.instant_health.with.1", fallback: "3 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_health.with.1", fallback: "3 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}}, \
-    {type: "lookup", values: ["6", "12", "24", "48", "96", "192"], no_context_value: {translate: "codex.desc.effect.instant_health.with.2", fallback: "2 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_health.with.2", fallback: "2 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}} \
+    {type: "lookup", values: ["4", "8", "16", "32", "64", "128"], no_context_value: {translate: "codex.desc.effect.instant_health.with.1", fallback: "2 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_health.with.1", fallback: "2 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: ["6", "12", "24", "48", "96", "192"], no_context_value: {translate: "codex.desc.effect.instant_health.with.2", fallback: "3 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_health.with.2", fallback: "3 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}} \
+  ] \
+}
+data modify storage codex:archives root."minecraft:effect/instant_health/half" set value { \
+  title: {translate: "effect.minecraft.instant_health", color: "#8888ff", bold: true}, \
+  button_color: 5592575, \
+  details: [ \
+    {translate: "codex.desc.effect.instant_health.1", fallback: "Heals %1$s HP."}, \
+    {translate: "codex.desc.effect.instant_health.2", fallback: "If the affected is undead mob,"}, \
+    {translate: "codex.desc.effect.instant_health.3", fallback: "inflicts %2$s magic damage instead."} \
+  ], \
+  context_type: "effect", \
+  insertions: [ \
+    {type: "lookup", values: ["2", "4", "8", "16", "32", "64"], no_context_value: {translate: "codex.desc.effect.instant_health.half.with.1", fallback: "1 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_health.half.with.1", fallback: "1 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}}, \
+    {type: "lookup", values: ["3", "6", "12", "24", "48", "96"], no_context_value: {translate: "codex.desc.effect.instant_health.half.with.2", fallback: "1.5 * (2 ^ lvl)"}, out_of_bound_value: {translate: "codex.desc.effect.instant_health.half.with.2", fallback: "1.5 * (2 ^ lvl)"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
 data modify storage codex:archives root."minecraft:effect/invisibility" set value { \
