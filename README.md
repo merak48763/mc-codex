@@ -45,7 +45,7 @@ Descriptions are defined under the `root` tag in command storage `codex:archives
 
 - `<A namespaced ID>`: A description
   - `title`: **\[Text component\]** The title of the description.
-  - `button_color`: **\[Optional int\]** The color of GUI element, which uses `filled_map` item model. Defaults to `0` (black).
+  - `button_color`: **\[Optional int\]** The color of GUI element, which uses `filled_map` item model. Defaults to `4603950` (the fallback value defined in `filled_map` item model).
   - `details`: **\[List of text components\]** The description lines. Like the `lore` component, `\n` is not treated as newline.
   - `base_style`: **\[Optional text style\]** The common style applied to every line of `details`. Defaults to `{color: "#e0e0e0", italic: false}`.
   - `context_type`: **\[Optional string\]** One of `none`, `enchantment` and `effect`. Determines how to interpret the *context number*. Defaults to `none`.
@@ -159,9 +159,12 @@ The resource pack provides the following features:
 
 ## Customize button texture
 
-- The button uses `filled_map` item model.
-- The buttons have special custom data, which can be isolated by `custom_data` item subpredicate.
-- The archive ID is passed to `custom_model_data.strings[0]`.
+- Regular buttons use `filled_map` item model.
+  - The archive ID is passed to `custom_model_data.strings[0]`.
+- "Next page" button uses `feather` item model.
+- "No information" button uses `barrier` item model.
+- All buttons have special custom data, which can be isolated by `custom_data` item subpredicate.
+  - The custom data test (in command form) is `custom_data~{codex: {type: "button"}}`.
 
 ### Example
 

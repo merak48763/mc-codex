@@ -5,7 +5,7 @@ execute if data storage codex:internal root.transforms."codex:bake_single_entry"
   run return 1
 
 # fallback
-data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive set value {\
+data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive set value { \
   title: {translate: "codex.book.page_dne.1", fallback: "ERROR", color: "dark_red", bold: true}, \
   button_color: 16711680, \
   details: [ \
