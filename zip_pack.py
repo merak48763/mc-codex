@@ -12,7 +12,7 @@ def zipdir(path, zip_filename, *, is_pack=True):
         zipfile.write(os.path.join(root, file), relpath)
     if is_pack:
       zipfile.write("LICENSE", "LICENSE")
-      zipfile.write("README.md", "README.md")
+      zipfile.write("packed_readme.md", "README.md")
 
 zipdir("datapack", "dist/mc-codex-dp.zip")
 zipdir("resourcepack", "dist/mc-codex-rp.zip")
