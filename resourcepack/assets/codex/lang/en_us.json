@@ -162,6 +162,8 @@
   "codex.desc.enchantment.thorns.1": "When attacked, there is a %1$s",
   "codex.desc.enchantment.thorns.2": "chance to deal up to 5 damage",
   "codex.desc.enchantment.thorns.3": "back to the attacker.",
+  "codex.desc.enchantment.thorns.4": "After triggering the damage, this",
+  "codex.desc.enchantment.thorns.5": "item loses 2 durability points.",
   "codex.desc.enchantment.thorns.with.1": "15%% * lvl",
   "codex.desc.enchantment.unbreaking.1": "This item has a %1$s chance to not",
   "codex.desc.enchantment.unbreaking.2": "lose durability when it should.",

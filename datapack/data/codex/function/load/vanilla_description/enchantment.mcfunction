@@ -451,7 +451,9 @@ data modify storage codex:archives root."minecraft:enchantment/thorns" set value
   details: [ \
     {translate: "codex.desc.enchantment.thorns.1", fallback: "When attacked, there is a %1$s"}, \
     {translate: "codex.desc.enchantment.thorns.2", fallback: "chance to deal up to 5 damage"}, \
-    {translate: "codex.desc.enchantment.thorns.3", fallback: "back to the attacker."} \
+    {translate: "codex.desc.enchantment.thorns.3", fallback: "back to the attacker."}, \
+    {translate: "codex.desc.enchantment.thorns.4", fallback: "After triggering the damage, this"}, \
+    {translate: "codex.desc.enchantment.thorns.5", fallback: "item loses 2 durability points."} \
   ], \
   context_type: "enchantment", \
   insertions: [ \
