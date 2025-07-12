@@ -93,6 +93,7 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
 
 There are currently 4 function tags that can be hooked on:
 
+- `#codex:describe`: Called when describing any item.
 - `#codex:describe/enchantment`: Called when describing an item which:
   - is enchanted, and
   - doesn't hide the enchantment tooltip text.
@@ -103,7 +104,6 @@ There are currently 4 function tags that can be hooked on:
 - `#codex:describe/potion`: Called when describing an item which:
   - has potion content component, and
   - doesn't hide the potion content tooltip text.
-- `#codex:describe`: Called when describing any item.
 
 In these functions, the following contexts are provided:
 

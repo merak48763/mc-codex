@@ -1,6 +1,5 @@
 {
   "values": [
-    "codex:event_handler/describe_enchanted_book",
     "codex:event_handler/describe_stored_enchantment"
   ]
 }

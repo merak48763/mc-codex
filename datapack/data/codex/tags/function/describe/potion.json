@@ -1,6 +1,5 @@
 {
   "values": [
-    "codex:event_handler/describe_tipped_arrow",
     "codex:event_handler/describe_potion"
   ]
 }
