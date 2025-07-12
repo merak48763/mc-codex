@@ -15,3 +15,5 @@ execute if items entity @s contents enchanted_book[stored_enchantments] run retu
 # both arrow and tipped arrow create "minecraft:arrow" projectile, which will apply the potion_contents component
 execute if items entity @s contents #codex:regular_arrow_item[potion_contents] run return run data modify \
   storage codex:description_keys values append value "codex:item/tipped_arrow"
+execute if items entity @s contents suspicious_stew[consumable, suspicious_stew_effects] run return run data modify \
+  storage codex:description_keys values append value "codex:item/suspicious_stew"

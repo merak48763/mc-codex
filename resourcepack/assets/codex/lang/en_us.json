@@ -32,7 +32,7 @@
   "codex.keyword.mining_speed_bonus.2": "%1$s and %2$s don't",
   "codex.keyword.mining_speed_bonus.3": "stack.",
   "codex.keyword.lingering_potion.1": "Instantaneous effect potency is",
-  "codex.keyword.lingering_potion.2": "halved on lingering potions.",
+  "codex.keyword.lingering_potion.2": "lower on lingering potions.",
   "codex.keyword.bad_omen_addition": "Transformed Effects",
   "codex.keyword.bad_omen_addition.1": "Effects transformed from %1$s.",
   "codex.item_keyword.enchanted_book.1": "Enchantments must be applied to",

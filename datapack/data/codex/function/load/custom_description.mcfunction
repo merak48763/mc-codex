@@ -44,7 +44,7 @@ data modify storage codex:archives root."codex:keyword/lingering_potion" set val
   title: {translate: "item.minecraft.lingering_potion", color: "#88ffff", bold: true}, \
   details: [ \
     {translate: "codex.keyword.lingering_potion.1", fallback: "Instantaneous effect potency is"}, \
-    {translate: "codex.keyword.lingering_potion.2", fallback: "halved on lingering potions."} \
+    {translate: "codex.keyword.lingering_potion.2", fallback: "lower on lingering potions."} \
   ] \
 }
 data modify storage codex:archives root."codex:keyword/bad_omen_addition" set value { \
@@ -77,6 +77,13 @@ data modify storage codex:archives root."codex:item/spectral_arrow" set value { 
   ], \
   insertions: [ \
     {type: "text", value: {translate: "effect.minecraft.glowing", color: "#8888ff"}} \
+  ] \
+}
+data modify storage codex:archives root."codex:item/suspicious_stew" set value { \
+  title: {translate: "item.minecraft.suspicious_stew", color: "red", bold: true}, \
+  button_color: 16711935, \
+  details: [ \
+    "sus" \
   ] \
 }
 # 255 = 0x0000ff
