@@ -44,6 +44,6 @@ data modify storage codex:internal root.transforms."codex:format_text".in.conten
   set from storage codex:internal root.transforms."codex:insertion".temp.picked_text
 data modify storage codex:internal root.transforms."codex:format_text".in.style \
   set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.base_style
-function codex:transforms/format_text
+function codex:util/format_text
 data modify storage codex:internal root.transforms."codex:insertion".out \
   set from storage codex:internal root.transforms."codex:format_text".out

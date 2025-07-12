@@ -12,7 +12,7 @@ execute if data storage codex:internal root.transforms."codex:format_text".in.co
   storage codex:internal root.transforms."codex:format_text".in.content.with \
   set from storage codex:internal root.transforms."codex:bake_single_entry".temp.with
 
-function codex:transforms/format_text
+function codex:util/format_text
 data modify storage codex:internal root.transforms."codex:bake_single_entry".out.lore \
   append from storage codex:internal root.transforms."codex:format_text".out
 

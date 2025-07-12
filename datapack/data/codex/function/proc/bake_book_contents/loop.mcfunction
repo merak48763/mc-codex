@@ -5,7 +5,7 @@ execute if score #entry_counter codex.var matches 0 run data modify \
 # bake entry
 data modify storage codex:internal root.transforms."codex:bake_single_entry".in \
   set from storage codex:internal root.transforms."codex:bake_book_contents".in[0]
-function codex:transforms/bake_single_entry
+function codex:util/bake_single_entry
 data modify storage codex:internal root.transforms."codex:bake_book_contents".out.other_pages[-1] \
   append from storage codex:internal root.transforms."codex:bake_single_entry".out
 

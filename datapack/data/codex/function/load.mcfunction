@@ -1,4 +1,5 @@
-scoreboard objectives add codex.var dummy {text: "Codex internal variable", color: "gray"}
+scoreboard objectives add codex.var dummy {text: "[Codex] internal variable", color: "gray"}
+execute unless score #next_pointer codex.var = #next_pointer codex.var run scoreboard players set #next_pointer codex.var 1
 
 function codex:load/vanilla_description
 function codex:load/custom_description

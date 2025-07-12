@@ -10,11 +10,8 @@ dispatch codex:item_data[%unknown] to struct {}
 dispatch codex:item_data[book] to struct BookItemData {
   /// State of the book
   state?: BookState,
-  /// Displaying page of loaded description
-  active_page?: BakedPage,
-  /// Hidden pages of loaded description
-  /// `active_page` is replaced by `other_pages[0]` when "next page" button is clicked
-  other_pages?: [BakedPage],
+  /// Points to an entry of storage `codex:internal baked_books.<pointer>`
+  content_pointer?: int,
 }
 
 type BakedPage = [BakedEntry] @ ..11

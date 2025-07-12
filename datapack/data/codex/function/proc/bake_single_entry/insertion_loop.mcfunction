@@ -1,6 +1,6 @@
 data modify storage codex:internal root.transforms."codex:insertion".in \
   set from storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.insertions[0]
-function codex:transforms/insertion
+function codex:util/insertion
 data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.with \
   append from storage codex:internal root.transforms."codex:insertion".out
 

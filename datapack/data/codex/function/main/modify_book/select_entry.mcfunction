@@ -9,7 +9,7 @@ execute if score #index codex.var >= #entry_count codex.var run return fail
 # reset lore
 data modify storage codex:internal root.transforms."codex:active_book_lore".in \
   set from storage codex:internal root.book_item.item_stack.components."minecraft:lore"[0]
-function codex:transforms/active_book_lore
+function codex:util/active_book_lore
 data modify storage codex:internal root.book_item.item_stack.components."minecraft:lore" \
   set from storage codex:internal root.transforms."codex:active_book_lore".out
 
