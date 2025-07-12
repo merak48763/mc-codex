@@ -67,8 +67,8 @@ When `type: "text"`:
 When `type: "lookup"`:
 
 - `values`: **\[List of text components\]** Entries will be selected based on the *context number*. The first entry is for enchantment level 1 / effect amplifier 0.
-- `no_context_value`: **\[Text component\]** The text to display if the *context number* is not provided.
-- `out_of_bound_value`: **\[Text component\]** The text to display if the *context number* is too large that the text is not defined in `values`.
+- `generic`: **\[Text component\]** The text to display if the *context number* is not provided.
+- `fallback`: **\[Text component\]** The text to display if the *context number* is too large that the text is not defined in `values`.
 - `base_style`: **\[Optional text style\]** The text style to apply on the generated text.
 
 ### Example
@@ -84,7 +84,7 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
   ], \
   context_type: "enchantment", \
   insertions: [ \
-    {type: "lookup", values: ["2.5", "5", "7.5", "10", "12.5", "15", "17.5", "20", "22.5", "25"], no_context_value: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, out_of_bound_value: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, base_style: {color: "#ff88ff"}} \
+    {type: "lookup", values: ["2.5", "5", "7.5", "10", "12.5", "15", "17.5", "20", "22.5", "25"], generic: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, fallback: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, base_style: {color: "#ff88ff"}} \
   ] \
 }
 ```

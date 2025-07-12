@@ -13,7 +13,7 @@ data modify storage codex:internal root.transforms."codex:insertion".temp.lookup
 # no context
 execute if score #has_context codex.var matches 0 run data modify \
   storage codex:internal root.transforms."codex:insertion".temp.picked_text \
-  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.no_context_value
+  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.generic
 
 # get index bound
 execute store result score #value_count codex.var \
@@ -22,11 +22,11 @@ execute store result score #value_count codex.var \
 execute if score #has_context codex.var matches 1 \
   if score #context_index codex.var matches ..-1 run data modify \
   storage codex:internal root.transforms."codex:insertion".temp.picked_text \
-  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.out_of_bound_value
+  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.fallback
 execute if score #has_context codex.var matches 1 \
   if score #context_index codex.var >= #value_count codex.var run data modify \
   storage codex:internal root.transforms."codex:insertion".temp.picked_text \
-  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.out_of_bound_value
+  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.fallback
 # in bound
 execute store result storage codex:internal root.macro.index int 1 \
   run scoreboard players get #context_index codex.var

@@ -40,11 +40,11 @@ dispatch codex:insertion[%none, text] to struct TextInsertion {
 
 dispatch codex:insertion[lookup] to struct LookupInsertion {
   /// Value to use when context number is not provided
-  no_context_value: Text,
+  generic: Text,
   /// When context number is provided, the corresponding value in the list will be picked
   values: [Text],
   /// Value to use when context number is provided but too large
-  out_of_bound_value: Text,
+  fallback: Text,
   /// Text style applied to the generated value
   base_style?: TextStyle,
 }
