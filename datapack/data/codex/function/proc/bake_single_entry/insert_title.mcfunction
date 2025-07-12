@@ -18,6 +18,6 @@ execute store result storage codex:internal root.macro.index int 1 \
   run scoreboard players get #context_number codex.var
 
 execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive{context_type: "enchantment"} \
-  run return run function codex:transforms_internal/bake_single_entry/insert_title/translate_enchantment with storage codex:internal root.macro
+  run return run function codex:proc/bake_single_entry/insert_title/translate_enchantment with storage codex:internal root.macro
 execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive{context_type: "effect"} \
-  run return run function codex:transforms_internal/bake_single_entry/insert_title/translate_effect with storage codex:internal root.macro
+  run return run function codex:proc/bake_single_entry/insert_title/translate_effect with storage codex:internal root.macro

@@ -74,7 +74,7 @@ def describe_potion():
         json.dump({"values": [effect] + [f"{v}_{effect}" for v in variants]}, file, indent=2)
         file.write("\n")
   def potion_name_function():
-    with open("datapack/data/codex/function/transforms_internal/item_name/potion_name/vanilla.mcfunction", "w") as file:
+    with open("datapack/data/codex/function/proc/item_name/potion_name/vanilla.mcfunction", "w") as file:
       file.write("# generated function\n")
       for effect in potion_effects:
         effect_predicate = f"#codex:{effect}" if effect in potion_with_variants else effect

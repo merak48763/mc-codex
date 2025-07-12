@@ -19,4 +19,4 @@ data modify storage codex:internal root.transforms."codex:bake_single_entry".out
 # recursion
 data remove storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.details[0]
 execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.details[0] \
-  run function codex:transforms_internal/bake_single_entry/description_loop
+  run function codex:proc/bake_single_entry/description_loop

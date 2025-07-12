@@ -8,10 +8,10 @@ execute unless data storage codex:internal root.transforms."codex:bake_single_en
   storage codex:internal root.macro.id \
   set from storage codex:internal root.transforms."codex:bake_single_entry".in
 # call macro
-function codex:transforms_internal/bake_single_entry/retrieve_archive with storage codex:internal root.macro
+function codex:proc/bake_single_entry/retrieve_archive with storage codex:internal root.macro
 
 # button item data
-execute if score #is_main_entry codex.var matches 1 run function codex:transforms_internal/bake_single_entry/set_button_data
+execute if score #is_main_entry codex.var matches 1 run function codex:proc/bake_single_entry/set_button_data
 
 # load context
 execute store result score #has_context codex.var \
@@ -33,7 +33,7 @@ data modify storage codex:internal root.transforms."codex:bake_single_entry".out
   append value ""
 data modify storage codex:internal root.transforms."codex:bake_single_entry".out.lore \
   append value {translate: "codex.bracket", fallback: "[%s]", with: [], color: "white", italic: false}
-function codex:transforms_internal/bake_single_entry/insert_title
+function codex:proc/bake_single_entry/insert_title
 # button text
 execute if score #is_main_entry codex.var matches 1 run data modify \
   storage codex:internal root.transforms."codex:bake_single_entry".out.button.components."minecraft:item_name" \
@@ -43,11 +43,11 @@ execute if score #is_main_entry codex.var matches 1 run data modify \
 data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.with \
   set value []
 execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.insertions[0] \
-  run function codex:transforms_internal/bake_single_entry/insertion_loop
+  run function codex:proc/bake_single_entry/insertion_loop
 
 # convert description lines
 execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.details[0] \
-  run function codex:transforms_internal/bake_single_entry/description_loop
+  run function codex:proc/bake_single_entry/description_loop
 
 # related keywords
 execute unless data storage codex:internal root.transforms."codex:bake_single_entry".in.related_keywords[0] \
@@ -55,4 +55,4 @@ execute unless data storage codex:internal root.transforms."codex:bake_single_en
 scoreboard players set #is_main_entry codex.var 0
 data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords \
   set from storage codex:internal root.transforms."codex:bake_single_entry".in.related_keywords
-function codex:transforms_internal/bake_single_entry/related_keyword_loop
+function codex:proc/bake_single_entry/related_keyword_loop

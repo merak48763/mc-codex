@@ -10,4 +10,4 @@ data modify storage codex:internal root.transforms."codex:bake_single_entry".out
   }
 
 scoreboard players set #is_main_entry codex.var 1
-function codex:transforms_internal/bake_single_entry/main
+function codex:proc/bake_single_entry/main

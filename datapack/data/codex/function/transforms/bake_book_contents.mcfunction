@@ -18,7 +18,7 @@ execute if score #entry_count codex.var matches 0 run return run data modify \
 # start loop
 scoreboard players set #entry_counter codex.var 0
 scoreboard players set #has_multiple_pages codex.var 0
-function codex:transforms_internal/bake_book_contents/loop
+function codex:proc/bake_book_contents/loop
 
 # make the first page active
 data modify storage codex:internal root.transforms."codex:bake_book_contents".out.active_page \

@@ -11,6 +11,6 @@ execute if data storage codex:internal root.transforms."codex:item_name".in.comp
   set from storage codex:internal root.transforms."codex:item_name".in.components."minecraft:potion_contents".custom_name
 # vanilla name
 execute unless data storage codex:internal root.transforms."codex:item_name".in.components."minecraft:potion_contents".custom_name \
-  run function codex:transforms_internal/item_name/potion_name/vanilla
+  run function codex:proc/item_name/potion_name/vanilla
 
-function codex:transforms_internal/item_name/potion_name/translate with storage codex:internal root.macro
+function codex:proc/item_name/potion_name/translate with storage codex:internal root.macro

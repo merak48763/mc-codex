@@ -5,11 +5,11 @@ data modify storage codex:internal root.transforms."codex:item_name".out set val
   {translate: "codex.book.item_name", fallback: "Item: [%s]", with: [{translate: "codex.formatter", fallback: "%s", with: []}], color: "white", italic: false}
 
 # rarity
-function codex:transforms_internal/item_name/rarity_style
+function codex:proc/item_name/rarity_style
 
 # custom name
 execute if items entity @s contents *[custom_name] \
-  run return run function codex:transforms_internal/item_name/custom_name
+  run return run function codex:proc/item_name/custom_name
 
 # hardcoded special cases
 # lodestone compass
@@ -22,13 +22,13 @@ execute if items entity @s contents written_book[written_book_content, !written_
   append from storage codex:internal root.transforms."codex:item_name".in.components."minecraft:written_book_content".title.raw
 # player head
 execute if items entity @s contents player_head[profile] \
-  run return run function codex:transforms_internal/item_name/player_head_name
+  run return run function codex:proc/item_name/player_head_name
 # potion
 execute if items entity @s contents #codex:potion_item[potion_contents] \
-  run return run function codex:transforms_internal/item_name/potion_name
+  run return run function codex:proc/item_name/potion_name
 # banner shield
 execute if items entity @s contents shield[base_color] \
-  run return run function codex:transforms_internal/item_name/shield_name
+  run return run function codex:proc/item_name/shield_name
 
 # explicit item name
 execute if items entity @s contents *[!item_name] run return run data modify \
@@ -43,5 +43,5 @@ execute if data storage codex:internal root.transforms."codex:item_name".in.comp
 data modify storage codex:internal root.macro.id \
   set string storage codex:internal root.transforms."codex:item_name".in.id 10
 execute if items entity @s contents #codex:block_item \
-  run return run function codex:transforms_internal/item_name/block_item_id/translate with storage codex:internal root.macro
-function codex:transforms_internal/item_name/regular_item_id/translate with storage codex:internal root.macro
+  run return run function codex:proc/item_name/block_item_id/translate with storage codex:internal root.macro
+function codex:proc/item_name/regular_item_id/translate with storage codex:internal root.macro

@@ -33,7 +33,7 @@ execute store result storage codex:internal root.macro.index int 1 \
 execute if score #has_context codex.var matches 1 \
   if score #context_index codex.var matches 0.. \
   if score #context_index codex.var < #value_count codex.var \
-  run function codex:transforms_internal/insertion/retrieve_value with storage codex:internal root.macro
+  run function codex:proc/insertion/retrieve_value with storage codex:internal root.macro
 
 # no format
 execute unless data storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.base_style run return run data modify \

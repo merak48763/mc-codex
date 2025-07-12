@@ -40,4 +40,4 @@ execute if score #has_multiple_pages codex.var matches 1 \
     bundle_contents: [{id: "bow"}], rarity: "common", "!jukebox_playable": {} \
   }}}
 execute if data storage codex:internal root.transforms."codex:bake_book_contents".in[0] \
-  run function codex:transforms_internal/bake_book_contents/loop
+  run function codex:proc/bake_book_contents/loop

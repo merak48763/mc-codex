@@ -7,4 +7,4 @@ data modify storage codex:internal root.transforms."codex:bake_single_entry".tem
 # recursion
 data remove storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.insertions[0]
 execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.insertions[0] \
-  run function codex:transforms_internal/bake_single_entry/insertion_loop
+  run function codex:proc/bake_single_entry/insertion_loop
