@@ -13,6 +13,10 @@ execute if score #context_number codex.var matches 0 \
   if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive{context_type: "effect"} run return run data modify \
   storage codex:internal root.transforms."codex:bake_single_entry".out.lore[-1].with \
   append from storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.title
+execute if score #context_number codex.var matches 1 \
+  if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive{context_type: "enchantment_lv1"} run return run data modify \
+  storage codex:internal root.transforms."codex:bake_single_entry".out.lore[-1].with \
+  append from storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive.title
 
 execute store result storage codex:internal root.macro.index int 1 \
   run scoreboard players get #context_number codex.var

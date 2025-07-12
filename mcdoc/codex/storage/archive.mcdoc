@@ -54,6 +54,9 @@ enum(string) ContextType {
   None = "none",
   /// The context number is an enchantment level (1-indexed)
   EnchantmentLevel = "enchantment",
+  /// The context number is an enchantment level (1-indexed)
+  /// The natural maximum level of the enchantment is 1
+  EnchantmentLevelLv1 = "enchantment_lv1",
   /// The context number is an effect amplifier (0-indexed)
   EffectAmplifier = "effect",
 }

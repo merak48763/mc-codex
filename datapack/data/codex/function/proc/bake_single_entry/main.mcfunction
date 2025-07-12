@@ -27,6 +27,8 @@ execute if data storage codex:internal root.transforms."codex:bake_single_entry"
 # 1-indexed -> 0-indexed
 execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive{context_type: "enchantment"} \
   run scoreboard players remove #context_index codex.var 1
+execute if data storage codex:internal root.transforms."codex:bake_single_entry".temp.retrieved_archive{context_type: "enchantment_lv1"} \
+  run scoreboard players remove #context_index codex.var 1
 
 # title text
 data modify storage codex:internal root.transforms."codex:bake_single_entry".out.lore \
