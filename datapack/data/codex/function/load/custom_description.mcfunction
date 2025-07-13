@@ -16,9 +16,9 @@ data modify storage codex:archives root."codex:keyword/curse" set value { \
   ] \
 }
 data modify storage codex:archives root."codex:keyword/damage_reduction" set value { \
-  title: {translate: "codex.keyword.damage_reduction", fallback: "Damage Reduction", color: "#ffbb88", bold: true}, \
+  title: {translate: "codex.keyword.damage_reduction", fallback: "Damage Reduction"}, \
   details: [ \
-    {translate: "codex.keyword.damage_reduction.1", fallback: "The value is capped at 80%%."} \
+    {translate: "codex.keyword.damage_reduction.1", fallback: "◆ Capped at 80%%"} \
   ] \
 }
 data modify storage codex:archives root."codex:keyword/armor_unbreaking" set value { \
@@ -55,6 +55,14 @@ data modify storage codex:archives root."codex:keyword/bad_omen_addition" set va
   ], \
   insertions: [ \
     {type: "text", value: {translate: "effect.minecraft.bad_omen", color: "#8888ff"}} \
+  ] \
+}
+data modify storage codex:archives root."codex:keyword/ignited_arrow" set value { \
+  title: {translate: "codex.keyword.ignited_arrow", fallback: "Ignited Arrow"}, \
+  details: [ \
+    {translate: "codex.keyword.ignited_arrow.1", fallback: "◆ Ignites target hit (00:04)"}, \
+    {translate: "codex.keyword.ignited_arrow.2", fallback: "◆ Ignites:"}, \
+    {translate: "codex.keyword.ignited_arrow.3", fallback: "  ▶ Campfires, Candles and TNT"}, \
   ] \
 }
 
