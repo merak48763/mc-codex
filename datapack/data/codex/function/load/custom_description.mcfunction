@@ -60,7 +60,7 @@ data modify storage codex:archives root."codex:keyword/bad_omen_addition" set va
 data modify storage codex:archives root."codex:keyword/ignited_arrow" set value { \
   title: {translate: "codex.keyword.ignited_arrow", fallback: "Ignited Arrow"}, \
   details: [ \
-    {translate: "codex.keyword.ignited_arrow.1", fallback: "◆ Ignites target hit (00:04)"}, \
+    {translate: "codex.keyword.ignited_arrow.1", fallback: "◆ Ignites target hit (4s)"}, \
     {translate: "codex.keyword.ignited_arrow.2", fallback: "◆ Ignites:"}, \
     {translate: "codex.keyword.ignited_arrow.3", fallback: "  ▶ Campfires, Candles and TNT"}, \
   ] \
