@@ -469,7 +469,6 @@ data modify storage codex:archives root."minecraft:enchantment/quick_charge" set
     {value: {translate: "codex.desc.enchantment.quick_charge.with.2", color: "#9999ff"}} \
   ] \
 }
-# TODO: implement "value_check" insertion type
 data modify storage codex:archives root."minecraft:enchantment/lure" set value { \
   title: {translate: "enchantment.minecraft.lure", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
@@ -485,8 +484,9 @@ data modify storage codex:archives root."minecraft:enchantment/lure" set value {
       base_style: {color: "#9999ff"} \
     }, \
     { \
-      type: "lookup", values: [{translate: "codex.desc.enchantment.lure.with.2"}, {translate: "codex.desc.enchantment.lure.with.2"}, {translate: "codex.desc.enchantment.lure.with.2"}, {translate: "codex.desc.enchantment.lure.with.2"}, {translate: "codex.desc.enchantment.lure.with.2"}], \
-      fallback: "", \
+      type: "value_check", threshold: 5, \
+      on_pass: {translate: "codex.desc.enchantment.lure.with.2"}, \
+      on_fail: "", \
       generic: {translate: "codex.desc.enchantment.lure.with.2"}, \
       base_style: {color: "#9999ff"} \
     } \

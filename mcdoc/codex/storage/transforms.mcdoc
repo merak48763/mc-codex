@@ -52,6 +52,8 @@ dispatch codex:transforms_out[codex:insertion] to Text
 dispatch codex:transforms_temp[codex:insertion] to struct {
   /// Typed input
   lookup_insertion?: codex:insertion[lookup],
+  /// Typed input
+  value_check_insertion?: codex:insertion[value_check],
   /// Temp storage of unformatted result text
   picked_text?: Text,
 }

@@ -49,6 +49,19 @@ dispatch codex:insertion[lookup] to struct LookupInsertion {
   base_style?: TextStyle,
 }
 
+dispatch codex:insertion[value_check] to struct ValueCheckInsertion {
+  /// Value to use when context number is not provided
+  generic: Text,
+  /// The maximum value to pass
+  threshold: int,
+  /// Value to use when context number ≤ threshold
+  on_pass: Text,
+  /// Value to use when context number > threshold
+  on_fail: Text,
+  /// Text style applied to the generated value
+  base_style?: TextStyle,
+}
+
 enum(string) ContextType {
   /// The entry doesn't need/have context number
   None = "none",
@@ -65,4 +78,6 @@ enum(string) InsertionType {
   TextComponent = "text",
   /// Value determined by context number
   ValueLookup = "lookup",
+  /// Value determined by the range of context number
+  ValueCheck = "value_check",
 }
