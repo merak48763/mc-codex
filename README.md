@@ -1,7 +1,7 @@
 # Codex
 
 Adapted from the Lexica module of [pearuhdox/Cartographer-2.0](https://github.com/pearuhdox/Cartographer-2.0).  
-Minecraft version: 1.21.5 ~ 1.21.7
+Minecraft version: 1.21.5 ~ 1.21.8
 
 # Get the Book
 
@@ -51,6 +51,7 @@ Descriptions are defined under the `root` tag in command storage `codex:archives
   - `context_type`: **\[Optional string\]** One of `none`, `enchantment` and `effect`. Determines how to interpret the *context number*. Defaults to `none`.
     - `"none"`: This description doesn't chage.
     - `"enchantment"`: The title & description lines may change based on a value starting from 1 (enchantment level).
+    - `"enchantment_lv1"`: The title & description lines may change based on a value starting from 1 (enchantment level). The title reflects the behavior of enchantments with max level = 1.
     - `"effect"`: The title & description lines may change based on a value starting from 0 (effect amplifier).
   - `insertions`: **\[Optional list of *insertion object*s\]** When present, generate a `with` list based on the *context number*. The `with` list is then inserted into all `details` lines.
 
