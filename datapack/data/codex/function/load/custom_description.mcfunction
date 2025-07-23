@@ -84,7 +84,7 @@ data modify storage codex:archives root."codex:item/spectral_arrow" set value { 
     {translate: "codex.item_keyword.spectral_arrow.2", fallback: "after hitting the target."} \
   ], \
   insertions: [ \
-    {type: "text", value: {translate: "effect.minecraft.glowing", color: "#8888ff"}} \
+    {type: "text", value: {translate: "effect.minecraft.glowing", color: "#ff9999"}} \
   ] \
 }
 data modify storage codex:archives root."codex:item/suspicious_stew" set value { \
