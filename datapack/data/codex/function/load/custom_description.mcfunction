@@ -1,90 +1,61 @@
-# TODO: 5635925 -> 0x55ff55 when Spyglass 1.21.5 SNBT is implemented
 data modify storage codex:archives root."codex:book" set value { \
-  title: {translate: "codex.ouroboros", fallback: "Ouroboros", color: "green", bold: true}, \
+  title: {text: ":learned:", color: "green"}, \
   button_color: 5635925, \
-  details: [ \
-    {translate: "codex.ouroboros.1", fallback: "Why put the book in?"} \
-  ], \
-  base_style: {italic: true} \
+  details: [], \
+  bullets: [] \
 }
 
 data modify storage codex:archives root."codex:keyword/curse" set value { \
-  title: {translate: "codex.keyword.curse", fallback: "Curse Enchantment", color: "#ff8888", bold: true}, \
+  title: {translate: "codex.keyword.curse", color: "#ff8888"}, \
   details: [ \
-    {translate: "codex.keyword.curse.1", fallback: "The enchantment cannot be"}, \
-    {translate: "codex.keyword.curse.2", fallback: "removed by grindstones."} \
-  ] \
+    {translate: "codex.keyword.curse.1"} \
+  ], \
+  bullets: ["dot"] \
 }
 data modify storage codex:archives root."codex:keyword/damage_reduction" set value { \
-  title: {translate: "codex.keyword.damage_reduction", fallback: "Damage Reduction"}, \
+  title: {translate: "codex.keyword.damage_reduction", fallback: "Damage Reduction", color: "#ffff88"}, \
   details: [ \
-    {translate: "codex.keyword.damage_reduction.1", fallback: "◆ Capped at 80%%"} \
-  ] \
-}
-data modify storage codex:archives root."codex:keyword/armor_unbreaking" set value { \
-  title: {translate: "codex.keyword.armor_unbreaking", fallback: "Unbreaking on Armor", color: "#ffbb88", bold: true}, \
-  details: [ \
-    {translate: "codex.keyword.armor_unbreaking.1", fallback: "The chance of not losing durability"}, \
-    {translate: "codex.keyword.armor_unbreaking.2", fallback: "is different from normal items."} \
-  ] \
-}
-data modify storage codex:archives root."codex:keyword/mining_speed_bonus" set value { \
-  title: {translate: "codex.keyword.mining_speed_bonus", fallback: "Mining Speed Bonus", color: "#ffbb88", bold: true}, \
-  details: [ \
-    {translate: "codex.keyword.mining_speed_bonus.1", fallback: "The mining speed bonuses from"}, \
-    {translate: "codex.keyword.mining_speed_bonus.2", fallback: "%1$s and %2$s don't"}, \
-    {translate: "codex.keyword.mining_speed_bonus.3", fallback: "stack."} \
+    {translate: "codex.keyword.damage_reduction.1"} \
   ], \
-  insertions: [ \
-    {type: "text", value: {translate: "effect.minecraft.haste", color: "#8888ff"}}, \
-    {type: "text", value: {translate: "effect.minecraft.conduit_power", color: "#8888ff"}} \
-  ] \
+  bullets: ["dot"] \
 }
 data modify storage codex:archives root."codex:keyword/lingering_potion" set value { \
-  title: {translate: "item.minecraft.lingering_potion", color: "#88ffff", bold: true}, \
+  title: {translate: "item.minecraft.lingering_potion", color: "#ffff88"}, \
   details: [ \
-    {translate: "codex.keyword.lingering_potion.1", fallback: "Instantaneous effect potency is"}, \
-    {translate: "codex.keyword.lingering_potion.2", fallback: "lower on lingering potions."} \
-  ] \
+    {translate: "codex.keyword.lingering_potion.1", color: "gray"}, \
+    {translate: "codex.keyword.lingering_potion.2"} \
+  ], \
+  bullets: ["section_header", "section_last_content"] \
 }
 data modify storage codex:archives root."codex:keyword/bad_omen_addition" set value { \
-  title: {translate: "codex.keyword.bad_omen_addition", fallback: "Transformed Effects", color: "#8c00ff", bold: true}, \
-  button_color: 5111949, \
+  title: {translate: "codex.keyword.bad_omen_addition", fallback: "Transformed Effects", color: "#ffff88"}, \
   details: [ \
     {translate: "codex.keyword.bad_omen_addition.1", fallback: "Effects transformed from %1$s."} \
   ], \
+  bullets: ["dot"], \
   insertions: [ \
-    {type: "text", value: {translate: "effect.minecraft.bad_omen", color: "#8888ff"}} \
+    {value: {translate: "effect.minecraft.bad_omen", color: "#ff8888"}} \
   ] \
 }
 data modify storage codex:archives root."codex:keyword/ignited_arrow" set value { \
-  title: {translate: "codex.keyword.ignited_arrow", fallback: "Ignited Arrow"}, \
+  title: {translate: "codex.keyword.ignited_arrow", fallback: "Ignited Arrow", color: "#ffff88"}, \
   details: [ \
-    {translate: "codex.keyword.ignited_arrow.1", fallback: "◆ Ignites target hit (4s)"}, \
-    {translate: "codex.keyword.ignited_arrow.2", fallback: "◆ Ignites:"}, \
-    {translate: "codex.keyword.ignited_arrow.3", fallback: "  ▶ Campfires, Candles and TNT"}, \
-  ] \
+    {translate: "codex.keyword.ignited_arrow.1"}, \
+    {translate: "codex.keyword.ignited_arrow.2"}, \
+    {translate: "codex.keyword.ignited_arrow.3"}, \
+  ], \
+  bullets: ["section_header", "section_content", "section_last_content"] \
 }
 
-# 16711935 = 0xff00ff
-data modify storage codex:archives root."codex:item/enchanted_book" set value { \
-  title: {translate: "item.minecraft.enchanted_book", color: "#ff55ff", bold: true}, \
-  button_color: 16711935, \
-  details: [ \
-    {translate: "codex.item_keyword.enchanted_book.1", fallback: "Enchantments must be applied to"}, \
-    {translate: "codex.item_keyword.enchanted_book.2", fallback: "proper items to work."} \
-  ] \
-}
-# 15658581 = 0xeeee55
 data modify storage codex:archives root."codex:item/spectral_arrow" set value { \
   title: {translate: "item.minecraft.spectral_arrow", color: "gold", bold: true}, \
   button_color: 16755285, \
   details: [ \
-    {translate: "codex.item_keyword.spectral_arrow.1", fallback: "Inflicts %1$s for 10 seconds"}, \
-    {translate: "codex.item_keyword.spectral_arrow.2", fallback: "after hitting the target."} \
+    {translate: "codex.item_keyword.spectral_arrow.1"} \
   ], \
+  bullets: ["dot"], \
   insertions: [ \
-    {type: "text", value: {translate: "effect.minecraft.glowing", color: "#ff9999"}} \
+    {value: {translate: "effect.minecraft.glowing", color: "#ff9999"}} \
   ] \
 }
 data modify storage codex:archives root."codex:item/suspicious_stew" set value { \
@@ -92,26 +63,27 @@ data modify storage codex:archives root."codex:item/suspicious_stew" set value {
   button_color: 16711935, \
   details: [ \
     "sus" \
-  ] \
+  ], \
+  bullets: ["none"] \
 }
-# 255 = 0x0000ff
 data modify storage codex:archives root."codex:item/tipped_arrow" set value { \
-  title: {translate: "item.minecraft.tipped_arrow", color: "blue", bold: true}, \
-  button_color: 255, \
+  title: {translate: "item.minecraft.tipped_arrow", color: "aqua", bold: true}, \
+  button_color: 3618808, \
   details: [ \
-    {translate: "codex.item_keyword.tipped_arrow.1", fallback: "Inflicts stored potion effect after"}, \
-    {translate: "codex.item_keyword.tipped_arrow.2", fallback: "hitting the target."} \
-  ] \
+    {translate: "codex.item_keyword.tipped_arrow.1"} \
+  ], \
+  bullets: ["dot"] \
 }
-# 42520 = 0x00aa00
 data modify storage codex:archives root."codex:item/turtle_shell" set value { \
   title: {translate: "item.minecraft.turtle_helmet", color: "dark_green", bold: true}, \
   button_color: 43520, \
   details: [ \
-    {translate: "codex.item_keyword.turtle_shell.1", fallback: "Provides %1$s for 10"}, \
-    {translate: "codex.item_keyword.turtle_shell.2", fallback: "seconds when exposed to air."} \
+    {translate: "item.modifiers.head", color: "gray"}, \
+    {translate: "codex.item_keyword.turtle_shell.1", color: "gray"}, \
+    {translate: "codex.item_keyword.turtle_shell.2"} \
   ], \
+  bullets: ["none", "section_header", "section_last_content"], \
   insertions: [ \
-    {type: "text", value: {translate: "effect.minecraft.water_breathing", color: "#8888ff"}} \
+    {value: {translate: "effect.minecraft.water_breathing", color: "#8888ff"}} \
   ] \
 }
