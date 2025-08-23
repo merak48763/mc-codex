@@ -20,7 +20,7 @@ struct ArchiveEntry {
   /// Text lines displayed in the book item's lore
   details: [Text],
   /// Text style applied to `details`
-  /// Defaults to `#e0e0e0` & non-italic
+  /// Defaults to `#f0f0f0` & non-italic
   base_style?: TextStyle,
   /// If present, generates and provides `with` list to all (translated) lines in `details`
   insertions?: [Insertion],
