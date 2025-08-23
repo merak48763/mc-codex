@@ -19,6 +19,7 @@ struct ArchiveEntry {
   title: Text,
   /// Text lines displayed in the book item's lore
   details: [Text],
+  bullets: [BulletType],
   /// Text style applied to `details`
   /// Defaults to `#f0f0f0` & non-italic
   base_style?: TextStyle,
@@ -80,4 +81,11 @@ enum(string) InsertionType {
   ValueLookup = "lookup",
   /// Value determined by the range of context number
   ValueCheck = "value_check",
+}
+enum(string) BulletType {
+  None = "none",
+  Dot = "dot",
+  SectionHeader = "section_header",
+  SectionContent = "section_content",
+  SectionLastContent = "section_last_content",
 }
