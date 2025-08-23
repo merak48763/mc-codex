@@ -58,7 +58,7 @@ Descriptions are defined under the `root` tag in command storage `codex:archives
 
 ### Insertion Object
 
-- `type`: **\[Optional string\]** Either `text` or `lookup`. Defaults to `text`.
+- `type`: **\[Optional string\]** One of `text`, `lookup` and `value_check`. Defaults to `text`.
   - `"text"`: Provides a text component unrelated to the *context number*.
   - `"lookup"`: Provides a text component based on the *context number*.
 
@@ -70,6 +70,14 @@ When `type: "lookup"`:
 
 - `values`: **\[List of text components\]** Entries will be selected based on the *context number*. The first entry is for enchantment level 1 / effect amplifier 0.
 - `fallback`: **\[Text component\]** The text to display if the *context number* is too large that the text is not defined in `values`.
+- `generic`: **\[Text component\]** The text to display if the *context number* is not provided.
+- `base_style`: **\[Optional text style\]** The text style to apply on the generated text.
+
+When `type: "value_check"`:
+
+- `threshold`: **\[Int\]** The value to compare with the *context number*.
+- `on_pass`: **\[Text component\]** The text to display if *context number* ≤ threshold.
+- `on_fail`: **\[Text component\]** The text to display if *context number* > threshold.
 - `generic`: **\[Text component\]** The text to display if the *context number* is not provided.
 - `base_style`: **\[Optional text style\]** The text style to apply on the generated text.
 
