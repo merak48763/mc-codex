@@ -47,6 +47,7 @@ Descriptions are defined under the `root` tag in command storage `codex:archives
   - `title`: **\[Text component\]** The title of the description.
   - `button_color`: **\[Optional int\]** The color of GUI element, which uses `filled_map` item model. Defaults to `4603950` (`#46402e`, defined in `filled_map` item model).
   - `details`: **\[List of text components\]** The description lines. Like the `lore` component, `\n` is not treated as newline.
+  - `bullets`: **\[List of strings\]** Each entry is one of `none`, `dot`, `section_header`, `section_content`, `section_last_content`. Determines the decoration of the corresponding description line
   - `base_style`: **\[Optional text style\]** The common style applied to every line of `details`. Defaults to `{color: "#f0f0f0", italic: false}`.
   - `context_type`: **\[Optional string\]** One of `none`, `enchantment` and `effect`. Determines how to interpret the *context number*. Defaults to `none`.
     - `"none"`: This description doesn't chage.
@@ -68,8 +69,8 @@ When `type: "text"`:
 When `type: "lookup"`:
 
 - `values`: **\[List of text components\]** Entries will be selected based on the *context number*. The first entry is for enchantment level 1 / effect amplifier 0.
-- `generic`: **\[Text component\]** The text to display if the *context number* is not provided.
 - `fallback`: **\[Text component\]** The text to display if the *context number* is too large that the text is not defined in `values`.
+- `generic`: **\[Text component\]** The text to display if the *context number* is not provided.
 - `base_style`: **\[Optional text style\]** The text style to apply on the generated text.
 
 ### Example
@@ -78,14 +79,20 @@ When `type: "lookup"`:
 # Defines the description of Smite enchantment
 data modify storage codex:archives root."minecraft:enchantment/smite" set value { \
   title: {translate: "enchantment.minecraft.smite", color: "#cc88ff", bold: true}, \
-  button_color: 0xaa00ff, \
+  button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.smite.1", fallback: "Attacks made against undead mobs"}, \
-    {translate: "codex.desc.enchantment.smite.2", fallback: "deal %1$s additional damage."} \
+    {translate: "codex.desc.enchantment.smite.1", fallback: "When attacking undead mobs:", color: "gray"}, \
+    {translate: "codex.desc.enchantment.smite.2", fallback: "%1$s Damage dealt"} \
   ], \
+  bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment", \
   insertions: [ \
-    {type: "lookup", values: ["2.5", "5", "7.5", "10", "12.5", "15", "17.5", "20", "22.5", "25"], generic: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, fallback: {translate: "codex.desc.enchantment.smite.with.1", fallback: "2.5 * lvl"}, base_style: {color: "#ff88ff"}} \
+    { \
+      type: "lookup", values: ["+2.5", "+5", "+7.5", "+10", "+12.5", "+15", "+17.5", "+20", "+22.5", "+25"], \
+      fallback: {translate: "codex.generic.enchantment.smite.1", fallback: "+[2.5 * lvl]"}, \
+      generic: {translate: "codex.generic.enchantment.smite.1", fallback: "+[2.5 * lvl]"}, \
+      base_style: {color: "#9999ff"} \
+    } \
   ] \
 }
 ```
