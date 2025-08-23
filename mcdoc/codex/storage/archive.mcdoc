@@ -19,8 +19,9 @@ struct ArchiveEntry {
   title: Text,
   /// Text lines displayed in the book item's lore
   details: [Text],
+  bullets: [BulletType],
   /// Text style applied to `details`
-  /// Defaults to `#e0e0e0` & non-italic
+  /// Defaults to `#f0f0f0` & non-italic
   base_style?: TextStyle,
   /// If present, generates and provides `with` list to all (translated) lines in `details`
   insertions?: [Insertion],
@@ -40,11 +41,24 @@ dispatch codex:insertion[%none, text] to struct TextInsertion {
 
 dispatch codex:insertion[lookup] to struct LookupInsertion {
   /// Value to use when context number is not provided
-  no_context_value: Text,
+  generic: Text,
   /// When context number is provided, the corresponding value in the list will be picked
   values: [Text],
   /// Value to use when context number is provided but too large
-  out_of_bound_value: Text,
+  fallback: Text,
+  /// Text style applied to the generated value
+  base_style?: TextStyle,
+}
+
+dispatch codex:insertion[value_check] to struct ValueCheckInsertion {
+  /// Value to use when context number is not provided
+  generic: Text,
+  /// The maximum value to pass
+  threshold: int,
+  /// Value to use when context number ≤ threshold
+  on_pass: Text,
+  /// Value to use when context number > threshold
+  on_fail: Text,
   /// Text style applied to the generated value
   base_style?: TextStyle,
 }
@@ -65,4 +79,13 @@ enum(string) InsertionType {
   TextComponent = "text",
   /// Value determined by context number
   ValueLookup = "lookup",
+  /// Value determined by the range of context number
+  ValueCheck = "value_check",
+}
+enum(string) BulletType {
+  None = "none",
+  Dot = "dot",
+  SectionHeader = "section_header",
+  SectionContent = "section_content",
+  SectionLastContent = "section_last_content",
 }

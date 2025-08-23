@@ -1,6 +1,8 @@
 use ::java::world::item::ItemStack
+use ::java::util::text::Text
 use super::CommandStorage
 use super::book_data::BookData
+use super::archive::BulletType
 
 dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
   /// The bundle item
@@ -31,6 +33,10 @@ dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
       /// Temp storage
       temp?: codex:transforms_temp[[%parent.%key]],
     },
+  },
+  /// Prefixes of description lines
+  bullet?: struct {
+    [BulletType]: Text,
   },
   /// Macro params
   macro?: struct {
