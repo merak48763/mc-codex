@@ -25,7 +25,7 @@ data modify storage codex:archives root."minecraft:effect/bad_omen" set value { 
     }, \
     {value: {translate: "effect.minecraft.trial_omen", color: "#ff9999"}}, \
     { \
-      "type": "lookup", values: ["15:00", "30:00", "45:00", "60:00", "75:00", "90:00"], \
+      type: "lookup", values: ["15:00", "30:00", "45:00", "60:00", "75:00", "90:00"], \
       fallback: {translate: "codex.generic.effect.bad_omen.5"}, \
       generic: {translate: "codex.generic.effect.bad_omen.5"}, \
       base_style: {color: "#ff99ff"} \

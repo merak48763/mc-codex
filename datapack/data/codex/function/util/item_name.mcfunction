@@ -33,7 +33,7 @@ execute if items entity @s contents shield[base_color] \
 # explicit item name
 execute if items entity @s contents *[!item_name] run return run data modify \
   storage codex:internal root.transforms."codex:item_name".out.with[0].with \
-  append value {translate: "codex.book.unnamed_item", "fallback": "Unnamed Item"}
+  append value {translate: "codex.book.unnamed_item", fallback: "Unnamed Item"}
 execute if data storage codex:internal root.transforms."codex:item_name".in.components."minecraft:item_name" run return run data modify \
   storage codex:internal root.transforms."codex:item_name".out.with[0].with \
   append from storage codex:internal root.transforms."codex:item_name".in.components."minecraft:item_name"

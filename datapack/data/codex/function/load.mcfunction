@@ -3,6 +3,7 @@ execute unless score #next_pointer codex.var = #next_pointer codex.var run score
 
 function codex:load/vanilla_description
 function codex:load/custom_description
+function codex:load/bullet
 
 forceload add -30000000 1832230
 # book item

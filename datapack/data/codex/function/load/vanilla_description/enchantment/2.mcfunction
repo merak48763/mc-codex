@@ -159,7 +159,7 @@ data modify storage codex:archives root."minecraft:enchantment/soul_speed" set v
   details: [ \
     {translate: "item.modifiers.feet", color: "gray"}, \
     {translate: "codex.desc.enchantment.soul_speed.1"}, \
-    {translate: "codex.desc.enchantment.soul_speed.2", "color": "gray"}, \
+    {translate: "codex.desc.enchantment.soul_speed.2", color: "gray"}, \
     {translate: "codex.desc.enchantment.soul_speed.3"}, \
     {translate: "codex.desc.enchantment.soul_speed.4"} \
   ], \
