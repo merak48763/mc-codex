@@ -19,8 +19,8 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
   title: {translate: "enchantment.minecraft.smite", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.special.smite", color: "gray"}, \
-    {translate: "codex.desc.enchantment.smite.1"} \
+    {translate: "codex.desc.enchantment.smite.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.smite.2"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment", \
@@ -37,9 +37,9 @@ data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropod
   title: {translate: "enchantment.minecraft.bane_of_arthropods", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.special.bane_of_arthropods", color: "gray"}, \
-    {translate: "codex.desc.enchantment.bane_of_arthropods.1"}, \
-    {translate: "codex.desc.enchantment.bane_of_arthropods.2"} \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.2"}, \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.3"} \
   ], \
   bullets: ["section_header", "section_content", "section_last_content"], \
   context_type: "enchantment", \
@@ -64,8 +64,8 @@ data modify storage codex:archives root."minecraft:enchantment/impaling" set val
   title: {translate: "enchantment.minecraft.impaling", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.special.impaling", color: "gray"}, \
-    {translate: "codex.desc.enchantment.impaling.1"} \
+    {translate: "codex.desc.enchantment.impaling.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.impaling.2"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment", \
@@ -99,8 +99,8 @@ data modify storage codex:archives root."minecraft:enchantment/density" set valu
   title: {translate: "enchantment.minecraft.density", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.mace_smash", color: "gray"}, \
-    {translate: "codex.desc.enchantment.density.1"} \
+    {translate: "codex.desc.enchantment.density.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.density.2"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment", \

@@ -201,8 +201,8 @@ data modify storage codex:archives root."minecraft:enchantment/unbreaking" set v
   title: {translate: "enchantment.minecraft.unbreaking", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.special.unbreaking", color: "gray"}, \
-    {translate: "codex.desc.enchantment.unbreaking.1"} \
+    {translate: "codex.desc.enchantment.unbreaking.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.unbreaking.2"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment", \
@@ -219,8 +219,8 @@ data modify storage codex:archives root."minecraft:enchantment/unbreaking/armor"
   title: {translate: "enchantment.minecraft.unbreaking", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.special.unbreaking", color: "gray"}, \
-    {translate: "codex.desc.enchantment.unbreaking.1"} \
+    {translate: "codex.desc.enchantment.unbreaking.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.unbreaking.2"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment", \
@@ -237,10 +237,10 @@ data modify storage codex:archives root."minecraft:enchantment/unbreaking/book" 
   title: {translate: "enchantment.minecraft.unbreaking", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.durability_loss", color: "gray"}, \
-    {translate: "codex.desc.enchantment.unbreaking.book.1"}, \
+    {translate: "codex.desc.enchantment.unbreaking.book.1", color: "gray"}, \
     {translate: "codex.desc.enchantment.unbreaking.book.2"}, \
-    {translate: "codex.desc.enchantment.unbreaking.book.3"} \
+    {translate: "codex.desc.enchantment.unbreaking.book.3"}, \
+    {translate: "codex.desc.enchantment.unbreaking.book.4"} \
   ], \
   bullets: ["section_header", "section_content", "section_content", "section_last_content"], \
   context_type: "enchantment", \

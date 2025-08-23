@@ -20,9 +20,9 @@ data modify storage codex:archives root."minecraft:enchantment/riptide" set valu
   title: {translate: "enchantment.minecraft.riptide", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.trident_thrown", color: "gray"}, \
-    {translate: "codex.desc.enchantment.riptide.1"}, \
-    {translate: "codex.desc.enchantment.riptide.2"} \
+    {translate: "codex.desc.enchantment.riptide.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.riptide.2"}, \
+    {translate: "codex.desc.enchantment.riptide.3"} \
   ], \
   bullets: ["section_header", "section_last_content", "none"], \
   context_type: "enchantment" \
@@ -31,8 +31,8 @@ data modify storage codex:archives root."minecraft:enchantment/channeling" set v
   title: {translate: "enchantment.minecraft.channeling", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.special.channeling", color: "gray"}, \
-    {translate: "codex.desc.enchantment.channeling.1"}, \
+    {translate: "codex.desc.enchantment.channeling.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.channeling.2"}, \
   ], \
   bullets: ["section_header", "section_last_content"] \
 }
@@ -41,8 +41,8 @@ data modify storage codex:archives root."minecraft:enchantment/wind_burst" set v
   title: {translate: "enchantment.minecraft.wind_burst", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.falling_attack", color: "gray"}, \
-    {translate: "codex.desc.enchantment.wind_burst.1"} \
+    {translate: "codex.desc.enchantment.wind_burst.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.wind_burst.2"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment" \
@@ -88,8 +88,8 @@ data modify storage codex:archives root."minecraft:enchantment/loyalty" set valu
   title: {translate: "enchantment.minecraft.loyalty", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.trigger.trident_thrown", color: "gray"}, \
-    {translate: "codex.desc.enchantment.loyalty.1"} \
+    {translate: "codex.desc.enchantment.loyalty.1", color: "gray"}, \
+    {translate: "codex.desc.enchantment.loyalty.2"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
   context_type: "enchantment" \
