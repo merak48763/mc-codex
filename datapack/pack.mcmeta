@@ -3,5 +3,13 @@
     "pack_format": 71,
     "supported_formats": [71, 81],
     "description": {"text": "https://github.com/merak48763/mc-codex", "color": "#8888ff"}
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "overlay-1_21_5",
+        "formats": 71
+      }
+    ]
   }
 }

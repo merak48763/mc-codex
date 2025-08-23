@@ -49,7 +49,6 @@ data modify storage codex:archives root."minecraft:effect/infested" set value { 
   ], \
   bullets: ["section_header", "section_last_content"] \
 }
-# Requires patch for 1.21.5
 data modify storage codex:archives root."minecraft:effect/invisibility" set value { \
   title: {translate: "effect.minecraft.invisibility", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
