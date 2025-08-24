@@ -1,5 +1,5 @@
 data modify storage codex:archives root."codex:book" set value { \
-  title: {text: ":learned:", color: "green"}, \
+  title: {text: ":learned:", color: "#88ff88"}, \
   button_color: 5635925, \
   details: [], \
   bullets: [] \

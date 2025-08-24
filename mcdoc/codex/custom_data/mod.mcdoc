@@ -1,5 +1,8 @@
 use ::java::util::text::Text
 use ::java::world::item::ItemStack
+use super::storage::DescriptionKey
+
+dispatch mcdoc:custom_data[static_description] to [DescriptionKey]
 
 dispatch mcdoc:custom_data[codex] to struct CodexItemData {
   type: ItemType,

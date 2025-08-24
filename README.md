@@ -107,6 +107,13 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
 
 ## Describe Items
 
+### Static Description
+
+The `static_description` custom data on item can provide descriptions.  
+`static_description` is a list of *index*es.
+
+### Dynamic Description
+
 There are currently 4 function tags that can be hooked on:
 
 - `#codex:describe`: Called when describing any item.
@@ -147,7 +154,14 @@ Compound:
 - `context_number`: **\[Optional int\]** The *context number* provided to the description.
 - `related_keywords`: **\[Optional list of *index*es\]** Related descriptions to show in the same page. Nested `related_keywords` is **not** supported.
 
-### Example
+### Example (Static)
+
+```mcfunction
+# Get a paper with description
+give @s paper[custom_data={static_description: ["minecraft:enchantment/smite"]}]
+```
+
+### Example (Dynamic)
 
 ```mcfunction
 # Describes Bane of Arthropods enchantment on this item
