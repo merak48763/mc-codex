@@ -60,7 +60,7 @@ Descriptions are defined under the `root` tag in command storage `codex:archives
 
 - `type`: **\[Optional string\]** One of `text`, `lookup` and `value_check`. Defaults to `text`.
   - `"text"`: Provides a text component unrelated to the *context number*.
-  - `"lookup"`: Provides a text component based on the *context number*.
+  - `"lookup"`, `"value_check"`: Provides a text component based on the *context number*.
 
 When `type: "text"`:
 
@@ -231,13 +231,6 @@ The resource pack provides the following features:
 Feel free to open a pull request for translations of this pack.  
 There are some things to note when translating the pack.
 
-- The pack currently only supports English style one-other [plural rule](https://www.unicode.org/cldr/charts/47/supplemental/language_plural_rules.html).
-  - Some other plural rules are compatible with English rule. Those languages should be fine.
-  - If your target language unfortunately is not supported, you can use a general expression (e.g. "*second(s)*") or open an issue for that.
-- Due to the nature of item lore, the number of lines is fixed.
-  - You should choose a proper line width so that the content fits.
-  - Rephrasing sometimes helps.
-  - Note: The layout of `codex.book.page_dne.*` doesn't matter.
 - Some terms are very unlikely to need changes (e.g. `codex.formatter`). It doesn't matter if those terms are copied to the translation file.
 - The following items/steps cover the important tests:
   - An enchanted book with all enchantments (the "Next Page" button will appear)
@@ -247,7 +240,6 @@ There are some things to note when translating the pack.
   - A Lingering Potion of Harming
   - A Spectral Arrow
   - An Ominous Bottle
-  - The *Book of the Universe Cat* itself
   - A Stone with `[!item_name, !custom_name]` (the "No Information" button & the "Unnamed Item" text will appear)
   - Hold the book in the cursor and pick two stacks of items (the "Found more than 1 item stack" message will appear)
 
