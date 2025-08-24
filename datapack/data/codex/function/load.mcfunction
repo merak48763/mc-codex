@@ -15,3 +15,6 @@ summon item_display -30000000 0 1832230 {UUID: [I; 615554270,0,0,2], CustomName:
 # item held on cursor
 #summon item_display -30000000 0 1832230 {UUID: uuid("24b09cde-0-0-0-3"), CustomName: "[codex] 24b09cde-0-0-0-3", view_range: 0}
 summon item_display -30000000 0 1832230 {UUID: [I; 615554270,0,0,3], CustomName: "[codex] 24b09cde-0-0-0-3", view_range: 0}
+# text resolver
+#summon text_display -30000000 0 1832230 {UUID: uuid("24b09cde-0-0-0-4"), CustomName: "[codex] 24b09cde-0-0-0-4", view_range: 0}
+summon text_display -30000000 0 1832230 {UUID: [I; 615554270,0,0,4], CustomName: "[codex] 24b09cde-0-0-0-4", view_range: 0}

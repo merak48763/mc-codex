@@ -13,6 +13,9 @@ use super::book_data::BookData
 // extra input: @s = 24b09cde-0-0-0-2
 dispatch codex:transforms_in[codex:item_name] to ItemStack
 dispatch codex:transforms_out[codex:item_name] to Text
+dispatch codex:transforms_temp[codex:item_name] to struct {
+  resolved_text?: Text,
+}
 
 // item name → common lore containing item name
 dispatch codex:transforms_in[codex:active_book_lore] to Text
