@@ -177,7 +177,7 @@ data modify storage codex:archives root."minecraft:effect/slowness" set value { 
   insertions: [ \
     { \
       type: "lookup", values: ["-15%", "-30%", "-45%", "-60%", "-75%", "-90%"], \
-      fallback: {translate: "codex.generic.effect.slowness.1", fallback: "-[15%% * lvl]"}, \
+      fallback: "-100%", \
       generic: {translate: "codex.generic.effect.slowness.1", fallback: "-[15%% * lvl]"}, \
       base_style: {color: "#ff9999"} \
     }, \
