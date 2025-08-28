@@ -14,10 +14,10 @@ scoreboard players add #entry_counter codex.var 1
 execute if score #entry_counter codex.var matches 10 \
   unless score #entry_count codex.var matches ..11 run data modify \
   storage codex:internal root.transforms."codex:bake_book_contents".out.other_pages[-1] \
-  append value {button: {id: "music_disc_5", components: { \
+  append value {button: {id: "filled_map", components: { \
     item_name: {translate: "codex.page_turner", fallback: "%s ❱", with: [{translate: "codex.book.next_page", fallback: "Next Page", color: "#88ff88"}]}, \
     custom_data: {codex: {type: "button", action: "next_page"}}, item_model: "feather", \
-    bundle_contents: [{id: "bow"}], rarity: "common", "!jukebox_playable": {} \
+    bundle_contents: [{id: "bow"}] \
   }}}
 execute if score #entry_counter codex.var matches 10 \
   unless score #entry_count codex.var matches ..11 \
@@ -34,10 +34,10 @@ execute if score #has_multiple_pages codex.var matches 1 \
   unless score #entry_counter codex.var matches 0 \
   unless data storage codex:internal root.transforms."codex:bake_book_contents".in[0] run data modify \
   storage codex:internal root.transforms."codex:bake_book_contents".out.other_pages[-1] \
-  append value {button: {id: "music_disc_5", components: { \
+  append value {button: {id: "filled_map", components: { \
     item_name: {translate: "codex.page_turner", fallback: "%s ❱", with: [{translate: "codex.book.next_page", fallback: "Next Page", color: "#88ff88"}]}, \
     custom_data: {codex: {type: "button", action: "next_page"}}, item_model: "feather", \
-    bundle_contents: [{id: "bow"}], rarity: "common", "!jukebox_playable": {} \
+    bundle_contents: [{id: "bow"}] \
   }}}
 execute if data storage codex:internal root.transforms."codex:bake_book_contents".in[0] \
   run function codex:proc/bake_book_contents/loop
