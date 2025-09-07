@@ -1,3 +1,1 @@
-return run execute if items entity @s contents player_head[profile]
-
-# Requires data check in 1.21.9+
+return run execute if data storage codex:inspecting_item root.components."minecraft:profile".name
