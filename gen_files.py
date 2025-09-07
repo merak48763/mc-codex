@@ -126,7 +126,7 @@ def describe_enchantment():
   create_subfunctions()
 
 if __name__ == "__main__":
-  block_item_tag()
+  #block_item_tag()
   iterate_slot_function()
   describe_potion()
   describe_enchantment()
