@@ -10,4 +10,6 @@ data modify storage codex:internal root.transforms."codex:bake_single_entry".out
   }
 
 scoreboard players set #is_main_entry codex.var 1
+data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords set value []
+data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords_stack set value []
 function codex:proc/bake_single_entry/main

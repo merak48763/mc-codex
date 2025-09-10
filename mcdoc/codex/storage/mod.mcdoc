@@ -13,19 +13,12 @@ dispatch :storage[codex:description_keys] to struct {
 
 type DescriptionKey = (
   #[id="codex:page"] string |
-  struct {
-    ...CompoundDescriptionKey,
+  struct CompoundDescriptionKey {
+    /// Page ID of `codex:archives` storage
+    id: #[id="codex:page"] string,
+    /// Context number provided to the text
+    context_number?: int @ 0..,
     /// Other keywords related to the description
-    related_keywords?: [(
-      #[id="codex:page"] string |
-      CompoundDescriptionKey |
-    )],
+    related_keywords?: [DescriptionKey],
   }
 )
-
-struct CompoundDescriptionKey {
-  /// Page ID of `codex:archives` storage
-  id: #[id="codex:page"] string,
-  /// Context number provided to the text
-  context_number?: int @ 0..,
-}

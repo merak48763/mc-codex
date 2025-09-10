@@ -2,7 +2,6 @@ use ::java::util::text::Text
 use ::java::util::text::TextStyle
 use ::java::world::item::ItemStack
 use super::DescriptionKey
-use super::CompoundDescriptionKey
 use super::super::custom_data::BakedEntry
 use super::archive::ArchiveEntry
 use super::archive::Insertion
@@ -30,10 +29,8 @@ dispatch codex:transforms_in[codex:bake_single_entry] to DescriptionKey
 dispatch codex:transforms_out[codex:bake_single_entry] to BakedEntry
 dispatch codex:transforms_temp[codex:bake_single_entry] to struct {
   /// Other keywords related to the main description
-  related_keywords?: [(
-    #[id="codex:page"] string |
-    CompoundDescriptionKey |
-  )],
+  related_keywords?: [DescriptionKey],
+  related_keywords_stack?: [[DescriptionKey]],
   /// Archive entry retrieved from `codex:archives`
   retrieved_archive?: ArchiveEntry,
   /// Transformed `with` text components

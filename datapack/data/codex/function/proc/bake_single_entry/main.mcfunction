@@ -52,9 +52,18 @@ execute if data storage codex:internal root.transforms."codex:bake_single_entry"
   run function codex:proc/bake_single_entry/description_loop
 
 # related keywords
+# no keywords -> return
 execute unless data storage codex:internal root.transforms."codex:bake_single_entry".in.related_keywords[0] \
   run return 1
+# push stack
+data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords_stack \
+  append from storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords
+# call loop
 scoreboard players set #is_main_entry codex.var 0
 data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords \
   set from storage codex:internal root.transforms."codex:bake_single_entry".in.related_keywords
 function codex:proc/bake_single_entry/related_keyword_loop
+# pop stack
+data modify storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords \
+  set from storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords_stack[-1]
+data remove storage codex:internal root.transforms."codex:bake_single_entry".temp.related_keywords_stack[-1]

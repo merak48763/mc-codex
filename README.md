@@ -152,7 +152,7 @@ Compound:
 
 - `id`: **\[String\]** A description ID defined in the archive.
 - `context_number`: **\[Optional int\]** The *context number* provided to the description.
-- `related_keywords`: **\[Optional list of *index*es\]** Related descriptions to show in the same page. Nested `related_keywords` is **not** supported.
+- `related_keywords`: **\[Optional list of *index*es\]** Related descriptions to show in the same page.
 
 ### Example (Static)
 
@@ -169,7 +169,6 @@ data modify storage codex:description_keys values \
   append value {id: "minecraft:enchantment/bane_of_arthropods", related_keywords: [{id: "minecraft:effect/slowness", context_number: 3}]}
 data modify storage codex:description_keys values[-1].context_number \
   set from storage codex:inspecting_item root.components."minecraft:enchantments"."minecraft:bane_of_arthropods"
-
 ```
 
 # Resource Pack
