@@ -1,7 +1,7 @@
 # Codex
 
 Adapted from the Lexica module of [pearuhdox/Cartographer-2.0](https://github.com/pearuhdox/Cartographer-2.0).  
-Minecraft version: 1.21.5 ~ 1.21.8
+Minecraft version: 1.21.5 ~ 1.21.9
 
 # Get the Book
 
