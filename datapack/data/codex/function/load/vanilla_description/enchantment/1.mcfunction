@@ -22,9 +22,9 @@ data modify storage codex:archives root."minecraft:enchantment/riptide" set valu
   details: [ \
     {translate: "codex.desc.enchantment.riptide.1", fallback: "When thrown:", color: "gray"}, \
     {translate: "codex.desc.enchantment.riptide.2", fallback: "Launches user with the trident"}, \
-    {translate: "codex.desc.enchantment.riptide.3", fallback: "  (Only available in water or rain)"} \
+    {translate: "codex.desc.enchantment.riptide.3", fallback: "(Only available in water or rain)"} \
   ], \
-  bullets: ["section_header", "section_last_content", "none"], \
+  bullets: ["section_header", "section_last_content", "indent"], \
   context_type: "enchantment" \
 }
 data modify storage codex:archives root."minecraft:enchantment/channeling" set value { \

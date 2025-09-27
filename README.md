@@ -47,7 +47,7 @@ Descriptions are defined under the `root` tag in command storage `codex:archives
   - `title`: **\[Text component\]** The title of the description.
   - `button_color`: **\[Optional int\]** The color of GUI element, which uses `filled_map` item model. Defaults to `4603950` (`#46402e`, defined in `filled_map` item model).
   - `details`: **\[List of text components\]** The description lines. Like the `lore` component, `\n` is not treated as newline.
-  - `bullets`: **\[List of strings\]** Each entry is one of `none`, `dot`, `section_header`, `section_content`, `section_last_content`. Determines the decoration of the corresponding description line
+  - `bullets`: **\[List of strings\]** Each entry is one of `none`, `dot`, `section_header`, `section_content`, `section_content_continued`, `section_last_content`, `indent`. Determines the decoration of the corresponding description line
   - `base_style`: **\[Optional text style\]** The common style applied to every line of `details`. Defaults to `{color: "#f0f0f0", italic: false}`.
   - `context_type`: **\[Optional string\]** One of `none`, `enchantment` and `effect`. Determines how to interpret the *context number*. Defaults to `none`.
     - `"none"`: This description doesn't chage.

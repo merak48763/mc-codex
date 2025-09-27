@@ -29,12 +29,12 @@ data modify storage codex:archives root."minecraft:effect/conduit_power" set val
   button_color: 11141375, \
   details: [ \
     {translate: "codex.desc.effect.conduit_power.1", fallback: "%1$s %2$s"}, \
-    {translate: "codex.desc.effect.conduit_power.2", fallback: "  (Does not stack with %3$s)"}, \
+    {translate: "codex.desc.effect.conduit_power.2", fallback: "(Does not stack with %3$s)"}, \
     {translate: "codex.desc.effect.conduit_power.3", fallback: "When in water:", color: "gray"}, \
     {translate: "codex.desc.effect.conduit_power.4", fallback: "Stops air depletion"}, \
     {translate: "codex.desc.effect.conduit_power.5", fallback: "Brightens vision"}, \
   ], \
-  bullets: ["dot", "none", "section_header", "section_content", "section_last_content"], \
+  bullets: ["dot", "indent", "section_header", "section_content", "section_last_content"], \
   context_type: "effect", \
   insertions: [ \
     { \
@@ -53,9 +53,9 @@ data modify storage codex:archives root."minecraft:effect/haste" set value { \
   details: [ \
     {translate: "codex.desc.effect.haste.1", fallback: "%1$s %2$s"}, \
     {translate: "codex.desc.effect.haste.2", fallback: "%3$s %4$s"}, \
-    {translate: "codex.desc.effect.haste.3", fallback: "  (Does not stack with %5$s)"} \
+    {translate: "codex.desc.effect.haste.3", fallback: "(Does not stack with %5$s)"} \
   ], \
-  bullets: ["dot", "dot", "none"], \
+  bullets: ["dot", "dot", "indent"], \
   context_type: "effect", \
   insertions: [ \
     { \

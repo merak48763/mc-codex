@@ -87,5 +87,7 @@ enum(string) BulletType {
   Dot = "dot",
   SectionHeader = "section_header",
   SectionContent = "section_content",
+  SectionContentContinued = "section_content_continued",
   SectionLastContent = "section_last_content",
+  Indent = "indent",
 }

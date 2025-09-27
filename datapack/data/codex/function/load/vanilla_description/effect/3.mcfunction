@@ -54,10 +54,10 @@ data modify storage codex:archives root."minecraft:effect/invisibility" set valu
   button_color: 11141375, \
   details: [ \
     {translate: "codex.desc.effect.invisibility.1", fallback: "Becomes invisible"}, \
-    {translate: "codex.desc.effect.invisibility.2", fallback: "  (Equipment is unaffected)"}, \
+    {translate: "codex.desc.effect.invisibility.2", fallback: "(Equipment is unaffected)"}, \
     {translate: "codex.desc.effect.invisibility.3", fallback: "%1$s %2$s"} \
   ], \
-  bullets: ["dot", "none", "dot"], \
+  bullets: ["dot", "indent", "dot"], \
   insertions: [ \
     {value: {text: "-100%", color: "#bbbbbb"}}, \
     {value: {translate: "attribute.name.waypoint_transmit_range"}} \

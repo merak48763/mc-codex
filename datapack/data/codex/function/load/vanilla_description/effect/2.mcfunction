@@ -74,9 +74,9 @@ data modify storage codex:archives root."minecraft:effect/poison" set value { \
   details: [ \
     {translate: "codex.desc.effect.poison.1", fallback: "Every %1$s%2$s:", color: "gray"}, \
     {translate: "codex.desc.effect.poison.2", fallback: "Inflicts 1 magic damage"}, \
-    {translate: "codex.desc.effect.poison.3", fallback: "  (Until the affected's HP reaches 1)"} \
+    {translate: "codex.desc.effect.poison.3", fallback: "(Until the affected's HP reaches 1)"} \
   ], \
-  bullets: ["section_header", "section_last_content", "none"], \
+  bullets: ["section_header", "section_last_content", "indent"], \
   context_type: "effect", \
   insertions: [ \
     { \
