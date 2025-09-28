@@ -21,7 +21,7 @@ execute if items entity @s contents written_book[written_book_content, !written_
   storage codex:internal root.transforms."codex:item_name".out.with[0].with \
   append from storage codex:internal root.transforms."codex:item_name".in.components."minecraft:written_book_content".title.raw
 # player head
-execute if function codex:proc/item_name/check/is_player_head_named \
+execute if data storage codex:inspecting_item root.components."minecraft:profile".name \
   run return run function codex:proc/item_name/player_head_name
 # potion
 # default item name resolver is simpler in this case
