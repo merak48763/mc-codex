@@ -20,11 +20,12 @@ data modify storage codex:archives root."minecraft:enchantment/riptide" set valu
   title: {translate: "enchantment.minecraft.riptide", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.riptide.1", fallback: "When thrown:", color: "gray"}, \
-    {translate: "codex.desc.enchantment.riptide.2", fallback: "Launches user with the trident"}, \
-    {translate: "codex.desc.enchantment.riptide.3", fallback: "(Only available in water or rain)"} \
+    {translate: "codex.desc.enchantment.riptide.1", fallback: "Can only be thrown in water or rain"}, \
+    {translate: "codex.desc.enchantment.riptide.2", fallback: "When thrown:", color: "gray"}, \
+    {translate: "codex.desc.enchantment.riptide.3", fallback: "Launches user with the trident"}, \
+    {translate: "codex.desc.enchantment.riptide.4", fallback: "Attacks collided target"} \
   ], \
-  bullets: ["section_header", "section_last_content", "indent"], \
+  bullets: ["dot", "section_header", "section_content", "section_last_content"], \
   context_type: "enchantment" \
 }
 data modify storage codex:archives root."minecraft:enchantment/channeling" set value { \
