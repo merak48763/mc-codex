@@ -1,4 +1,4 @@
-import os
+import os, sys
 from zipfile import ZipFile
 
 def zipdir(path, zip_filename, *, is_pack=True):
@@ -14,6 +14,11 @@ def zipdir(path, zip_filename, *, is_pack=True):
       zipfile.write("LICENSE", "LICENSE")
       zipfile.write("packed_readme.md", "README.md")
 
-zipdir("datapack", "dist/mc-codex-dp.zip")
-zipdir("resourcepack", "dist/mc-codex-rp.zip")
+if len(sys.argv) > 1:
+  version_suffix = "-" + sys.argv[1]
+else:
+  version_suffix = ""
+
+zipdir("datapack", f"dist/mc-codex-dp{version_suffix}.zip")
+zipdir("resourcepack", f"dist/mc-codex-rp{version_suffix}.zip")
 zipdir("mcdoc", "dist/codex-mcdoc.zip", is_pack=False)

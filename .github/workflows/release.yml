@@ -1,0 +1,29 @@
+name: Pack Release
+
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Zip packs
+        run: |
+          mkdir dist
+          python zip_pack.py ${{ github.ref_name }}
+
+      - name: Upload release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./dist/*.zip
