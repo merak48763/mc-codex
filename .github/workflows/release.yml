@@ -20,10 +20,23 @@ jobs:
 
       - name: Zip packs
         run: |
-          mkdir dist
-          python zip_pack.py ${{ github.ref_name }}
+          mkdir -p dist
+          python zip_pack.py $GITHUB_REF_NAME
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
           files: ./dist/*.zip
+
+      - name: Send notification to Discord
+        if: always()
+        uses: tsickert/discord-webhook@v7.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          embed-title: "[${{ github.event.repository.name }}] automated release"
+          embed-url: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          embed-description: |
+            **Tag**: ${{ github.ref_name }}
+            **Status**: ${{ job.status }}
+          embed-timestamp: ${{ github.event.release.published_at }}
+          embed-color: 0x66ee66
