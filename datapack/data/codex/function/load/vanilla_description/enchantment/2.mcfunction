@@ -6,7 +6,7 @@ data modify storage codex:archives root."minecraft:enchantment/frost_walker" set
     {translate: "codex.desc.enchantment.frost_walker.1", fallback: "While walking:", color: "gray"}, \
     {translate: "codex.desc.enchantment.frost_walker.2", fallback: "Frosts water surface within %1$s blocks"}, \
     {translate: "codex.desc.enchantment.frost_walker.3", fallback: "Immune to stepping damage from:"}, \
-    {translate: "codex.desc.enchantment.frost_walker.4", fallback: "Magma Block and Campfires"} \
+    {translate: "codex.desc.enchantment.frost_walker.4", fallback: "Magma Block, Campfires"} \
   ], \
   bullets: ["none", "section_header", "section_last_content", "section_header", "section_last_content"], \
   context_type: "enchantment", \
