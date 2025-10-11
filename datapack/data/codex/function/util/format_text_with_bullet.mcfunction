@@ -1,5 +1,5 @@
 data modify storage codex:internal root.transforms."codex:format_text_with_bullet".out \
-  set value {translate: "codex.bullet.base", fallback: "%1$s%2$s", with: []}
+  set value {translate: "codex.bullet.base", fallback: " %1$s%2$s", with: []}
 data modify storage codex:internal root.transforms."codex:format_text_with_bullet".out \
   merge from storage codex:internal root.transforms."codex:format_text_with_bullet".in.style
 

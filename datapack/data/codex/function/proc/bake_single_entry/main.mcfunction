@@ -31,7 +31,7 @@ execute if data storage codex:internal root.transforms."codex:bake_single_entry"
   run scoreboard players remove #context_index codex.var 1
 
 # title text
-data modify storage codex:internal root.transforms."codex:bake_single_entry".out.lore \
+#data modify storage codex:internal root.transforms."codex:bake_single_entry".out.lore \
   append value ""
 data modify storage codex:internal root.transforms."codex:bake_single_entry".out.lore \
   append value {translate: "codex.bracket", fallback: "[%s]", with: [], color: "white", italic: false}
