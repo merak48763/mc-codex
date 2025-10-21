@@ -27,13 +27,14 @@ data modify storage codex:archives root."minecraft:enchantment/lunge" set value 
   details: [ \
     {translate: "codex.desc.enchantment.lunge.1", color: "gray"}, \
     {translate: "codex.desc.enchantment.lunge.2"}, \
-    {translate: "codex.desc.enchantment.lunge.3"} \
+    {translate: "codex.desc.enchantment.lunge.3"}, \
+    {translate: "codex.desc.enchantment.lunge.4"} \
   ], \
-  bullets: ["section_header", "section_content", "section_last_content"], \
+  bullets: ["section_header", "section_content", "section_last_content", "indent"], \
   context_type: "enchantment", \
   insertions: [ \
     { \
-      type: "lookup", values: ["8", "32", "128", "512", "2048", "8192", "32768", "131072", "524288", "2097152"], \
+      type: "lookup", values: ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], \
       fallback: {translate: "codex.generic.enchantment.lunge.1"}, \
       generic: {translate: "codex.generic.enchantment.lunge.1"}, \
       base_style: {color: "#ff99ff"} \
