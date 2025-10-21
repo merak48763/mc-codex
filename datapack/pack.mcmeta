@@ -1,8 +1,8 @@
 {
   "pack": {
     "pack_format": 71,
-    "supported_formats": [71, 89],
-    "min_format": 71, "max_format": 89,
+    "supported_formats": [71, 91],
+    "min_format": 71, "max_format": 91,
     "description": {"text": "https://github.com/merak48763/mc-codex", "color": "#8888ff"}
   },
   "overlays": {
