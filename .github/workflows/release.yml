@@ -27,8 +27,8 @@ jobs:
       - name: Zip packs
         run: |
           beet build
-          mv dist/exported_data_pack.zip mc-codex-dp-${GITHUB_REF_NAME}.zip
-          mv dist/exported_resource_pack.zip mc-codex-rp-${GITHUB_REF_NAME}.zip
+          mv dist/exported_data_pack.zip dist/mc-codex-dp-${GITHUB_REF_NAME}.zip
+          mv dist/exported_resource_pack.zip dist/mc-codex-rp-${GITHUB_REF_NAME}.zip
 
       - name: Zip mcdoc
         run: |
