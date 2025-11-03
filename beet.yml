@@ -18,6 +18,8 @@ meta:
       LICENSE: LICENSE
       README.md: packed_readme.md
 
+require:
+  - beet.contrib.unknown_files
 pipeline:
   - beet.contrib.copy_files
 

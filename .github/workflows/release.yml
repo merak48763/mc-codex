@@ -10,6 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -19,16 +24,13 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
-
       - name: Zip packs
         run: |
           beet build
-          mv dist/exported_data_pack.zip mc-codex-dp-${GITHUB_REF_NAME}.zip
-          mv dist/exported_resource_pack.zip mc-codex-rp-${GITHUB_REF_NAME}.zip
+          cd dist
+          mv exported_data_pack.zip mc-codex-dp-${GITHUB_REF_NAME}.zip
+          mv exported_resource_pack.zip mc-codex-rp-${GITHUB_REF_NAME}.zip
+          cd ..
 
       - name: Zip mcdoc
         run: |
