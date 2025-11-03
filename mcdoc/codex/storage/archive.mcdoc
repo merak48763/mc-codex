@@ -3,7 +3,7 @@ use ::java::util::text::TextStyle
 use super::CommandStorage
 
 dispatch :storage[codex:archives] to CommandStorage<struct Archives {
-  [#[id(registry="codex:page", definition=true)] string]: ArchiveEntry,
+  [#[id(registry="codex/page", definition=true)] string]: ArchiveEntry,
 }>
 
 struct ArchiveEntry {
