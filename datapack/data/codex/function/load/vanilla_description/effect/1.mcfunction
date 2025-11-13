@@ -31,7 +31,7 @@ data modify storage codex:archives root."minecraft:effect/conduit_power" set val
     {translate: "codex.desc.effect.conduit_power.1", fallback: "%1$s %2$s"}, \
     {translate: "codex.desc.effect.conduit_power.2", fallback: "(Does not stack with %3$s)"}, \
     {translate: "codex.desc.effect.conduit_power.3", fallback: "When in water:", color: "gray"}, \
-    {translate: "codex.desc.effect.conduit_power.4", fallback: "Stops air depletion"}, \
+    {translate: "codex.desc.effect.conduit_power.4", fallback: "Replenishes air"}, \
     {translate: "codex.desc.effect.conduit_power.5", fallback: "Brightens vision"}, \
   ], \
   bullets: ["dot", "indent", "section_header", "section_content", "section_last_content"], \
