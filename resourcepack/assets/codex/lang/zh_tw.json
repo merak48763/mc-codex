@@ -181,7 +181,7 @@
   "codex.desc.effect.conduit_power.1": "%1$s %2$s",
   "codex.desc.effect.conduit_power.2": "(不會和%3$s的效果堆疊)",
   "codex.desc.effect.conduit_power.3": "在水中時：",
-  "codex.desc.effect.conduit_power.4": "停止氧氣消耗",
+  "codex.desc.effect.conduit_power.4": "回復氧氣",
   "codex.desc.effect.conduit_power.5": "使視野變亮",
   "codex.desc.effect.darkness.1": "使視野變暗",
   "codex.desc.effect.dolphins_grace.1": "減少水中的移動阻力",

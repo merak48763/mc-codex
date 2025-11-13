@@ -181,7 +181,7 @@
   "codex.desc.effect.conduit_power.1": "%1$s %2$s",
   "codex.desc.effect.conduit_power.2": "(Does not stack with %3$s)",
   "codex.desc.effect.conduit_power.3": "When in water:",
-  "codex.desc.effect.conduit_power.4": "Stops air depletion",
+  "codex.desc.effect.conduit_power.4": "Replenishes air",
   "codex.desc.effect.conduit_power.5": "Brightens vision",
   "codex.desc.effect.darkness.1": "Dims vision",
   "codex.desc.effect.dolphins_grace.1": "Decreases movement resistance underwater",
