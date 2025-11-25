@@ -20,16 +20,15 @@ data modify storage codex:archives root."minecraft:enchantment/frost_walker" set
   ] \
 }
 
-# TODO: fallback
 data modify storage codex:archives root."minecraft:enchantment/lunge" set value { \
   title: {translate: "enchantment.minecraft.lunge", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.lunge.1"}, \
-    {translate: "codex.desc.enchantment.lunge.2", color: "gray"}, \
-    {translate: "codex.desc.enchantment.lunge.3"}, \
-    {translate: "codex.desc.enchantment.lunge.4"}, \
-    {translate: "codex.desc.enchantment.lunge.5"} \
+    {translate: "codex.desc.enchantment.lunge.1", fallback: "Only works when food point > 6"}, \
+    {translate: "codex.desc.enchantment.lunge.2", fallback: "When performing jab attack:", color: "gray"}, \
+    {translate: "codex.desc.enchantment.lunge.3", fallback: "Launches the user forward"}, \
+    {translate: "codex.desc.enchantment.lunge.4", fallback: "Consumes %1$s food saturation points"}, \
+    {translate: "codex.desc.enchantment.lunge.5", fallback: "Loses 1 durability point"} \
   ], \
   bullets: ["dot", "section_header", "section_content", "section_content", "section_last_content"], \
   context_type: "enchantment", \
