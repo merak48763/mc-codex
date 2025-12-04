@@ -3,7 +3,7 @@
 [![GitHub Release](https://img.shields.io/github/v/release/merak48763/mc-codex?style=for-the-badge&logo=github&color=6e6)](https://github.com/merak48763/mc-codex/releases/latest)
 
 Adapted from the Lexica module of [pearuhdox/Cartographer-2.0](https://github.com/pearuhdox/Cartographer-2.0).  
-Minecraft version: 1.21.5 ~ 25w44a
+Minecraft version: 1.21.5 ~ 1.21.11
 
 # Get the Book
 
