@@ -8,6 +8,14 @@ data modify storage codex:archives root."minecraft:effect/blindness" set value {
   ], \
   bullets: ["dot", "dot", "dot"] \
 }
+data modify storage codex:archives root."minecraft:effect/breath_of_the_nautilus" set value { \
+  title: {translate: "effect.minecraft.breath_of_the_nautilus", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.effect.breath_of_the_nautilus.1", fallback: "Stops underwater air depletion"} \
+  ], \
+  bullets: ["dot"] \
+}
 data modify storage codex:archives root."minecraft:effect/darkness" set value { \
   title: {translate: "effect.minecraft.darkness", color: "red", bold: true}, \
   button_color: 14680064, \
@@ -118,7 +126,7 @@ data modify storage codex:archives root."minecraft:effect/water_breathing" set v
   title: {translate: "effect.minecraft.water_breathing", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.effect.water_breathing.1", fallback: "Stops underwater air depletion"} \
+    {translate: "codex.desc.effect.water_breathing.1", fallback: "Replenishes air underwater"} \
   ], \
   bullets: ["dot"] \
 }

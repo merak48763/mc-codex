@@ -5,6 +5,7 @@ execute if items entity @s contents *[stored_enchantments~[{enchantments: "ripti
 execute if items entity @s contents *[stored_enchantments~[{enchantments: "channeling"}]] run function codex:event_handler/describe_stored_enchantment/channeling
 execute if items entity @s contents *[stored_enchantments~[{enchantments: "wind_burst"}]] run function codex:event_handler/describe_stored_enchantment/wind_burst
 execute if items entity @s contents *[stored_enchantments~[{enchantments: "frost_walker"}]] run function codex:event_handler/describe_stored_enchantment/frost_walker
+execute if items entity @s contents *[stored_enchantments~[{enchantments: "#codex:holder/lunge"}]] run function codex:event_handler/describe_stored_enchantment/lunge
 execute if items entity @s contents *[stored_enchantments~[{enchantments: "sharpness"}]] run function codex:event_handler/describe_stored_enchantment/sharpness
 execute if items entity @s contents *[stored_enchantments~[{enchantments: "smite"}]] run function codex:event_handler/describe_stored_enchantment/smite
 execute if items entity @s contents *[stored_enchantments~[{enchantments: "bane_of_arthropods"}]] run function codex:event_handler/describe_stored_enchantment/bane_of_arthropods

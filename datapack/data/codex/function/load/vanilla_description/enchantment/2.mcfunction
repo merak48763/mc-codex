@@ -20,6 +20,28 @@ data modify storage codex:archives root."minecraft:enchantment/frost_walker" set
   ] \
 }
 
+data modify storage codex:archives root."minecraft:enchantment/lunge" set value { \
+  title: {translate: "enchantment.minecraft.lunge", color: "#cc88ff", bold: true}, \
+  button_color: 11141375, \
+  details: [ \
+    {translate: "codex.desc.enchantment.lunge.1", fallback: "Only works when food point > 6"}, \
+    {translate: "codex.desc.enchantment.lunge.2", fallback: "When performing jab attack:", color: "gray"}, \
+    {translate: "codex.desc.enchantment.lunge.3", fallback: "Launches the user forward"}, \
+    {translate: "codex.desc.enchantment.lunge.4", fallback: "Consumes %1$s food saturation points"}, \
+    {translate: "codex.desc.enchantment.lunge.5", fallback: "Loses 1 durability point"} \
+  ], \
+  bullets: ["dot", "section_header", "section_content", "section_content", "section_last_content"], \
+  context_type: "enchantment", \
+  insertions: [ \
+    { \
+      type: "lookup", values: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], \
+      fallback: {translate: "codex.generic.enchantment.lunge.1"}, \
+      generic: {translate: "codex.generic.enchantment.lunge.1"}, \
+      base_style: {color: "#ff99ff"} \
+    } \
+  ] \
+}
+
 data modify storage codex:archives root."minecraft:enchantment/piercing" set value { \
   title: {translate: "enchantment.minecraft.piercing", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
