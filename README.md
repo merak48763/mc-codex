@@ -1,4 +1,4 @@
-# Codex
+# The Universe Cat Codex
 
 [![GitHub Release](https://img.shields.io/github/v/release/merak48763/mc-codex?style=for-the-badge&logo=github&color=6e6)](https://github.com/merak48763/mc-codex/releases/latest)
 

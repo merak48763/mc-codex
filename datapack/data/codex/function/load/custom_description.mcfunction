@@ -1,8 +1,11 @@
 data modify storage codex:archives root."codex:book" set value { \
   title: {text: ":learned:", color: "#88ff88"}, \
   button_color: 5635925, \
-  details: [], \
-  bullets: [] \
+  details: [ \
+    {translate: "codex.book", fallback: "Book of the Universe Cat"}, \
+    {translate: "codex.keyword.book.1", fallback: "Subtitle: The Reinvented Wheel"} \
+  ], \
+  bullets: ["none", "none"] \
 }
 
 data modify storage codex:archives root."codex:keyword/curse" set value { \
