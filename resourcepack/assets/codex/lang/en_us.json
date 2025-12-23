@@ -288,6 +288,6 @@
   "codex.generic.effect.wither.1": "[4 * (0.5 ^ lvl)]",
   "codex.formatter": "%s",
   "codex.bracket": "[%s]",
-  "codex.bullet.base": "%1$s%2$s",
+  "codex.bullet.base": " %1$s%2$s",
   "codex.page_turner": "%s ❱"
 }
