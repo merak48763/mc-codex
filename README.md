@@ -107,6 +107,17 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
 }
 ```
 
+## Override Data
+
+`#codex:override_builtin_data` always runs after loading built-in data.  
+Functions hooked on this tag can consistently modify the built-in data, regardless of datapack loading order.
+
+### Example
+
+```mcfunction
+data modify storage codex:archives root."minecraft:enchantment/sharpness".insertions[0].values append value "+6"
+```
+
 ## Describe Items
 
 ### Static Description
