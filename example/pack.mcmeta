@@ -1,6 +1,7 @@
 {
   "pack": {
-    "pack_format": 81,
-    "description": "Example"
+    "min_format": 94,
+    "max_format": 94,
+    "description": "1.21.11 Example"
   }
 }

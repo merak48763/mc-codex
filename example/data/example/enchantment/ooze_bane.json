@@ -2,7 +2,7 @@
   "description": "Ooze Bane",
   "exclusive_set": "#exclusive_set/damage",
   "supported_items": "#enchantable/weapon",
-  "primary_items": "#enchantable/sword",
+  "primary_items": "#enchantable/melee_weapon",
   "weight": 5,
   "max_level": 5,
   "min_cost": {"base": 5, "per_level_above_first": 8},
