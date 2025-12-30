@@ -15,21 +15,20 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Setup Beet
+      - name: Zip datapack
         run: |
-          pip install -r requirements.txt
+          cd datapack
+          cp ../packed_readme.md README.md
+          cp ../LICENSE LICENSE
+          zip -r ../dist/mc-codex-dp-${GITHUB_REF_NAME}.zip .
+          cd ..
 
-      - name: Zip packs
+      - name: Zip resourcepack
         run: |
-          beet build
-          cd dist
-          mv exported_data_pack.zip mc-codex-dp-${GITHUB_REF_NAME}.zip
-          mv exported_resource_pack.zip mc-codex-rp-${GITHUB_REF_NAME}.zip
+          cd resourcepack
+          cp ../packed_readme.md README.md
+          cp ../LICENSE LICENSE
+          zip -r ../dist/mc-codex-rp-${GITHUB_REF_NAME}.zip .
           cd ..
 
       - name: Zip mcdoc
