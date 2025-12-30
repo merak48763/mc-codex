@@ -5,7 +5,7 @@ use super::DescriptionKey
 use super::super::custom_data::BakedEntry
 use super::archive::ArchiveEntry
 use super::archive::Insertion
-use super::archive::BulletType
+use super::line_prefix::BulletType
 use super::book_data::BookData
 
 // item stack → translated item name

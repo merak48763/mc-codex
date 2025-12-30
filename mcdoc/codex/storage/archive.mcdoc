@@ -1,6 +1,7 @@
 use ::java::util::text::Text
 use ::java::util::text::TextStyle
 use super::CommandStorage
+use super::line_prefix::BulletType
 
 dispatch :storage[codex:archives] to CommandStorage<struct Archives {
   [#[id(registry="codex/page", definition=true)] string]: ArchiveEntry,
@@ -81,13 +82,4 @@ enum(string) InsertionType {
   ValueLookup = "lookup",
   /// Value determined by the range of context number
   ValueCheck = "value_check",
-}
-enum(string) BulletType {
-  None = "none",
-  Dot = "dot",
-  SectionHeader = "section_header",
-  SectionContent = "section_content",
-  SectionContentContinued = "section_content_continued",
-  SectionLastContent = "section_last_content",
-  Indent = "indent",
 }
