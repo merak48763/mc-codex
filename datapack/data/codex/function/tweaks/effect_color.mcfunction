@@ -27,7 +27,7 @@ data modify storage codex:archives root."minecraft:effect/saturation/half".butto
 data modify storage codex:archives root."minecraft:effect/glowing".button_color set value 9740385
 data modify storage codex:archives root."minecraft:effect/levitation".button_color set value 13565951
 data modify storage codex:archives root."minecraft:effect/luck".button_color set value 5882118
-data modify storage codex:archives root."minecraft:effect/bad_luck".button_color set value 12624973
+data modify storage codex:archives root."minecraft:effect/unluck".button_color set value 12624973
 data modify storage codex:archives root."minecraft:effect/slow_falling".button_color set value 15978425
 data modify storage codex:archives root."minecraft:effect/conduit_power".button_color set value 1950417
 data modify storage codex:archives root."minecraft:effect/dolphins_grace".button_color set value 8954814
