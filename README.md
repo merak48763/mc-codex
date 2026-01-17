@@ -144,6 +144,12 @@ Functions hooked on this tag can consistently modify the built-in data, regardle
 data modify storage codex:archives root."minecraft:enchantment/sharpness".insertions[0].values append value "+6"
 ```
 
+### Built-in Tweaks
+
+These functions can be hooked onto `#codex:override_builtin_data` to tweak some parts of behavior.
+
+- `codex:tweaks/effect_color`: Makes button color of status effects match their particle color.
+
 ## Describe Items
 
 ### Static Description
