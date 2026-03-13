@@ -61,12 +61,17 @@ data modify storage codex:archives root."minecraft:effect/invisibility" set valu
   title: {translate: "effect.minecraft.invisibility", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.effect.invisibility.1", fallback: "Becomes invisible"}, \
-    {translate: "codex.desc.effect.invisibility.2", fallback: "(Equipment is unaffected)"}, \
-    {translate: "codex.desc.effect.invisibility.3", fallback: "%1$s %2$s"} \
+    {translate: "codex.desc.effect.invisibility.1", fallback: "Reduces mob provoking range:"}, \
+    {translate: "codex.desc.effect.invisibility.2", fallback: "No equipment: %1$s"}, \
+    {translate: "codex.desc.effect.invisibility.3", fallback: "1 armor piece: %2$s"}, \
+    {translate: "codex.desc.effect.invisibility.4", fallback: "4 armor pieces: %3$s"}, \
+    {translate: "codex.desc.effect.invisibility.5", fallback: "%4$s %5$s"} \
   ], \
-  bullets: ["dot", "indent", "dot"], \
+  bullets: ["section_header", "section_content", "section_content", "section_last_content", "dot"], \
   insertions: [ \
+    {value: {text: "-93%", color: "#9999ff"}}, \
+    {value: {text: "-82.5%", color: "#9999ff"}}, \
+    {value: {text: "-30%", color: "#9999ff"}}, \
     {value: {text: "-100%", color: "#bbbbbb"}}, \
     {value: {translate: "attribute.name.waypoint_transmit_range"}} \
   ] \
