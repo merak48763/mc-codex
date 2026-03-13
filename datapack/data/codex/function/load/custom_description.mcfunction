@@ -44,7 +44,7 @@ data modify storage codex:archives root."codex:keyword/ignited_arrow" set value 
   title: {translate: "codex.keyword.ignited_arrow", fallback: "Ignited Arrow", color: "#ffff88"}, \
   details: [ \
     {translate: "codex.keyword.ignited_arrow.1", fallback: "Ignites:"}, \
-    {translate: "codex.keyword.ignited_arrow.2", fallback: "Targets hit (5s)"}, \
+    {translate: "codex.keyword.ignited_arrow.2", fallback: "Targets hit (5 seconds)"}, \
     {translate: "codex.keyword.ignited_arrow.3", fallback: "Campfires, Candles, TNT"}, \
   ], \
   bullets: ["section_header", "section_content", "section_last_content"] \

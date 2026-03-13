@@ -39,7 +39,7 @@ data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropod
   details: [ \
     {translate: "codex.desc.enchantment.bane_of_arthropods.1", fallback: "When attacking arthropods:", color: "gray"}, \
     {translate: "codex.desc.enchantment.bane_of_arthropods.2", fallback: "%1$s Damage dealt"}, \
-    {translate: "codex.desc.enchantment.bane_of_arthropods.3", fallback: "Inflicts %2$s (%3$s%4$s max)"} \
+    {translate: "codex.desc.enchantment.bane_of_arthropods.3", fallback: "Inflicts %2$s (%3$s max)"} \
   ], \
   bullets: ["section_header", "section_content", "section_last_content"], \
   context_type: "enchantment", \
@@ -52,12 +52,11 @@ data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropod
     }, \
     {value: {translate: "potion.withAmplifier", with: [{translate: "effect.minecraft.slowness"}, {translate: "potion.potency.3"}], color: "#ff9999"}}, \
     { \
-      type: "lookup", values: ["1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6"], \
-      fallback: {translate: "codex.generic.enchantment.bane_of_arthropods.3", fallback: "[1 + (0.5 * lvl)]"}, \
-      generic: {translate: "codex.generic.enchantment.bane_of_arthropods.3", fallback: "[1 + (0.5 * lvl)]"}, \
+      type: "lookup", values: ["00:01.5", "00:02", "00:02.5", "00:03", "00:03.5", "00:04", "00:04.5", "00:05", "00:05.5", "00:06"], \
+      fallback: {translate: "codex.generic.enchantment.bane_of_arthropods.3", fallback: "[1 + (0.5 * lvl)] seconds"}, \
+      generic: {translate: "codex.generic.enchantment.bane_of_arthropods.3", fallback: "[1 + (0.5 * lvl)] seconds"}, \
       base_style: {color: "#ff99ff"} \
-    }, \
-    {value: {translate: "codex.desc.enchantment.bane_of_arthropods.with.4", fallback: "s", color: "#ff99ff"}} \
+    } \
   ] \
 }
 data modify storage codex:archives root."minecraft:enchantment/impaling" set value { \
