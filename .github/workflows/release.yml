@@ -37,7 +37,9 @@ jobs:
 
       - name: Zip mcdoc
         run: |
-          zip -r dist/codex-mcdoc.zip mcdoc
+          cd mcdoc
+          zip -r ../dist/codex-mcdoc.zip .
+          cd ..
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
