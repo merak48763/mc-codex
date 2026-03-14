@@ -10,7 +10,6 @@ data modify storage codex:archives root."minecraft:enchantment/sweeping_edge" se
   insertions: [ \
     { \
       type: "lookup", values: ["+0.5", "+0.67", "+0.75", "+0.8", "+0.83", "+0.86", "+0.88", "+0.89", "+0.9", "+0.91"], \
-      fallback: {translate: "codex.generic.enchantment.sweeping_edge.1", fallback: "+[lvl / (1 + lvl)]"}, \
       generic: {translate: "codex.generic.enchantment.sweeping_edge.1", fallback: "+[lvl / (1 + lvl)]"}, \
       base_style: {color: "#9999ff"} \
     }, \
@@ -30,7 +29,6 @@ data modify storage codex:archives root."minecraft:enchantment/luck_of_the_sea" 
   insertions: [ \
     { \
       type: "lookup", values: ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10"], \
-      fallback: {translate: "codex.generic.enchantment.luck_of_the_sea.1", fallback: "+[lvl]"}, \
       generic: {translate: "codex.generic.enchantment.luck_of_the_sea.1", fallback: "+[lvl]"}, \
       base_style: {color: "#9999ff"} \
     }, \
@@ -50,7 +48,6 @@ data modify storage codex:archives root."minecraft:enchantment/efficiency" set v
   insertions: [ \
     { \
       type: "lookup", values: ["+2", "+5", "+10", "+17", "+26", "+37", "+50", "+65", "+82", "+101"], \
-      fallback: {translate: "codex.generic.enchantment.efficiency.1", fallback: "+[1 + (lvl)²]"}, \
       generic: {translate: "codex.generic.enchantment.efficiency.1", fallback: "+[1 + (lvl)²]"}, \
       base_style: {color: "#9999ff"} \
     }, \
@@ -70,7 +67,6 @@ data modify storage codex:archives root."minecraft:enchantment/respiration" set 
   insertions: [ \
     { \
       type: "lookup", values: ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10"], \
-      fallback: {translate: "codex.generic.enchantment.respiration.1", fallback: "+[lvl]"}, \
       generic: {translate: "codex.generic.enchantment.respiration.1", fallback: "+[lvl]"}, \
       base_style: {color: "#9999ff"} \
     }, \
@@ -89,7 +85,6 @@ data modify storage codex:archives root."minecraft:enchantment/aqua_affinity" se
   insertions: [ \
     { \
       type: "lookup", values: ["+400%", "+800%", "+1200%", "+1600%", "+2000%", "+2400%", "+2800%", "+3200%", "+3600%", "+4000%"], \
-      fallback: {translate: "codex.generic.enchantment.aqua_affinity.1", fallback: "+[400%% * lvl]"}, \
       generic: {translate: "codex.generic.enchantment.aqua_affinity.1", fallback: "+[400%% * lvl]"}, \
       base_style: {color: "#9999ff"} \
     }, \

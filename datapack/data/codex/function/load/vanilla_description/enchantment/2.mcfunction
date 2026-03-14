@@ -13,7 +13,6 @@ data modify storage codex:archives root."minecraft:enchantment/frost_walker" set
   insertions: [ \
     { \
       type: "lookup", values: ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], \
-      fallback: {translate: "codex.generic.enchantment.frost_walker.1", fallback: "[2 + lvl]"}, \
       generic: {translate: "codex.generic.enchantment.frost_walker.1", fallback: "[2 + lvl]"}, \
       base_style: {color: "#ff99ff"} \
     } \
@@ -35,8 +34,7 @@ data modify storage codex:archives root."minecraft:enchantment/lunge" set value 
   insertions: [ \
     { \
       type: "lookup", values: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], \
-      fallback: {translate: "codex.generic.enchantment.lunge.1"}, \
-      generic: {translate: "codex.generic.enchantment.lunge.1"}, \
+      generic: {translate: "codex.generic.enchantment.lunge.1", fallback: "[lvl]"}, \
       base_style: {color: "#ff99ff"} \
     } \
   ] \
@@ -53,7 +51,6 @@ data modify storage codex:archives root."minecraft:enchantment/piercing" set val
   insertions: [ \
     { \
       type: "lookup", values: ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10"], \
-      fallback: {translate: "codex.generic.enchantment.piercing.1", fallback: "+[lvl]"}, \
       generic: {translate: "codex.generic.enchantment.piercing.1", fallback: "+[lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -70,7 +67,6 @@ data modify storage codex:archives root."minecraft:enchantment/multishot" set va
   insertions: [ \
     { \
       type: "lookup", values: ["+2", "+4", "+6", "+8", "+10", "+12", "+14", "+16", "+18", "+20"], \
-      fallback: {translate: "codex.generic.enchantment.multishot.1", fallback: "+[2 * lvl]"}, \
       generic: {translate: "codex.generic.enchantment.multishot.1", fallback: "+[2 * lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -88,7 +84,6 @@ data modify storage codex:archives root."minecraft:enchantment/fire_aspect" set 
   insertions: [ \
     { \
       type: "lookup", values: ["00:04", "00:08", "00:12", "00:16", "00:20", "00:24", "00:28", "00:32", "00:36", "00:40"], \
-      fallback: {translate: "codex.generic.enchantment.fire_aspect.1", fallback: "[4 * lvl] seconds"}, \
       generic: {translate: "codex.generic.enchantment.fire_aspect.1", fallback: "[4 * lvl] seconds"}, \
       base_style: {color: "#ff99ff"} \
     } \
@@ -106,7 +101,6 @@ data modify storage codex:archives root."minecraft:enchantment/knockback" set va
   insertions: [ \
     { \
       type: "lookup", values: ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10"], \
-      fallback: {translate: "codex.generic.enchantment.knockback.1", fallback: "+[lvl]"}, \
       generic: {translate: "codex.generic.enchantment.knockback.1", fallback: "+[lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -123,7 +117,6 @@ data modify storage codex:archives root."minecraft:enchantment/punch" set value 
   insertions: [ \
     { \
       type: "lookup", values: ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10"], \
-      fallback: {translate: "codex.generic.enchantment.punch.1", fallback: "+[lvl]"}, \
       generic: {translate: "codex.generic.enchantment.punch.1", fallback: "+[lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -189,7 +182,6 @@ data modify storage codex:archives root."minecraft:enchantment/soul_speed" set v
   insertions: [ \
     { \
       type: "lookup", values: ["+40.5%", "+51%", "+61.5%", "+72%", "+82.5%", "+93%", "+103.5%", "+114%", "+124.5%", "+135%"], \
-      fallback: {translate: "codex.generic.enchantment.soul_speed.1", fallback: "+[30%% + (10.5%% * lvl)]"}, \
       generic: {translate: "codex.generic.enchantment.soul_speed.1", fallback: "+[30%% + (10.5%% * lvl)]"}, \
       base_style: {color: "#9999ff"} \
     }, \
@@ -230,7 +222,6 @@ data modify storage codex:archives root."minecraft:enchantment/unbreaking" set v
   insertions: [ \
     { \
       type: "lookup", values: ["50%", "66.67%", "75%", "80%", "83.33%", "85.71%", "87.5%", "88.89%", "90%", "90.91%"], \
-      fallback: {translate: "codex.generic.enchantment.unbreaking.1", fallback: "[lvl / (1 + lvl)]"}, \
       generic: {translate: "codex.generic.enchantment.unbreaking.1", fallback: "[lvl / (1 + lvl)]"}, \
       base_style: {color: "#aa66aa"} \
     } \
@@ -248,7 +239,6 @@ data modify storage codex:archives root."minecraft:enchantment/unbreaking/armor"
   insertions: [ \
     { \
       type: "lookup", values: ["20%", "26.67%", "30%", "32%", "33.33%", "34.29%", "35%", "35.56%", "36%", "36.36%"], \
-      fallback: {translate: "codex.generic.enchantment.unbreaking.1.armor", fallback: "[(lvl * 2) / (5 + (lvl * 5))]"}, \
       generic: {translate: "codex.generic.enchantment.unbreaking.1.armor", fallback: "[(lvl * 2) / (5 + (lvl * 5))]"}, \
       base_style: {color: "#aa66aa"} \
     } \
@@ -268,13 +258,11 @@ data modify storage codex:archives root."minecraft:enchantment/unbreaking/book" 
   insertions: [ \
     { \
       type: "lookup", values: ["20%", "26.67%", "30%", "32%", "33.33%", "34.29%", "35%", "35.56%", "36%", "36.36%"], \
-      fallback: {translate: "codex.generic.enchantment.unbreaking.1.armor", fallback: "[(lvl * 2) / (5 + (lvl * 5))]"}, \
       generic: {translate: "codex.generic.enchantment.unbreaking.1.armor", fallback: "[(lvl * 2) / (5 + (lvl * 5))]"}, \
       base_style: {color: "#ff99ff"} \
     }, \
     { \
       type: "lookup", values: ["50%", "66.67%", "75%", "80%", "83.33%", "85.71%", "87.5%", "88.89%", "90%", "90.91%"], \
-      fallback: {translate: "codex.generic.enchantment.unbreaking.1", fallback: "[lvl / (1 + lvl)]"}, \
       generic: {translate: "codex.generic.enchantment.unbreaking.1", fallback: "[lvl / (1 + lvl)]"}, \
       base_style: {color: "#ff99ff"} \
     } \

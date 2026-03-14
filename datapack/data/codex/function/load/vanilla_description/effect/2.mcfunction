@@ -19,14 +19,12 @@ data modify storage codex:archives root."minecraft:effect/bad_omen" set value { 
     }, \
     { \
       type: "lookup", values: ["", {translate: "potion.potency.1"}, {translate: "potion.potency.2"}, {translate: "potion.potency.3"}, {translate: "potion.potency.4"}, {translate: "potion.potency.5"}], \
-      fallback: {translate: "codex.generic.effect.bad_omen.3", fallback: "[lvl]"}, \
       generic: {translate: "codex.generic.effect.bad_omen.3", fallback: "[lvl]"}, \
       base_style: {color: "#ff9999"} \
     }, \
     {value: {translate: "effect.minecraft.trial_omen", color: "#ff9999"}}, \
     { \
       type: "lookup", values: ["15:00", "30:00", "45:00", "60:00", "75:00", "90:00"], \
-      fallback: {translate: "codex.generic.effect.bad_omen.5", fallback: "[15 * lvl] mins"}, \
       generic: {translate: "codex.generic.effect.bad_omen.5", fallback: "[15 * lvl] mins"}, \
       base_style: {color: "#ff99ff"} \
     } \
@@ -43,7 +41,6 @@ data modify storage codex:archives root."minecraft:effect/hero_of_the_village" s
   insertions: [ \
     { \
       type: "lookup", values: ["30%", "36.25%", "42.5%", "48.75%", "55%", "61.25%"], \
-      fallback: {translate: "codex.generic.effect.hero_of_the_village.1", fallback: "[23.75%% + (6.25%% * lvl)]"}, \
       generic: {translate: "codex.generic.effect.hero_of_the_village.1", fallback: "[23.75%% + (6.25%% * lvl)]"}, \
       base_style: {color: "#ff99ff"} \
     } \
@@ -61,7 +58,6 @@ data modify storage codex:archives root."minecraft:effect/hunger" set value { \
   insertions: [ \
     { \
       type: "lookup", values: ["40", "20", "13.35", "10", "8", "6.7"], \
-      fallback: {translate: "codex.generic.effect.hunger.1", fallback: "[40 / lvl]"}, \
       generic: {translate: "codex.generic.effect.hunger.1", fallback: "[40 / lvl]"}, \
       base_style: {color: "#aa66aa"} \
     }, \

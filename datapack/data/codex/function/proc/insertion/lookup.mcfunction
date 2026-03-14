@@ -11,13 +11,11 @@ execute store result score #value_count codex.var \
   run data get storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.values
 # out of bound
 execute if score #has_context codex.var matches 1 \
-  if score #context_index codex.var matches ..-1 run data modify \
-  storage codex:internal root.transforms."codex:insertion".temp.picked_text \
-  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.fallback
+  if score #context_index codex.var matches ..-1 \
+  run function codex:proc/insertion/lookup/use_fallback
 execute if score #has_context codex.var matches 1 \
-  if score #context_index codex.var >= #value_count codex.var run data modify \
-  storage codex:internal root.transforms."codex:insertion".temp.picked_text \
-  set from storage codex:internal root.transforms."codex:insertion".temp.lookup_insertion.fallback
+  if score #context_index codex.var >= #value_count codex.var \
+  run function codex:proc/insertion/lookup/use_fallback
 # bounded
 execute store result storage codex:internal root.macro.index int 1 \
   run scoreboard players get #context_index codex.var

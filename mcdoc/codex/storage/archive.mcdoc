@@ -45,8 +45,9 @@ dispatch codex:insertion[lookup] to struct LookupInsertion {
   generic: Text,
   /// When context number is provided, the corresponding value in the list will be selected.
   values: [Text],
-  /// Value to use when context number is provided but too large.
-  fallback: Text,
+  /// Value to use when context number is provided but too large. \
+  /// If not present, `generic` is used instead.
+  fallback?: Text,
   /// Text style applied to the generated value.
   base_style?: TextStyle,
 }

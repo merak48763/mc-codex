@@ -12,7 +12,6 @@ data modify storage codex:archives root."example:enchantment/ooze_bane" set valu
   insertions: [ \
     { \
       type: "lookup", values: ["+2.5", "+5", "+7.5", "+10", "+12.5"], \
-      fallback: "+[2.5 * lvl]", \
       generic: "+[2.5 * lvl]", \
       base_style: {color: "#9999ff"} \
     }, \
@@ -22,7 +21,6 @@ data modify storage codex:archives root."example:enchantment/ooze_bane" set valu
     }, \
     { \
       type: "lookup", values: ["+1.25", "+2.5", "+3.75", "+5", "+6.25"], \
-      fallback: "+[1.25 * lvl]", \
       generic: "+[1.25 * lvl]", \
       base_style: {color: "#9999ff"} \
     } \

@@ -71,7 +71,7 @@ When `type: "text"`:
 When `type: "lookup"`:
 
 - `values`: **\[List of text components\]** Entries will be selected based on the *context number*. The first entry is for enchantment level 1 / effect amplifier 0.
-- `fallback`: **\[Text component\]** The text to display if the *context number* is too large that the text is not defined in `values`.
+- `fallback`: **\[Optional text component\]** The text to display if the *context number* is too large that the text is not defined in `values`. If this field is not present, the `generic` value is used instead.
 - `generic`: **\[Text component\]** The text to display if the *context number* is not provided.
 - `base_style`: **\[Optional text style\]** The text style to apply on the generated text.
 
@@ -99,7 +99,6 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
   insertions: [ \
     { \
       type: "lookup", values: ["+2.5", "+5", "+7.5", "+10", "+12.5", "+15", "+17.5", "+20", "+22.5", "+25"], \
-      fallback: {translate: "codex.generic.enchantment.smite.1", fallback: "+[2.5 * lvl]"}, \
       generic: {translate: "codex.generic.enchantment.smite.1", fallback: "+[2.5 * lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \

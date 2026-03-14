@@ -9,7 +9,6 @@ data modify storage codex:archives root."minecraft:enchantment/sharpness" set va
   insertions: [ \
     { \
       type: "lookup", values: ["+1", "+1.5", "+2", "+2.5", "+3", "+3.5", "+4", "+4.5", "+5", "+5.5"], \
-      fallback: {translate: "codex.generic.enchantment.sharpness.1", fallback: "+[0.5 + (0.5 * lvl)]"}, \
       generic: {translate: "codex.generic.enchantment.sharpness.1", fallback: "+[0.5 + (0.5 * lvl)]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -27,7 +26,6 @@ data modify storage codex:archives root."minecraft:enchantment/smite" set value 
   insertions: [ \
     { \
       type: "lookup", values: ["+2.5", "+5", "+7.5", "+10", "+12.5", "+15", "+17.5", "+20", "+22.5", "+25"], \
-      fallback: {translate: "codex.generic.enchantment.smite.1", fallback: "+[2.5 * lvl]"}, \
       generic: {translate: "codex.generic.enchantment.smite.1", fallback: "+[2.5 * lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -46,14 +44,12 @@ data modify storage codex:archives root."minecraft:enchantment/bane_of_arthropod
   insertions: [ \
     { \
       type: "lookup", values: ["+2.5", "+5", "+7.5", "+10", "+12.5", "+15", "+17.5", "+20", "+22.5", "+25"], \
-      fallback: {translate: "codex.generic.enchantment.bane_of_arthropods.1", fallback: "+[2.5 * lvl]"}, \
       generic: {translate: "codex.generic.enchantment.bane_of_arthropods.1", fallback: "+[2.5 * lvl]"}, \
       base_style: {color: "#9999ff"} \
     }, \
     {value: {translate: "potion.withAmplifier", with: [{translate: "effect.minecraft.slowness"}, {translate: "potion.potency.3"}], color: "#ff9999"}}, \
     { \
       type: "lookup", values: ["00:01.5", "00:02", "00:02.5", "00:03", "00:03.5", "00:04", "00:04.5", "00:05", "00:05.5", "00:06"], \
-      fallback: {translate: "codex.generic.enchantment.bane_of_arthropods.3", fallback: "[1 + (0.5 * lvl)] seconds"}, \
       generic: {translate: "codex.generic.enchantment.bane_of_arthropods.3", fallback: "[1 + (0.5 * lvl)] seconds"}, \
       base_style: {color: "#ff99ff"} \
     } \
@@ -71,7 +67,6 @@ data modify storage codex:archives root."minecraft:enchantment/impaling" set val
   insertions: [ \
     { \
       type: "lookup", values: ["+2.5", "+5", "+7.5", "+10", "+12.5", "+15", "+17.5", "+20", "+22.5", "+25"], \
-      fallback: {translate: "codex.generic.enchantment.impaling.1", fallback: "+[2.5 * lvl]"}, \
       generic: {translate: "codex.generic.enchantment.impaling.1", fallback: "+[2.5 * lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -88,7 +83,6 @@ data modify storage codex:archives root."minecraft:enchantment/power" set value 
   insertions: [ \
     { \
       type: "lookup", values: ["+50%", "+75%", "+100%", "+125%", "+150%", "+175%", "+200%", "+225%", "+250%", "+275%"], \
-      fallback: {translate: "codex.generic.enchantment.power.1", fallback: "+[25%% + (25%% * lvl)]"}, \
       generic: {translate: "codex.generic.enchantment.power.1", fallback: "+[25%% + (25%% * lvl)]"}, \
       base_style: {color: "#9999ff"} \
     } \
@@ -106,7 +100,6 @@ data modify storage codex:archives root."minecraft:enchantment/density" set valu
   insertions: [ \
     { \
       type: "lookup", values: ["+0.5", "+1", "+1.5", "+2", "+2.5", "+3", "+3.5", "+4", "+4.5", "+5"], \
-      fallback: {translate: "codex.generic.enchantment.density.1", fallback: "+[0.5 * lvl]"}, \
       generic: {translate: "codex.generic.enchantment.density.1", fallback: "+[0.5 * lvl]"}, \
       base_style: {color: "#9999ff"} \
     } \
