@@ -28,36 +28,36 @@ dispatch codex:transforms_out[codex:bake_book_contents] to BookData
 dispatch codex:transforms_in[codex:bake_single_entry] to DescriptionKey
 dispatch codex:transforms_out[codex:bake_single_entry] to BakedEntry
 dispatch codex:transforms_temp[codex:bake_single_entry] to struct {
-  /// Other keywords related to the main description
+  /// Other keywords related to the main description.
   related_keywords?: [DescriptionKey],
   related_keywords_stack?: [[DescriptionKey]],
-  /// Archive entry retrieved from `codex:archives`
+  /// Archive entry retrieved from `codex:archives`.
   retrieved_archive?: ArchiveEntry,
-  /// Transformed `with` text components
+  /// Transformed `with` text components.
   with?: [Text],
 }
 
 // text & style → styled text component
 dispatch codex:transforms_in[codex:format_text] to struct {
-  /// Text content
+  /// Text content.
   content?: Text,
-  /// Text style
+  /// Text style.
   style?: TextStyle,
 }
 dispatch codex:transforms_out[codex:format_text] to Text
 
 // text & style & bullet ID → styled text component
 dispatch codex:transforms_in[codex:format_text_with_bullet] to struct {
-  /// Text content
+  /// Text content.
   content?: Text,
-  /// Bullet type
+  /// Bullet type.
   bullet_type?: BulletType,
-  /// Text style
+  /// Text style.
   style?: TextStyle,
 }
 dispatch codex:transforms_out[codex:format_text_with_bullet] to Text
 dispatch codex:transforms_temp[codex:format_text_with_bullet] to struct {
-  /// Mapped bullet value
+  /// Mapped bullet value.
   bullet_text?: Text,
 }
 
@@ -66,10 +66,10 @@ dispatch codex:transforms_temp[codex:format_text_with_bullet] to struct {
 dispatch codex:transforms_in[codex:insertion] to Insertion
 dispatch codex:transforms_out[codex:insertion] to Text
 dispatch codex:transforms_temp[codex:insertion] to struct {
-  /// Typed input
+  /// Typed input.
   lookup_insertion?: codex:insertion[lookup],
-  /// Typed input
+  /// Typed input.
   value_check_insertion?: codex:insertion[value_check],
-  /// Temp storage of unformatted result text
+  /// Temp storage of unformatted result text.
   picked_text?: Text,
 }

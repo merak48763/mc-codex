@@ -4,7 +4,7 @@ use super::CommandStorage
 type BulletType = #[dispatcher_key="codex:bullet_type"] string
 
 dispatch :storage[codex:bullets] to CommandStorage<struct BulletMap {
-  /// Prefix text of description lines
+  /// Prefix text of description lines.
   [BulletType]: Text,
 }>
 

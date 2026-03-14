@@ -1,7 +1,7 @@
 use ::java::world::item::ItemStack
 
 type CommandStorage<T> = struct {
-  /// Single entry of a command storage
+  /// Single entry of a command storage.
   root: T,
 }
 
@@ -14,11 +14,11 @@ dispatch :storage[codex:description_keys] to struct {
 type DescriptionKey = (
   #[id="codex/page"] string |
   struct CompoundDescriptionKey {
-    /// Page ID of `codex:archives` storage
+    /// Page ID of `codex:archives` storage.
     id: #[id="codex/page"] string,
-    /// Context number provided to the text
+    /// Context number provided to the text.
     context_number?: int @ 0..,
-    /// Other keywords related to the description
+    /// Other keywords related to the description.
     related_keywords?: [DescriptionKey],
   }
 )

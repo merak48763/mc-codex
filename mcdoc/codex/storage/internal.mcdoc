@@ -5,44 +5,44 @@ use super::book_data::BookData
 use super::line_prefix::BulletType
 
 dispatch :storage[codex:internal] to CommandStorage<struct InternalStorage {
-  /// The bundle item
+  /// The bundle item.
   book_item?: struct {
-    /// The original item stack
+    /// The original item stack.
     item_stack?: ItemStack,
-    /// Typed custom data
+    /// Typed custom data.
     custom_data?: codex:item_data[book],
-    /// Book contents
+    /// Book contents.
     baked_contents?: BookData,
   },
-  /// Remote storage of the bulky book contents
+  /// Remote storage of the bulky book contents.
   baked_books?: struct {
     [#[integer] string]?: BookData,
   },
-  /// The button item in the bundle
+  /// The button item in the bundle.
   button_item?: struct {
-    /// Typed custom data
+    /// Typed custom data.
     select_entry_data?: codex:button_action[select_entry],
   },
-  /// Input/output of transform functions
+  /// Input/output of transform functions.
   transforms?: struct {
     [#[id=(registry="function", path="util/")] string]: struct TransformsIO {
-      /// Input
+      /// Input.
       in?: codex:transforms_in[[%parent.%key]],
-      /// Output
+      /// Output.
       out?: codex:transforms_out[[%parent.%key]],
-      /// Temp storage
+      /// Temp storage.
       temp?: codex:transforms_temp[[%parent.%key]],
     },
   },
-  /// Macro params
+  /// Macro params.
   macro?: struct {
-    /// Banner `base_color` component
+    /// Banner `base_color` component.
     base_color?: :data_component[base_color],
-    /// Arbitrary ID
+    /// Arbitrary ID.
     id?: string,
-    /// Potion effect type
+    /// Potion effect type.
     effect?: string,
-    /// Array index
+    /// Array index.
     index?: int,
   },
 }>
