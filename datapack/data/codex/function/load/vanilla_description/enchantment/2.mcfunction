@@ -77,14 +77,14 @@ data modify storage codex:archives root."minecraft:enchantment/fire_aspect" set 
   title: {translate: "enchantment.minecraft.fire_aspect", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.enchantment.fire_aspect.1", fallback: "Ignites targets (%1$s)"} \
+    {translate: "codex.desc.enchantment.fire_aspect.1", fallback: "Ignites targets (%1$s seconds)"} \
   ], \
   bullets: ["dot"], \
   context_type: "enchantment", \
   insertions: [ \
     { \
-      type: "lookup", values: ["00:04", "00:08", "00:12", "00:16", "00:20", "00:24", "00:28", "00:32", "00:36", "00:40"], \
-      generic: {translate: "codex.generic.enchantment.fire_aspect.1", fallback: "[4 * lvl] seconds"}, \
+      type: "lookup", values: ["4", "8", "12", "16", "20", "24", "28", "32", "36", "40"], \
+      generic: {translate: "codex.generic.enchantment.fire_aspect.1", fallback: "[4 * lvl]"}, \
       base_style: {color: "#ff99ff"} \
     } \
   ] \
