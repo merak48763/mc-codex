@@ -5,6 +5,11 @@
 Adapted from the Lexica module of [pearuhdox/Cartographer-2.0](https://github.com/pearuhdox/Cartographer-2.0).  
 Minecraft version: 1.21.5 ~ 26.1
 
+> [!IMPORTANT]
+> Despite having a similar name, this project is not affiliated with Codex (the AI agent).  
+> This pack predates the release of that fancy slop generator.  
+> I will rename this pack in the future anyways.
+
 # Get the Book
 
 - The book is defined by `codex:book` loot table.
