@@ -50,7 +50,7 @@ data modify storage codex:archives root."minecraft:effect/hunger" set value { \
   title: {translate: "effect.minecraft.hunger", color: "red", bold: true}, \
   button_color: 14680064, \
   details: [ \
-    {translate: "codex.desc.effect.hunger.1", fallback: "Every %1$s%2$s:", color: "gray"}, \
+    {translate: "codex.desc.effect.hunger.1", fallback: "Every %1$s seconds:", color: "gray"}, \
     {translate: "codex.desc.effect.hunger.2", fallback: "Depletes 1 food saturation point"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
@@ -60,15 +60,14 @@ data modify storage codex:archives root."minecraft:effect/hunger" set value { \
       type: "lookup", values: ["40", "20", "13.35", "10", "8", "6.7"], \
       generic: {translate: "codex.generic.effect.hunger.1", fallback: "[40 / lvl]"}, \
       base_style: {color: "#aa66aa"} \
-    }, \
-    {value: {translate: "codex.desc.effect.hunger.with.2", fallback: "s", color: "#aa66aa"}} \
+    } \
   ] \
 }
 data modify storage codex:archives root."minecraft:effect/poison" set value { \
   title: {translate: "effect.minecraft.poison", color: "red", bold: true}, \
   button_color: 14680064, \
   details: [ \
-    {translate: "codex.desc.effect.poison.1", fallback: "Every %1$s%2$s:", color: "gray"}, \
+    {translate: "codex.desc.effect.poison.1", fallback: "Every %1$s seconds:", color: "gray"}, \
     {translate: "codex.desc.effect.poison.2", fallback: "Inflicts 1 magic damage"}, \
     {translate: "codex.desc.effect.poison.3", fallback: "(Until the affected's HP reaches 1)"} \
   ], \
@@ -80,8 +79,7 @@ data modify storage codex:archives root."minecraft:effect/poison" set value { \
       fallback: "0.5", \
       generic: {translate: "codex.generic.effect.poison.1", fallback: "[2.5 * (0.5 ^ lvl)]"}, \
       base_style: {color: "#aa66aa"} \
-    }, \
-    {value: {translate: "codex.desc.effect.poison.with.2", fallback: "s", color: "#aa66aa"}} \
+    } \
   ] \
 }
 data modify storage codex:archives root."minecraft:effect/raid_omen" set value { \
@@ -107,7 +105,7 @@ data modify storage codex:archives root."minecraft:effect/regeneration" set valu
   title: {translate: "effect.minecraft.regeneration", color: "#cc88ff", bold: true}, \
   button_color: 11141375, \
   details: [ \
-    {translate: "codex.desc.effect.regeneration.1", fallback: "Every %1$s%2$s:", color: "gray"}, \
+    {translate: "codex.desc.effect.regeneration.1", fallback: "Every %1$s seconds:", color: "gray"}, \
     {translate: "codex.desc.effect.regeneration.2", fallback: "Heals 1 HP"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
@@ -118,8 +116,7 @@ data modify storage codex:archives root."minecraft:effect/regeneration" set valu
       fallback: "0.05", \
       generic: {translate: "codex.generic.effect.regeneration.1", fallback: "[5 * (0.5 ^ lvl)]"}, \
       base_style: {color: "#aa66aa"} \
-    }, \
-    {value: {translate: "codex.desc.effect.regeneration.with.2", fallback: "s", color: "#aa66aa"}} \
+    } \
   ] \
 }
 data modify storage codex:archives root."minecraft:effect/resistance" set value { \
@@ -143,7 +140,7 @@ data modify storage codex:archives root."minecraft:effect/wither" set value { \
   title: {translate: "effect.minecraft.wither", color: "red", bold: true}, \
   button_color: 14680064, \
   details: [ \
-    {translate: "codex.desc.effect.wither.1", fallback: "Every %1$s%2$s:", color: "gray"}, \
+    {translate: "codex.desc.effect.wither.1", fallback: "Every %1$s second(s):", color: "gray"}, \
     {translate: "codex.desc.effect.wither.2", fallback: "Inflicts 1 magic damage"} \
   ], \
   bullets: ["section_header", "section_last_content"], \
@@ -154,7 +151,6 @@ data modify storage codex:archives root."minecraft:effect/wither" set value { \
       fallback: "0.5", \
       generic: {translate: "codex.generic.effect.wither.1", fallback: "[4 * (0.5 ^ lvl)]"}, \
       base_style: {color: "#aa66aa"} \
-    }, \
-    {value: {translate: "codex.desc.effect.wither.with.2", fallback: "s", color: "#aa66aa"}} \
+    } \
   ] \
 }
