@@ -153,6 +153,8 @@ data modify storage codex:archives root."minecraft:enchantment/sharpness".insert
 These functions can be hooked onto `#codex:override_builtin_data` to tweak some parts of behavior.
 
 - `codex:tweaks/effect_color`: Makes button color of status effects match their particle color.
+- `codex:tweaks/poison_bypass_iframe`: The below-0.5s damage period of poison effect will not be capped.
+- `codex:tweaks/wither_bypass_iframe`: The below-0.5s damage period of wither effect will not be capped.
 
 ## Describe Items
 
