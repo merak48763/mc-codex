@@ -24,7 +24,7 @@
           "condition": "entity_properties",
           "entity": "this",
           "predicate": {
-            "type": "slime"
+            "entity_type": "slime"
           }
         }
       },
